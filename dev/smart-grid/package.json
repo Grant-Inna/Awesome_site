@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "smart-grid",
+        "scope": null,
+        "escapedName": "smart-grid",
+        "name": "smart-grid",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "F:\\Секретные Документы\\Архивъ\\П\\git\\GitHub\\Awesome_site"
+    ]
+  ],
+  "_from": "smart-grid@latest",
+  "_id": "smart-grid@2.0.0",
+  "_inCache": true,
+  "_location": "/smart-grid",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/smart-grid-2.0.0.tgz_1506676733099_0.589344291947782"
+  },
+  "_npmUser": {
+    "name": "dmitrylavrik",
+    "email": "admin@dmitrylavrik.ru"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "smart-grid",
+    "scope": null,
+    "escapedName": "smart-grid",
+    "name": "smart-grid",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/smart-grid/-/smart-grid-2.0.0.tgz",
+  "_shasum": "77c8a85a8597825f1ab71ef22e815709f620b8a8",
+  "_shrinkwrap": null,
+  "_spec": "smart-grid",
+  "_where": "F:\\Секретные Документы\\Архивъ\\П\\git\\GitHub\\Awesome_site",
+  "author": {
+    "name": "Dmitry Lavrik"
+  },
+  "bugs": {
+    "url": "https://github.com/dmitry-lavrik/smart-grid/issues"
+  },
+  "dependencies": {},
+  "description": "Smart CSS Grid with different preprocessors: LESS, SCSS, SASS or Stylus",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "77c8a85a8597825f1ab71ef22e815709f620b8a8",
+    "tarball": "https://registry.npmjs.org/smart-grid/-/smart-grid-2.0.0.tgz"
+  },
+  "gitHead": "97c60fa63f03c84974699e3f6b6dbcc41167b547",
+  "homepage": "https://github.com/dmitry-lavrik/smart-grid#readme",
+  "keywords": [
+    "css",
+    "less",
+    "scss",
+    "sass",
+    "stylus"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "dmitrylavrik",
+      "email": "admin@dmitrylavrik.ru"
+    }
+  ],
+  "name": "smart-grid",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitry-lavrik/smart-grid.git"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "version": "2.0.0"
+}
