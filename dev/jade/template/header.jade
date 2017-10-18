@@ -1,0 +1,20 @@
+.header.container
+    .header__logo
+    .heder__holder
+        .heder__top
+            .width-33.header__search
+                input( type="search")
+            .width-65.header__userHolder
+                .header__user
+                .header__cart
+        .header__bottom
+            .width-65.flex.header__sections
+                include ../mixins/_mixin-Section
+                +_mixin-Section( 'игрушки', '' )
+                +_mixin-Section( 'куклы', '' )
+                +_mixin-Section( 'техника', '' )
+            .width-33.header__infoHolder
+                .header__orders
+                .header__help
+
+
