@@ -11,6 +11,7 @@
     "gulp-csscomb": "^3.0.8",
     "gulp-group-css-media-queries": "1.2.0",
     "gulp-jsmin": "^0.1.5",
+    "gulp-imagemin": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-jade": "^1.1.0",
