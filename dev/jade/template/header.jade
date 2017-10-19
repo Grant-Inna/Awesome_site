@@ -1,6 +1,10 @@
-.header.container
-    .header__logo
-    .heder__holder
+.header.container.flex
+    .width-10.header__logo
+        .header__logoHolder.relation.relation-min-50
+            .relation__ratio.relation__ratio-1x1
+            .relation__content.flex-center
+                img.max-width-80.margin-center( src="img/sections/sticker.png" )
+    .width-85.heder__holder
         .heder__top
             .width-33.header__search
                 input( type="search")
@@ -10,9 +14,9 @@
         .header__bottom
             .width-65.flex.header__sections
                 include ../mixins/_mixin-Section
-                +_mixin-Section( 'игрушки', '' )
-                +_mixin-Section( 'куклы', '' )
-                +_mixin-Section( 'техника', '' )
+                +section( 'игрушки', 'sticker.png' )
+                +section( 'куклы', 'sticker.png' )
+                +section( 'техника', 'sticker.png' )
             .width-33.header__infoHolder
                 .header__orders
                 .header__help

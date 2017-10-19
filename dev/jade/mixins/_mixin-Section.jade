@@ -1,7 +1,9 @@
 mixin section ( name, img )
-    .min-width-10.margin-3.section
-        .section__name
-            span #{ name }
-        .section__image
-            img( src="img/sections/#{ img }" )
-        
+    .width-15.margin-3.relation.relation-min-70.section
+        .relation__ratio.relation__ratio-1x1
+        .relation__content
+            .section__name
+                span #{ name }
+            .wrapper
+                img.max-width-80.section__image( src="img/sections/#{ img }" )
+
