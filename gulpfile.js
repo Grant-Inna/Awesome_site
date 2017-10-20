@@ -27,7 +27,7 @@ gulp.task('compress', function() {
 gulp.task('CSS', function() {
     return gulp.src('dev/scss/main.scss')
         //.pipe(groupMedia())
-        .pipe(sass().on('error', sass.logError)) // Turn scss file into css
+        .pipe(sass()) // Turn scss file into css
         .pipe(autoprefixer({browsers: ['last 5 versions', '> 3%']}))
         .pipe(rename("style.css"))
         .pipe(gulp.dest('app/css/'));
