@@ -1,24 +1,30 @@
 .header.container.flex
-    .width-10.header__logo
-        .header__logoHolder.relation.relation-min-50
-            .relation__ratio.relation__ratio-1x1
+    .l-header__logo.flex-center.flex-column
+        .l-header__logoHolder.relation.relation-min-50
+            .relation__ratio.relation__ratio-2x1
             .relation__content.flex-center
-                img.max-width-80.margin-center( src="img/sections/sticker.png" )
-    .width-85.heder__holder
-        .heder__top
-            .width-33.header__search
-                input( type="search")
-            .width-65.header__userHolder
-                .header__user
-                .header__cart
-        .header__bottom
-            .width-65.flex.header__sections
+                img.header__logoImage( src="img/sections/sticker.png" alt="Logo")
+        .header__toIndexLink
+            a.header__linkText( href="index.html" ) Surprise me!
+    .l-header__holder
+        .l-header__block.justify-between
+            .header__search.items-center
+                input.header__searchInput( type="search")
+            .l-header__userHolder.justify-around
+                .l-header__userInfo.flex-column.flex-center
+                    img.header__userAva( src="img/sections/sticker.png" alt="Ava" )
+                    span.header__userName Рик
+                .header__userCart.flex-center
+                    i.icon-lg.s7-cart.font-2
+                .header__userLogIn
+        .l-header__block.justify-between
+            .l-header__sections.flex
                 include ../mixins/_mixin-Section
                 +section( 'игрушки', 'sticker.png' )
                 +section( 'куклы', 'sticker.png' )
                 +section( 'техника', 'sticker.png' )
-            .width-33.header__infoHolder
-                .header__orders
-                .header__help
+            .l-header__infoHolder
+                .header__infoOrders
+                .header__infoHelp
 
 
