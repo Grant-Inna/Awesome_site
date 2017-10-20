@@ -1,0 +1,20 @@
+
+@mixin width ( $w: auto ) {
+  width: $w;
+}
+@mixin max-width ( $w: none ) {
+  max-width: $w;
+}
+@mixin min-width ( $w: none ) {
+  min-width: $w;
+}
+
+@mixin height ( $h: auto ) {
+  height: $h;
+}
+@mixin max-height ( $h: none ) {
+  max-height: $h;
+}
+@mixin min-height ( $h: none ) {
+  min-height: $h;
+}
