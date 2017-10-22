@@ -15,8 +15,10 @@ var gulp = require( 'gulp' ),
 
 // Images __________________________________________________________________
 
+var imdArr = ['dev/img/*.{png,jpg,jpeg}', 'dev/img/**/*.{png,jpg,jpeg}'];
+
 gulp.task('compress', function() {
-    return gulp.src('dev/img/*.{png,jpg}')
+    return gulp.src( imdArr )
         .pipe(imagemin())
         .pipe(gulp.dest('app/img/'));
 });
@@ -73,7 +75,7 @@ gulp.task( 'watch_jade', function() {
 
 // Tasks arrays ========================================================================================================
 
-var tasksCSS = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS'];
+
 var tasksCSS = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS'];
 
 var tasksJade = ['jade_pages', 'watch_jade'];

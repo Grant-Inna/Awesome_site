@@ -2,21 +2,26 @@
 @import "global";
 @import "mixins";
 
-$header-height: 100px;
+$header-height: 80px;
+$header-color: #82b383;
+$userNav-width: 100%/5;
 
 /* ========= HEADER ========= */
 
 
 .header {
-  background-color: #dadada;
+  background-color: $header-color;
   height: $header-height;
+  padding-left: 10px;
+  padding-right: 10px;
+  @extend .margin-bottom-20;
 }
 
-.l-header__logo { @include width($w: 10%); @include min-width($w: 85px); }
+.l-header__logo { @include width(); @include min-width($w: 110px); }
 
-  .l-header__logoHolder { @include height();}
+  .l-header__logoHolder { @include height($h: 60px);}
 
-  .header__logoImage { @include width($w: 90%); }
+  .header__logoImage { @include height($h: 100%); }
 
   .header__toIndexLink {}
 
@@ -25,49 +30,50 @@ $header-height: 100px;
     text-align: center;}
 
 
-.l-header__holder { @include width($w: 90%); @extend .margin-center; }
+.l-header__holder { @include width($w: 80%); }
 
-.l-header__block { @include width($w: 100%);
-  height: 50%;}
+.l-header__block { @include width($w: 100%); }
 
 .header__search { @include width($w: 66%); height: 100% }
 
-  input.header__searchInput { width: 100%; height: 35px }
+  .header__searchLabel { width: 70%; height: 35px; border: 1px solid $header-color - 50; border-radius: 2px }
+
+  input.header__searchInput { width: 90%; height: 100%; outline: none; border: none; padding: 3px 7px; border-radius: 2px }
+
+  .search__iconHolder { @include width($w: 10%); outline: none; border: none; background: $header-color - 50; }
 
 
-.l-header__userHolder { @include width($w: 33%); background-color: #006666; }
+.l-header__userHolder { @include width($w: 33%); background-color: transparent; } // Right icons
 
-  .l-header__userInfo { @include width($w: 30%); }
+  .l-header__userInfo { @include width($w: $userNav-width); }
 
     .header__userName { text-align: center }
 
-    .header__userAva { @include width(); @include max-width($w: 95%); max-height: 75%; border-radius: 25px }
+    .header__userAva { @include width(); @include min-width($w: 40px); @include height($h: 40px); border-radius: 25px }
 
-  .header__userCart { @include width($w: 33%); color: #f2f2f2; }
+  .header__userCart { @include width($w: $userNav-width); color: #f2f2f2; }
 
-  .header__userLogIn { @include width($w: 33%); }
+  .header__infoOrders { @include width($w: $userNav-width); color: #f2f2f2;}
+  .header__infoHelp { @include width($w: $userNav-width); color: #f2f2f2;}
+
+  .header__userLogIn { @include width($w: $userNav-width); color: #f2f2f2; }
 
 
-
+.l-header__sectionBlock { @include width(); @include height() }
 .l-header__sections { @include width($w: 66%); }
 
-  .header__section { @include max-width($w: 15%); @extend .margin-3;}
+  .header__section { @include max-width($w: 30%); @extend .margin-5;
+    &:hover img { transform: scale(1.6); @include transition}
+  }
 
   .header__sectionName {}
 
   .header__sectionNameText {}
 
-  .header__sectionImage {  @include max-width($w: 80%) }
+  .header__sectionImage {  @include max-width($w: 80%); @include transition }
 
 
 .l-header__infoHolder { @include width($w: 33%); }
-
-  .header__infoOrders {}
-
-  .header__infoHelp {}
-
-
-
 
 
 
@@ -83,3 +89,18 @@ $header-height: 100px;
 .section__image {
 
 }
+
+
+
+/* ============ CONTENT ============ */
+
+.l-content__holder {}
+.l-content__cell {
+  &:nth-child(even) {
+    background-color: red;
+  }
+  &:nth-child(odd) {
+    background-color: blue;
+  }
+}
+.cell__icon { position: absolute; top: 3px; left: 3px }

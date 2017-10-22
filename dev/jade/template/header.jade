@@ -1,30 +1,44 @@
-.header.container.flex
-    .l-header__logo.flex-center.flex-column
-        .l-header__logoHolder.relation.relation-min-50
-            .relation__ratio.relation__ratio-2x1
-            .relation__content.flex-center
-                img.header__logoImage( src="img/sections/sticker.png" alt="Logo")
-        .header__toIndexLink
-            a.header__linkText( href="index.html" ) Surprise me!
-    .l-header__holder
-        .l-header__block.justify-between
-            .header__search.items-center
-                input.header__searchInput( type="search")
-            .l-header__userHolder.justify-around
-                .l-header__userInfo.flex-column.flex-center
-                    img.header__userAva( src="img/sections/sticker.png" alt="Ava" )
-                    span.header__userName Рик
-                .header__userCart.flex-center
-                    i.icon-lg.s7-cart.font-2
-                .header__userLogIn
-        .l-header__block.justify-between
+.container
+    .header.flex.justify-between
+        .l-header__logo.flex-center.flex-column
+            .l-header__logoHolder.relation.relation-min-110
+                .relation__ratio.relation__ratio-2x1
+                .relation__content.flex-center
+                    img.header__logoImage( src="img/logo.jpg" alt="Logo" )
+            //.header__toIndexLink
+                //a.header__linkText( href="index.html" ) Surprise me!
+        .l-header__holder.items-center.justify-end
+            .l-header__block.justify-between.items-center
+                .header__search.items-center.justify-end
+                    label.header__searchLabel.flex
+                        input.header__searchInput( type="search" placeholder="Поиск")
+                        button.search__iconHolder.flex-center( type="submit" )
+                            i.icon-lg.s7-search.font-1-6
+                .l-header__userHolder.justify-end
+                    .header__userCart.flex-center
+                        a( title="Корзина")
+                            i.icon-lg.s7-cart.font-1-6
+                    .header__infoOrders.flex-center
+                        a( title="Заказы")
+                            i.icon-lg.s7-shopbag.font-1-6
+                    .header__infoHelp.flex-center
+                        a( title="Помощь")
+                            i.icon-lg.s7-info.font-1-6
+                    .l-header__userInfo.flex-column.flex-center
+                        img.header__userAva( src="img/sections/sticker.png" alt="Ava" )
+                        span.header__userName Рик
+                    .header__userLogIn.flex-center
+                        a( title="Выход")
+                            i.icon-lg.s7-power.font-1-6
+    .wrapper.justify-center
+        .l-header__sectionBlock.justify-between
             .l-header__sections.flex
                 include ../mixins/_mixin-Section
-                +section( 'игрушки', 'sticker.png' )
-                +section( 'куклы', 'sticker.png' )
-                +section( 'техника', 'sticker.png' )
-            .l-header__infoHolder
-                .header__infoOrders
-                .header__infoHelp
+                +section( 'игрушки', 'toy.jpg' )
+                +section( 'куклы', 'dol.jpg' )
+                +section( 'техника', 'phone.jpg' )
+                +section( 'кружки', 'cup.jpeg' )
+                +section( 'лалки', 'sticker.png' )
+
 
 
