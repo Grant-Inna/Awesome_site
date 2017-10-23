@@ -80,6 +80,11 @@ a {
   &-min-270 { min-width: 270px; }
   &-min-500 { min-width: 500px; }
 }
+@media (max-width: 535px) {
+  .relation-min-250 {
+    min-width: 300px
+  }
+}
 .relation__ratio {
   height: 0;
   &-1x1 { padding-top: 100%}

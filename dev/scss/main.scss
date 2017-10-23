@@ -168,21 +168,10 @@ $cell-base-color: #f4f4f4 + 10;
   @extend .margin-2;
 }
 
-/*@media ( max-width: 1129px ) {
-  .l-content__cell {
-    &:nth-child(3n+2) {
-      background-color: red;
-    }
-    &:nth-child(4n+6) {
-      background-color: blue;
-    }
-    &:nth-child(5n+3) {
-      background-color: green;
-    }
-    &:nth-child(6n+10) {
-      background-color: yellow;
-    }
+@media ( max-width: 1135px ) {
+  .content__cellDouble {
+    display: none;
   }
-}*/
+}
 .content__cellImage { @include max-height(90%)}
 .cell__icon { position: absolute; top: 3px; left: 3px }

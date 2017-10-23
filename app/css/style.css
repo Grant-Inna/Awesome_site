@@ -87,6 +87,10 @@ a {
   .relation-min-500 {
     min-width: 500px; }
 
+@media (max-width: 535px) {
+  .relation-min-250 {
+    min-width: 300px; } }
+
 .relation__ratio {
   height: 0;
   /* Разделить на первое, умножить на второе*/ }
@@ -614,22 +618,10 @@ input.header__searchInput {
           box-sizing: border-box;
   background: white; }
 
-/*@media ( max-width: 1129px ) {
-  .l-content__cell {
-    &:nth-child(3n+2) {
-      background-color: red;
-    }
-    &:nth-child(4n+6) {
-      background-color: blue;
-    }
-    &:nth-child(5n+3) {
-      background-color: green;
-    }
-    &:nth-child(6n+10) {
-      background-color: yellow;
-    }
-  }
-}*/
+@media (max-width: 1135px) {
+  .content__cellDouble {
+    display: none; } }
+
 .content__cellImage {
   max-height: 90%; }
 
