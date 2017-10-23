@@ -6,6 +6,8 @@ $header-height: 80px;
 $header-color: #82b383;
 $userNav-width: 100%/5;
 
+$cell-base-color: #f4f4f4 + 10;
+
 /* ========= HEADER ========= */
 
 
@@ -60,7 +62,7 @@ $userNav-width: 100%/5;
 
 
 .l-header__sectionBlock { @include width(); @include height() }
-.l-header__sections { @include width($w: 66%); }
+.l-header__sections {  }
 
   .header__section { @include max-width($w: 30%); @extend .margin-5;
     &:hover img { transform: scale(1.6); @include transition}
@@ -94,13 +96,93 @@ $userNav-width: 100%/5;
 
 /* ============ CONTENT ============ */
 
-.l-content__holder {}
+.l-content__holder { @include max-width( 1260px )}
 .l-content__cell {
-  &:nth-child(even) {
-    background-color: red;
+  @extend .margin-1;
+  background-color: rgba( 0, 0, 0, .014);
+  &:nth-child(1n) {
+    background-color: rgba( 0, 0, 0, .014);
   }
-  &:nth-child(odd) {
-    background-color: blue;
+  &:nth-child(2n) {
+    background-color: rgba( 0, 0, 0, .034);
+  }
+  &:nth-child(3n) {
+    background-color: rgba( 0, 0, 0, .004);
+  }
+  &:nth-child(4n) {
+    background-color: rgba( 0, 0, 0, .019);
+  }
+  &:nth-child(5n) {
+    background-color: rgba( 0, 0, 0, .025);
+  }
+  &:nth-child(6n) {
+    background-color: rgba( 0, 0, 0, .020);
+  }
+  &:nth-child(8n) {
+    background-color: rgba( 0, 0, 0, .01);
+  }
+  &:nth-child(9n) {
+    background-color: rgba( 0, 0, 0, .046);
+  }
+  &:nth-child(10n) {
+    background-color: rgba( 0, 0, 0, .012);
+  }
+  &:nth-child(11n) {
+    background-color: rgba( 0, 0, 0, .025);
+  }
+
+  &:nth-child(1n + 11) {
+    background-color: rgba( 0, 0, 0, .055);
+  }
+  &:nth-child(2n + 11) {
+    background-color: rgba( 0, 0, 0, .0321);
+  }
+  &:nth-child(3n + 11) {
+    background-color: rgba( 0, 0, 0, .08);
+  }
+  &:nth-child(4n + 11) {
+    background-color: rgba( 0, 0, 0, .005);
+  }
+  &:nth-child(5n + 11) {
+    background-color: rgba( 0, 0, 0, .026);
+  }
+  &:nth-child(6n + 11) {
+    background-color: rgba( 0, 0, 0, .007);
+  }
+  &:nth-child(8n + 11) {
+    background-color: rgba( 0, 0, 0, .017);
+  }
+  &:nth-child(9n + 11) {
+    background-color: rgba( 0, 0, 0, .005);
+  }
+  &:nth-child(10n + 11) {
+    background-color: rgba( 0, 0, 0, .068);
+  }
+  &:nth-child(11n + 11) {
+    background-color: rgba( 0, 0, 0, .015);
   }
 }
+.content__cellDouble {
+  box-sizing: border-box;
+  background: white;
+  @extend .margin-2;
+}
+
+/*@media ( max-width: 1129px ) {
+  .l-content__cell {
+    &:nth-child(3n+2) {
+      background-color: red;
+    }
+    &:nth-child(4n+6) {
+      background-color: blue;
+    }
+    &:nth-child(5n+3) {
+      background-color: green;
+    }
+    &:nth-child(6n+10) {
+      background-color: yellow;
+    }
+  }
+}*/
+.content__cellImage { @include max-height(90%)}
 .cell__icon { position: absolute; top: 3px; left: 3px }

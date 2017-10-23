@@ -16,7 +16,7 @@ body {
   font-size: 1rem;
   font-weight: normal;
   color: #303030;
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 .container {
   width: 100%;
@@ -78,6 +78,7 @@ a {
   &-min-200 { min-width: 200px; }
   &-min-250 { min-width: 250px; }
   &-min-270 { min-width: 270px; }
+  &-min-500 { min-width: 500px; }
 }
 .relation__ratio {
   height: 0;
@@ -86,6 +87,7 @@ a {
   &-4x3 { padding-top: 75%;}
   &-6x5 { padding-top: 83.33%;}
   &-8x7 { padding-top: 87.5%;}
+  &-7x8 { padding-top: 114%;}
   &-16x9 { padding-top: 56.25%;}
 }
 .relation__content {
@@ -102,6 +104,7 @@ a {
 .margin-center { margin: 0 auto }
 
 .margin-1  { margin: 1px }
+.margin-2  { margin: 2px }
 .margin-3  { margin: 3px }
 .margin-5  { margin: 5px }
 .margin-10 { margin: 10px }
