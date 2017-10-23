@@ -99,67 +99,67 @@ $cell-base-color: #f4f4f4 + 10;
 .l-content__holder { @include max-width( 1260px )}
 .l-content__cell {
   @extend .margin-1;
-  background-color: rgba( 0, 0, 0, .014);
+  background-color: rgba( 0, 0, 0, .0200);
   &:nth-child(1n) {
-    background-color: rgba( 0, 0, 0, .014);
+    background-color: rgba( 0, 0, 0, .0199);
   }
   &:nth-child(2n) {
-    background-color: rgba( 0, 0, 0, .034);
+    background-color: rgba( 0, 0, 0, .0340);
   }
   &:nth-child(3n) {
-    background-color: rgba( 0, 0, 0, .004);
+    background-color: rgba( 0, 0, 0, .0400);
   }
   &:nth-child(4n) {
-    background-color: rgba( 0, 0, 0, .019);
+    background-color: rgba( 0, 0, 0, .0210);
   }
   &:nth-child(5n) {
-    background-color: rgba( 0, 0, 0, .025);
+    background-color: rgba( 0, 0, 0, .0180);
   }
   &:nth-child(6n) {
-    background-color: rgba( 0, 0, 0, .020);
+    background-color: rgba( 0, 0, 0, .0194);
   }
   &:nth-child(8n) {
-    background-color: rgba( 0, 0, 0, .01);
+    background-color: rgba( 0, 0, 0, .0240);
   }
   &:nth-child(9n) {
-    background-color: rgba( 0, 0, 0, .046);
+    background-color: rgba( 0, 0, 0, .0460);
   }
   &:nth-child(10n) {
-    background-color: rgba( 0, 0, 0, .012);
+    background-color: rgba( 0, 0, 0, .0220);
   }
   &:nth-child(11n) {
-    background-color: rgba( 0, 0, 0, .025);
+    background-color: rgba( 0, 0, 0, .0250);
   }
 
   &:nth-child(1n + 11) {
-    background-color: rgba( 0, 0, 0, .055);
+    background-color: rgba( 0, 0, 0, .0368);
   }
   &:nth-child(2n + 11) {
     background-color: rgba( 0, 0, 0, .0321);
   }
   &:nth-child(3n + 11) {
-    background-color: rgba( 0, 0, 0, .08);
+    background-color: rgba( 0, 0, 0, .0280);
   }
   &:nth-child(4n + 11) {
-    background-color: rgba( 0, 0, 0, .005);
+    background-color: rgba( 0, 0, 0, .0397);
   }
   &:nth-child(5n + 11) {
-    background-color: rgba( 0, 0, 0, .026);
+    background-color: rgba( 0, 0, 0, .0265);
   }
   &:nth-child(6n + 11) {
-    background-color: rgba( 0, 0, 0, .007);
+    background-color: rgba( 0, 0, 0, .0270);
   }
   &:nth-child(8n + 11) {
-    background-color: rgba( 0, 0, 0, .017);
+    background-color: rgba( 0, 0, 0, .0229);
   }
   &:nth-child(9n + 11) {
-    background-color: rgba( 0, 0, 0, .005);
+    background-color: rgba( 0, 0, 0, .0302);
   }
   &:nth-child(10n + 11) {
-    background-color: rgba( 0, 0, 0, .068);
+    background-color: rgba( 0, 0, 0, .0248);
   }
   &:nth-child(11n + 11) {
-    background-color: rgba( 0, 0, 0, .015);
+    background-color: rgba( 0, 0, 0, .0220);
   }
 }
 .content__cellDouble {

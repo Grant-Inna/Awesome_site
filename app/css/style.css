@@ -567,47 +567,47 @@ input.header__searchInput {
   max-width: 1260px; }
 
 .l-content__cell {
-  background-color: rgba(0, 0, 0, 0.014); }
+  background-color: rgba(0, 0, 0, 0.02); }
   .l-content__cell:nth-child(1n) {
-    background-color: rgba(0, 0, 0, 0.014); }
+    background-color: rgba(0, 0, 0, 0.0199); }
   .l-content__cell:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.034); }
   .l-content__cell:nth-child(3n) {
-    background-color: rgba(0, 0, 0, 0.004); }
+    background-color: rgba(0, 0, 0, 0.04); }
   .l-content__cell:nth-child(4n) {
-    background-color: rgba(0, 0, 0, 0.019); }
+    background-color: rgba(0, 0, 0, 0.021); }
   .l-content__cell:nth-child(5n) {
-    background-color: rgba(0, 0, 0, 0.025); }
+    background-color: rgba(0, 0, 0, 0.018); }
   .l-content__cell:nth-child(6n) {
-    background-color: rgba(0, 0, 0, 0.02); }
+    background-color: rgba(0, 0, 0, 0.0194); }
   .l-content__cell:nth-child(8n) {
-    background-color: rgba(0, 0, 0, 0.01); }
+    background-color: rgba(0, 0, 0, 0.024); }
   .l-content__cell:nth-child(9n) {
     background-color: rgba(0, 0, 0, 0.046); }
   .l-content__cell:nth-child(10n) {
-    background-color: rgba(0, 0, 0, 0.012); }
+    background-color: rgba(0, 0, 0, 0.022); }
   .l-content__cell:nth-child(11n) {
     background-color: rgba(0, 0, 0, 0.025); }
   .l-content__cell:nth-child(1n + 11) {
-    background-color: rgba(0, 0, 0, 0.055); }
+    background-color: rgba(0, 0, 0, 0.0368); }
   .l-content__cell:nth-child(2n + 11) {
     background-color: rgba(0, 0, 0, 0.0321); }
   .l-content__cell:nth-child(3n + 11) {
-    background-color: rgba(0, 0, 0, 0.08); }
+    background-color: rgba(0, 0, 0, 0.028); }
   .l-content__cell:nth-child(4n + 11) {
-    background-color: rgba(0, 0, 0, 0.005); }
+    background-color: rgba(0, 0, 0, 0.0397); }
   .l-content__cell:nth-child(5n + 11) {
-    background-color: rgba(0, 0, 0, 0.026); }
+    background-color: rgba(0, 0, 0, 0.0265); }
   .l-content__cell:nth-child(6n + 11) {
-    background-color: rgba(0, 0, 0, 0.007); }
+    background-color: rgba(0, 0, 0, 0.027); }
   .l-content__cell:nth-child(8n + 11) {
-    background-color: rgba(0, 0, 0, 0.017); }
+    background-color: rgba(0, 0, 0, 0.0229); }
   .l-content__cell:nth-child(9n + 11) {
-    background-color: rgba(0, 0, 0, 0.005); }
+    background-color: rgba(0, 0, 0, 0.0302); }
   .l-content__cell:nth-child(10n + 11) {
-    background-color: rgba(0, 0, 0, 0.068); }
+    background-color: rgba(0, 0, 0, 0.0248); }
   .l-content__cell:nth-child(11n + 11) {
-    background-color: rgba(0, 0, 0, 0.015); }
+    background-color: rgba(0, 0, 0, 0.022); }
 
 .content__cellDouble {
   -webkit-box-sizing: border-box;
