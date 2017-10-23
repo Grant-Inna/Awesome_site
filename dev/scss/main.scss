@@ -13,10 +13,7 @@ $cell-base-color: #f4f4f4 + 10;
 
 .header {
   background-color: $header-color;
-  height: $header-height;
-  padding-left: 10px;
-  padding-right: 10px;
-  @extend .margin-bottom-20;
+  min-height: $header-height;
 }
 
 .l-header__logo { @include width(); @include min-width($w: 110px); }
@@ -32,20 +29,20 @@ $cell-base-color: #f4f4f4 + 10;
     text-align: center;}
 
 
-.l-header__holder { @include width($w: 80%); }
+.l-header__holder { @include width($w: 90%); }
 
 .l-header__block { @include width($w: 100%); }
 
-.header__search { @include width($w: 66%); height: 100% }
+.header__search { @include width($w: 60%); height: 100% }
 
-  .header__searchLabel { width: 70%; height: 35px; border: 1px solid $header-color - 50; border-radius: 2px }
+  .header__searchLabel { width: 90%; height: 35px; border: 1px solid $header-color - 50; border-radius: 2px }
 
   input.header__searchInput { width: 90%; height: 100%; outline: none; border: none; padding: 3px 7px; border-radius: 2px }
 
   .search__iconHolder { @include width($w: 10%); outline: none; border: none; background: $header-color - 50; }
 
 
-.l-header__userHolder { @include width($w: 33%); background-color: transparent; } // Right icons
+.l-header__userHolder { @include width($w: 40%); background-color: transparent; } // Right icons
 
   .l-header__userInfo { @include width($w: $userNav-width); }
 
@@ -63,9 +60,11 @@ $cell-base-color: #f4f4f4 + 10;
 
 .l-header__sectionBlock { @include width(); @include height() }
 .l-header__sections {  }
+.header__sectionNameText { @include transition }
 
   .header__section { @include max-width($w: 30%); @extend .margin-5;
-    &:hover img { transform: scale(1.6); @include transition}
+    &:hover img { transform: scale(1.6); @include transition($t: .1s)}
+    &:hover .header__sectionNameText { transform: scale(1.3); @include transition($t: .1s) }
   }
 
   .header__sectionName {}
@@ -83,9 +82,11 @@ $cell-base-color: #f4f4f4 + 10;
 
 /* ONE SECTION */
 
+.header__sliderCaption {}
+
 .header__sliderWrpper { position: relative }
 .header__sliderWrpper-before,
-.header__sliderWrpper-after { display: block; position: absolute;top: 50%; @include transition(); }
+.header__sliderWrpper-after { display: block; position: absolute; top: 30%; @include transition(); }
 
 .header__sliderWrpper-before {  left: 10px;
   &:hover {
@@ -183,6 +184,13 @@ $cell-base-color: #f4f4f4 + 10;
   background: white;
   @extend .margin-2;
 }
+
+@media ( max-width: 680px ) {
+  .l-header__block { flex-direction: column }
+  .header__search { @include width($w: 90%); margin: 4px auto 2px; }
+  .l-header__userHolder { @include width($w: 90%); margin: 2px auto 4px; }
+}
+
 
 @media ( max-width: 1135px ) {
   .content__cellDouble {
