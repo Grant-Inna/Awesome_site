@@ -85,6 +85,21 @@ a {
     min-width: 300px
   }
 }
+@media ( max-width: 365px ) {
+  .relation {
+    position: relative;
+    &-min-70 { min-width: 50px; }
+    &-min-50 { min-width: 30px; }
+    &-min-90 { min-width: 70px; }
+    &-min-110 { min-width: 90px; }
+    &-min-120 { min-width: 100px; }
+    &-min-150 { min-width: 130px; }
+    &-min-200 { min-width: 180px; }
+    &-min-250 { min-width: 230px; }
+    &-min-270 { min-width: 250px; }
+    &-min-500 { min-width: 480px; }
+  }
+}
 .relation__ratio {
   height: 0;
   &-1x1 { padding-top: 100%}

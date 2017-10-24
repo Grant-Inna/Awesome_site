@@ -3,7 +3,7 @@
 @import "mixins";
 
 $header-height: 80px;
-$header-color: #82b383;
+$header-color: #314257;
 $userNav-width: 100%/5;
 
 $cell-base-color: #f4f4f4 + 10;
@@ -33,20 +33,24 @@ $cell-base-color: #f4f4f4 + 10;
 
 .l-header__block { @include width($w: 100%); }
 
-.header__search { @include width($w: 60%); height: 100% }
+.l-header__search { @include width($w: 60%); }
 
-  .header__searchLabel { width: 90%; height: 35px; border: 1px solid $header-color - 50; border-radius: 2px }
+  .header__searchLabel { width: 90%; height: 35px; border: 1px solid $header-color + 15; border-radius: 2px }
 
-  input.header__searchInput { width: 90%; height: 100%; outline: none; border: none; padding: 3px 7px; border-radius: 2px }
+  input.header__searchInput { width: 90%; outline: none; border: none; padding: 3px 7px; border-radius: 2px 0 0 2px }
 
-  .search__iconHolder { @include width($w: 10%); outline: none; border: none; background: $header-color - 50; }
+  .search__iconHolder { @include width($w: 10%); outline: none; border: none; background: $header-color + 50; }
 
 
-.l-header__userHolder { @include width($w: 40%); background-color: transparent; } // Right icons
+.l-header__userHolder { @include width($w: 40%); background-color: transparent; // Right icons
+  div {
+    min-width: 80px;
+  }
+}
 
   .l-header__userInfo { @include width($w: $userNav-width); }
 
-    .header__userName { text-align: center }
+    .header__userName { text-align: center; color: #fefefe }
 
     .header__userAva { @include width(); @include min-width($w: 40px); @include height($h: 40px); border-radius: 25px }
 
@@ -63,8 +67,8 @@ $cell-base-color: #f4f4f4 + 10;
 .header__sectionNameText { @include transition }
 
   .header__section { @include max-width($w: 30%); @extend .margin-5;
-    &:hover img { transform: scale(1.6); @include transition($t: .1s)}
-    &:hover .header__sectionNameText { transform: scale(1.3); @include transition($t: .1s) }
+    &:hover img { transform: scale(1.2); @include transition($t: .1s)}
+    &:hover .header__sectionNameText { transform: scale(1.1) translateY(3px); @include transition($t: .1s) }
   }
 
   .header__sectionName {}
@@ -185,17 +189,39 @@ $cell-base-color: #f4f4f4 + 10;
   @extend .margin-2;
 }
 
-@media ( max-width: 680px ) {
-  .l-header__block { flex-direction: column }
-  .header__search { @include width($w: 90%); margin: 4px auto 2px; }
-  .l-header__userHolder { @include width($w: 90%); margin: 2px auto 4px; }
-}
-
-
 @media ( max-width: 1135px ) {
   .content__cellDouble {
     display: none;
   }
 }
+@media ( max-width: 680px ) {
+  .l-header__holder { flex-direction: column; padding-right: 7px }
+  .l-header__logo { padding-left: 3px; }
+  .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
+  .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
+}
+@media ( max-width: 490px ) {
+
+}
+@media ( max-width: 365px ) {
+  .l-header__wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+  }
+  .l-header__logo,
+  .l-header__holder {
+    width: 100%;
+    align-items: center;
+  }
+  .l-header__search {
+    justify-content: center;
+  }
+  .l-header__userHolder {
+    justify-content: baseline;
+  }
+
+}
+
 .content__cellImage { @include height(90%)}
 .cell__icon { position: absolute; top: 3px; left: 3px }
