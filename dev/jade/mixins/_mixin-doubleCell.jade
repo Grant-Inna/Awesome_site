@@ -1,17 +1,16 @@
-mixin double-cell ( img )
+mixin double-cell ( title, by, img1, img2, img3, img4 )
     .content__cellDouble
         .relation.relation-min-500
             .relation__ratio.relation__ratio-2x1
             .relation__content.flex-column.flex-center
-                h4 Название
-                .content__doubleCellHolder
+                h4.content__doubleCellTitle #{ title }
+                sup.content__doubleCellTitle-sub #{ by }
+                .content__doubleCellHolder.justify-around.items-center
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/#{ img }" )
+                        img.max-width-80.content__cellImage( src="img/sections/#{ img1 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/#{ img }" )
+                        img.max-width-80.content__cellImage( src="img/sections/#{ img2 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/#{ img }" )
+                        img.max-width-80.content__cellImage( src="img/sections/#{ img3 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/#{ img }" )
-                    .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/#{ img }" )
+                        img.max-width-80.content__cellImage( src="img/sections/#{ img4 }" )

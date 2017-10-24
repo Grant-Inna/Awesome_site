@@ -63,7 +63,7 @@ $cell-base-color: #f4f4f4 + 10;
 
 
 .l-header__sectionBlock { @include width(); @include height() }
-.l-header__sections {  }
+.l-header__sections { list-style: none }
 .header__sectionNameText { @include transition }
 
   .header__section { @include max-width($w: 30%); @extend .margin-5;
@@ -88,21 +88,28 @@ $cell-base-color: #f4f4f4 + 10;
 
 .header__sliderCaption {}
 
-.header__sliderWrpper { position: relative }
-.header__sliderWrpper-before,
-.header__sliderWrpper-after { display: block; position: absolute; top: 30%; @include transition(); }
+.header__slider { position: relative }
+.header__slider-before,
+.header__slider-after { display: block; position: absolute; width: 50px; padding-top: 2%; height: 100%; @include transition(); }
 
-.header__sliderWrpper-before {  left: 10px;
+.header__slider-before {  left: 10px;
   &:hover {
     @include transition();
     transform: translateX(-10px)
 
   }}
-.header__sliderWrpper-after { right: 10px;
+.header__slider-after { right: 10px;
   &:hover {
     @include transition();
     transform: translateX(10px)
   }}
+
+.l-header__sliderWrapper {
+  @include width( $w: 90% );
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 
 
 .section {}
@@ -188,6 +195,24 @@ $cell-base-color: #f4f4f4 + 10;
   background: white;
   @extend .margin-2;
 }
+.content__doubleCellHolder {
+  @include width($w: 100%);
+  @include height($h: 60%);
+  padding: 0 50px;
+}
+.content__doubleCellTitle {
+  margin-bottom: 7px;
+}
+.content__doubleCellImage {
+  @include max-width($w: 20%);
+  @include max-height($h: 90%);
+}
+.content__cellImage {
+  @include max-width($w: 80%);
+  @include max-height($h: 90%);
+  background-size: contain;
+}
+.cell__icon { position: absolute; top: 3px; left: 3px }
 
 @media ( max-width: 1135px ) {
   .content__cellDouble {
@@ -223,5 +248,4 @@ $cell-base-color: #f4f4f4 + 10;
 
 }
 
-.content__cellImage { @include height(90%)}
-.cell__icon { position: absolute; top: 3px; left: 3px }
+

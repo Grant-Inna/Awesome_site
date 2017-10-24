@@ -1,21 +1,24 @@
 .container
     h2.header__sliderCaption.flex-center.text-center Очень крутая надпись
-    .wrapper.header__sliderWrpper.flex-center
-        .header__sliderWrpper-before.s7-angle-left.font-4
-        .header__sliderWrpper-after.s7-angle-right.font-4
-        .l-header__sectionBlock.justify-between
-            .l-header__sections.flex
-                include ../mixins/_mixin-Section
-                +section( 'Книжки', 'books.svg' )
-                +section( 'Камеры', 'cameras.svg' )
-                +section( 'Игрушки', 'puppet.svg' )
-                +section( 'Часы', 'clock.svg' )
-                +section( 'Пивасик', 'beer.svg' )
-                +section( 'Печеньки', 'cookies.png' )
-                +section( 'Шляпы', 'hats.svg' )
-                +section( 'Пироги', 'cake.svg' )
-                +section( 'Маагияя', 'magic.svg' )
-                +section( 'Картины', 'painting.svg' )
-                +section( 'Игрушки', 'toys.svg' )
-                +section( 'Телефоны', 'phones.svg' )
-                +section( 'Пластинки', 'record.svg' )
+    .wrapper.header__slider.flex-center
+        .header__slider-before
+            i.s7-angle-left.font-4
+        .header__slider-after
+            i.s7-angle-right.font-4
+        .l-header__sliderWrapper.flex-center
+            .l-header__sectionBlock.justify-between
+                .l-header__sections.flex
+                    include ../mixins/_mixin-Section
+                    +section( 'Книжки', 'books.svg' )
+                    +section( 'Камеры', 'cameras.svg' )
+                    +section( 'Игрушки', 'puppet.svg' )
+                    +section( 'Часы', 'clock.svg' )
+                    +section( 'Пивасик', 'beer.svg' )
+                    +section( 'Печеньки', 'cookies.png' )
+                    +section( 'Шляпы', 'hats.svg' )
+                    +section( 'Пироги', 'cake.svg' )
+                    +section( 'Маагияя', 'magic.svg' )
+                    +section( 'Картины', 'painting.svg' )
+                    +section( 'Игрушки', 'toys.svg' )
+                    +section( 'Телефоны', 'phones.svg' )
+                    +section( 'Пластинки', 'record.svg' )
