@@ -27,11 +27,26 @@ body {
 
 .wrapper {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s; }
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 92%; } }
 
 @media screen and (max-width: 960px) {
   .wrapper {
     width: 94%; } }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 96%; } }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 97%; } }
 
 @media screen and (max-width: 678px) {
   .wrapper {
@@ -40,8 +55,8 @@ body {
 @media screen and (max-width: 480px) {
   .wrapper {
     width: 100%;
-    padding-left: 1px;
-    padding-right: 1px; } }
+    padding-left: 2px;
+    padding-right: 2px; } }
 
 a {
   color: inherit; }
