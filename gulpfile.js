@@ -15,7 +15,7 @@ var gulp = require( 'gulp' ),
 
 // Images __________________________________________________________________
 
-var imdArr = ['dev/img/*.{png,jpg,jpeg}', 'dev/img/**/*.{png,jpg,jpeg}'];
+var imdArr = ['dev/img/*.{png,jpg,jpeg,svg}', 'dev/img/**/*.{png,jpg,jpeg,svg}'];
 
 gulp.task('compress', function() {
     return gulp.src( imdArr )
@@ -80,7 +80,10 @@ var tasksCSS = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS'];
 
 var tasksJade = ['jade_pages', 'watch_jade'];
 
+var tasksAll = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS', 'jade_pages', 'watch_jade'];
+
 // Main tasks
 
-gulp.task('default', tasksCSS);
+gulp.task('default', tasksAll);
+gulp.task('css', tasksCSS);
 gulp.task('jade', tasksJade);
