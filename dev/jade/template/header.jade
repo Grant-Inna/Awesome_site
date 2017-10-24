@@ -1,27 +1,26 @@
 .container.header.flex-center
-    .wrapper.flex.justify-between
+    .wrapper.flex.l-header__wrapper.justify-between
         .l-header__logo.flex-center.flex-column
             .l-header__logoHolder.relation.relation-min-110
                 .relation__ratio.relation__ratio-2x1
                 .relation__content.flex-center
                     img.header__logoImage( src="img/logo.jpg" alt="Logo" )
         .l-header__holder.items-center.justify-end
-            .l-header__block.justify-between.items-center
-                .header__search.items-center.justify-end
-                    label.header__searchLabel.flex
-                        input.header__searchInput( type="search" placeholder="Поиск")
-                        button.search__iconHolder.flex-center( type="submit" )
-                            i.icon-lg.s7-search.font-1-6
-                .l-header__userHolder.justify-end
-                    .header__userCart.flex-center
-                        a( title="Корзина")
-                            i.icon-lg.s7-cart.font-1-6
-                    .header__infoOrders.flex-center
-                        a( title="Заказы")
-                            i.icon-lg.s7-shopbag.font-1-6
-                    .l-header__userInfo.flex-column.flex-center
-                        img.header__userAva( src="img/sections/sticker.png" alt="Ava" )
-                        span.header__userName Рик
+            .l-header__search.items-center.justify-end
+                label.header__searchLabel.flex
+                    input.header__searchInput( type="search" placeholder="Поиск")
+                    button.search__iconHolder.flex-center( type="submit" )
+                        i.icon-lg.s7-search.font-1-6
+            .l-header__userHolder.justify-end
+                .header__userCart.justify-end.items-center
+                    a( title="Корзина")
+                        i.icon-lg.s7-cart.font-1-6
+                .header__infoOrders.justify-end.items-center
+                    a( title="Заказы")
+                        i.icon-lg.s7-shopbag.font-1-6
+                .l-header__userInfo.flex-column.items-end
+                    img.header__userAva( src="img/sticker1.png" alt="Ava" )
+                    span.header__userName Гарольд
                     
 
 
