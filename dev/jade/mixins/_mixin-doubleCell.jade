@@ -1,4 +1,4 @@
-mixin double-cell ( title, by, img1, img2, img3, img4 )
+mixin double-cell ( title, by, img1, exhib1, img2, exhib2, img3, exhib3, img4, exhib4 )
     .content__cellDouble
         .relation.relation-min-500
             .relation__ratio.relation__ratio-2x1
@@ -7,10 +7,10 @@ mixin double-cell ( title, by, img1, img2, img3, img4 )
                 sup.content__doubleCellTitle-sub #{ by }
                 .content__doubleCellHolder.justify-around.items-center
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/sections/#{ img1 }" )
+                        img.content__cellImage( src="img/sections/#{ img1 + '.' + exhib1 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/sections/#{ img2 }" )
+                        img.content__cellImage( src="img/sections/#{ img2 + '.' + exhib2 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/sections/#{ img3 }" )
+                        img.content__cellImage( src="img/sections/#{ img3 + '.' + exhib3 }" )
                     .content__doubleCellImage
-                        img.max-width-80.content__cellImage( src="img/sections/#{ img4 }" )
+                        img.content__cellImage( src="img/sections/#{ img4 + '.' + exhib4 }" )

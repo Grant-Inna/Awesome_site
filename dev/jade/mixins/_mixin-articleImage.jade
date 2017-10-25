@@ -1,0 +1,8 @@
+mixin article-image ( img, exhib )
+    .l-article__imageHolder.items-center
+        i.s7-angle-left.font-3.onHover-left-5
+        .relation.relation-min-200
+            .relation__ratio.relation__ratio-7x8
+            .relation__content.flex-center
+                img.content__cellImage( src="img/sections/#{ img + '.' + exhib }" )
+        i.s7-angle-right.font-3.onHover-right-5
