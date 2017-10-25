@@ -16,13 +16,19 @@ body {
   font-size: 1rem;
   font-weight: normal;
   color: #303030;
-  background-color: #fff;
+  background-color: $color-background-body;
 }
 .container {
   width: 100%;
   height: auto;
   margin-bottom: 50px;
 }
+.container-small {
+  width: 85%;
+  height: auto;
+  margin: 100px auto;
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -49,19 +55,25 @@ body {
     padding-right: 2px; }
 }
 
+
+
 a {
   color: inherit;
 }
 
+.icon-20 {
+  width: 30px;
+  height: 30px;
+}
 .icon {
   width: 30px;
   height: 30px;
 }
-.icon-md {
+.icon-40 {
   width: 40px;
   height: 40px;
 }
-.icon-lg {
+.icon-free {
   width: auto;
   height: auto;
 }
@@ -74,6 +86,7 @@ a {
   position: absolute;
   top: -9999px;
 }
+.relative { position: relative }
 
 
 /* Proportion */
@@ -85,6 +98,7 @@ a {
   &-min-110 { min-width: 110px; }
   &-min-120 { min-width: 120px; }
   &-min-150 { min-width: 150px; }
+  &-min-175 { min-width: 175px; }
   &-min-200 { min-width: 200px; }
   &-min-250 { min-width: 250px; }
   &-min-270 { min-width: 270px; }
@@ -104,6 +118,7 @@ a {
     &-min-110 { min-width: 90px; }
     &-min-120 { min-width: 100px; }
     &-min-150 { min-width: 130px; }
+    &-min-175 { min-width: 155px; }
     &-min-200 { min-width: 180px; }
     &-min-250 { min-width: 230px; }
     &-min-270 { min-width: 250px; }
@@ -141,6 +156,8 @@ a {
 .margin-15 { margin: 15px }
 .margin-20 { margin: 20px }
 .margin-30 { margin: 30px }
+.margin-40 { margin: 40px }
+.margin-50 { margin: 50px }
 
 .margin-left-5  { margin-left: 5px }
 .margin-left-10 { margin-left: 10px }
@@ -153,6 +170,8 @@ a {
 .margin-right-15 { margin-right: 15px }
 .margin-right-20 { margin-right: 20px }
 .margin-right-30 { margin-right: 30px }
+.margin-right-40 { margin-right: 40px }
+.margin-right-50 { margin-right: 50px }
 
 .margin-top-5  { margin-top: 5px }
 .margin-top-10 { margin-top: 10px }
@@ -204,6 +223,10 @@ a {
 
 .flex {
   display: flex;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 .flex-column {
   flex-direction: column;
@@ -307,6 +330,34 @@ a {
 .font-0-1 { font-size: 0.1rem; }
 
 
+/* Border */
+
+.border-1 { border: 1px solid $border-color-RGB; }
+.border-2 { border: 2px solid $border-color-RGB; }
+.border-3 { border: 3px solid $border-color-RGB; }
+.border-4 { border: 4px solid $border-color-RGB; }
+.border-5 { border: 5px solid $border-color-RGB; }
+
+.radius-1 { border-radius: 1px; }
+.radius-2 { border-radius: 2px; }
+.radius-3 { border-radius: 3px; }
+.radius-4 { border-radius: 4px; }
+.radius-5 { border-radius: 5px; }
 
 
+/* Animation */
 
+i[class^="s7-angle"] {
+  transition: .2s;
+}
+i[class^="s7-angle"]:hover {
+  transition: .2s;
+}
+.s7-angle-left:hover { transform: translateX(-10px) }
+.s7-angle-right:hover { transform: translateX(10px) }
+
+.onHover-left-5:hover { transform: translateX(-5px) }
+.onHover-right-5:hover { transform: translateX(5px) }
+
+.onHover-left-1:hover { transform: translateX(-1px) }
+.onHover-right-1:hover { transform: translateX(1px) }

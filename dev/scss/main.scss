@@ -1,12 +1,9 @@
 @import "../../node_modules/normalize-scss/sass/normalize";
+@import "var";
 @import "global";
 @import "mixins";
 
-$header-height: 80px;
-$header-color: #314257;
-$userNav-width: 100%/5;
 
-$cell-base-color: #f4f4f4 + 10;
 
 /* ========= HEADER ========= */
 
@@ -212,7 +209,7 @@ $cell-base-color: #f4f4f4 + 10;
   @include max-height($h: 90%);
   background-size: contain;
 }
-.cell__icon { position: absolute; top: 3px; left: 3px }
+.cell__moreHolder, .cell__icon { position: absolute; top: 3px; left: 3px }
 
 @media ( max-width: 1135px ) {
   .content__cellDouble {
@@ -247,5 +244,30 @@ $cell-base-color: #f4f4f4 + 10;
   }
 
 }
+
+
+/* ======== OТУ ARTICLE ====== */
+
+.l-article__infoHolder { margin: 50px auto 80px }
+.l-article__infoImage { @extend .margin-right-50; }
+.close__icon { position: absolute; right: 5px; top: 4px; color: $border-color; font-weight: 800 }
+
+.article__iconLike {  }
+.article__likesCount { @extend .margin-left-15; @extend .radius-2; color: #515151; font-size: large; font-weight: 600; background-color: $border-color-RGB; }
+
+.article__sectionName { padding: 15px 0 0; font-size: 1.3rem; }
+
+.article__goodsName { margin: 15px 0 }
+
+
+.article__button { @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2; }
+.article__buttonDetails { @extend .border-1; }
+.article__buttonToCart { background-color: $green-color; font-weight: 600; }
+.toCart__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
+.amount__holder { @extend .border-1; @extend .padding-5; }
+
+.l-article__moreHolder { padding: 30px 0; border-top: 2px solid $border-color-RGB; }
+
+
 
 
