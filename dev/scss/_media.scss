@@ -1,0 +1,70 @@
+$cell-width: 250px;
+$break-lg: $cell-width * 5 + 15px; /* 1265px; Максимальная ширина секции плитки * 5 + 15px для запаса */
+$break-md: $cell-width * 4 + 15px; /* 1015; Максимальная ширина секции плитки * 4 + 15px для запаса */
+$break-sm: $cell-width * 3 + 15px; /* 765; Максимальная ширина секции плитки * 3 + 15px для запаса */
+$break-xs: $cell-width * 2 + 15px; /* 515; Максимальная ширина секции плитки * 2 + 15px для запаса */
+
+@mixin media ( $p ) {
+  @media screen and (max-width: $p) {
+    @content
+  }
+}
+
+.wrapper {
+
+  @include media( $p: $break-lg ) {
+    width: 1010px; /* Сбрасываем до 4 блоков */
+  }
+  @include media( $p: $break-md ) {
+    width: 760px; /* Сбрасываем до 3 блоков */
+  }
+  @include media( $p: $break-sm ) {
+    width: 510px; /* Сбрасываем до 2 блоков */
+  }
+  @include media( $p: $break-xs ) {
+    width: 310px; /* Сбрасываем до 1 блоков */
+  }
+}
+
+
+@media ( max-width: $break-sm ) {  /* Пошаманили с header */
+  .l-header__holder { flex-direction: column; padding-right: 7px }
+  .l-header__logo { padding-left: 3px; }
+  .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
+  .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
+}
+@media ( max-width: $break-xs ) { /* Пошаманили с header */
+  .l-header__wrapper { flex-direction: column; align-items: center; padding-top: 5px; }
+  .l-header__logo,
+  .l-header__holder { width: 100%; align-items: center; }
+  .l-header__search { justify-content: center; }
+  .l-header__userHolder { justify-content: baseline; }
+}
+
+.header__section {
+  @include media( $p: $break-lg ) {
+    margin: 5px 6px; /* Увеличим margin по бокам, чтобы не обрезались секции */
+  }
+  @include media( $p: $break-md ) {
+    margin: 5px 10px; /* Ещё увеличим */
+  }
+  @include media( $p: $break-sm ) {
+    margin: 5px; /* И вернём его обратно :D */
+  }
+}
+
+@media ( max-width: $break-xs ) {
+  .s7-angle-left { margin: 0 } /* Уберём margin — и без того тесно */
+  .s7-angle-right { margin: 0 } /* Уберём margin — и без того тесно */
+}
+
+.relation-min-250 {
+  @include media( $p: $break-xs ) {
+    width: 300px; /* Увеличим один блок */
+  }
+}
+.content__cellDouble {
+  @include media( $p: $break-lg ) {
+    display: none; /* Уберём двойной блок, чтобы не ломал всё нафиг */
+  }
+}

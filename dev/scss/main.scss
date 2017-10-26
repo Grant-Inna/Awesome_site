@@ -110,14 +110,11 @@
 
 
 .section {}
-.section__name {
-  font-variant: all-small-caps;
-}
-.section__image {
+.section__name { font-variant: all-small-caps; }
+.section__image {}
 
-}
-
-
+.s7-angle-left { @extend .margin-right-15; display: flex; justify-content: flex-end; }
+.s7-angle-right { @extend .margin-left-15 }
 
 /* ============ CONTENT ============ */
 
@@ -211,39 +208,6 @@
 }
 .cell__moreHolder, .cell__icon { position: absolute; top: 3px; left: 3px }
 
-@media ( max-width: 1135px ) {
-  .content__cellDouble {
-    display: none;
-  }
-}
-@media ( max-width: 680px ) {
-  .l-header__holder { flex-direction: column; padding-right: 7px }
-  .l-header__logo { padding-left: 3px; }
-  .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
-  .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
-}
-@media ( max-width: 490px ) {
-
-}
-@media ( max-width: 365px ) {
-  .l-header__wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5px;
-  }
-  .l-header__logo,
-  .l-header__holder {
-    width: 100%;
-    align-items: center;
-  }
-  .l-header__search {
-    justify-content: center;
-  }
-  .l-header__userHolder {
-    justify-content: baseline;
-  }
-
-}
 
 
 /* ======== OТУ ARTICLE ====== */
@@ -271,3 +235,6 @@
 
 
 
+
+
+@import 'media';

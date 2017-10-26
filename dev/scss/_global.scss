@@ -30,30 +30,12 @@ body {
 }
 
 .wrapper {
-  width: 90%;
+  width: 1260px; /* Должно умещаться ровно 5 балов + 10px про запас*/
   margin: 0 auto;
   transition: .4s;
 }
-@media screen and (max-width: 1100px) {
-  .wrapper { width: 92%; }
-}
-@media screen and (max-width: 960px) {
-  .wrapper { width: 94%; }
-}
-@media screen and (max-width: 768px) {
-  .wrapper { width: 96%; }
-}
-@media screen and (max-width: 600px) {
-  .wrapper { width: 97%; }
-}
-@media screen and (max-width: 678px) {
-  .wrapper { width: 98%; }
-}
-@media screen and (max-width: 480px) {
-  .wrapper { width: 100%;
-    padding-left: 2px;
-    padding-right: 2px; }
-}
+
+
 
 
 
@@ -104,35 +86,20 @@ a {
   &-min-270 { min-width: 270px; }
   &-min-500 { min-width: 500px; }
 }
-@media (max-width: 535px) {
-  .relation-min-250 {
-    min-width: 300px
-  }
-}
-@media ( max-width: 365px ) {
-  .relation {
-    position: relative;
-    &-min-70 { min-width: 50px; }
-    &-min-50 { min-width: 30px; }
-    &-min-90 { min-width: 70px; }
-    &-min-110 { min-width: 90px; }
-    &-min-120 { min-width: 100px; }
-    &-min-150 { min-width: 130px; }
-    &-min-175 { min-width: 155px; }
-    &-min-200 { min-width: 180px; }
-    &-min-250 { min-width: 230px; }
-    &-min-270 { min-width: 250px; }
-    &-min-500 { min-width: 480px; }
-  }
-}
+
 .relation__ratio {
   height: 0;
   &-1x1 { padding-top: 100%}
   &-2x1 { padding-top: 50%} /* Разделить на первое, умножить на второе*/
   &-4x3 { padding-top: 75%;}
+  &-3x4 { padding-top: 133.33%;}
   &-6x5 { padding-top: 83.33%;}
   &-8x7 { padding-top: 87.5%;}
   &-7x8 { padding-top: 114%;}
+  &-8x9 { padding-top: 112.5%;}
+  &-9x10 { padding-top: 111.11%;}
+  &-10x11 { padding-top: 110%;}
+  &-11x12 { padding-top: 109.09%;}
   &-16x9 { padding-top: 56.25%;}
 }
 .relation__content {
