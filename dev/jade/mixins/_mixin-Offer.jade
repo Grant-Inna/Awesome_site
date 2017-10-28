@@ -1,0 +1,13 @@
+mixin offer-section ( size, name, img, exhib, rating, cost )
+    a( href="one-article-page.html" ).l-content__cell.navigation__section( class=" relation-min-#{ +size + 50 } " )
+        .relation( class="relation-min-#{ size } " )
+            .relation__ratio.relation__ratio-1x1
+            .relation__content.flex-center
+                img.max-width-60.navigation__sectionImage( src="img/icons/#{ img + '.' + exhib }" )
+        .navigation__sectionName
+            .navigation__sectionNameText.txt-center #{ name }
+        .navigation__offerRating.flex-center
+            include ../mixins/_mixin-ratingStars
+            +article-rating( rating )
+        .navigation__offerCost.flex-center
+            h3 #{cost}

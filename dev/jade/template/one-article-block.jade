@@ -4,7 +4,7 @@
         main.l-article__infoHolder.justify-center
             .l-article__infoImage
                 include ../mixins/_mixin-articleImage
-                +article-image( 'sticker1', 'png' )
+                +article-image( '200', 'sticker1', 'png' )
             .l-article__infoMeta.flex-column
                 .l-acticle__rating.justify-start
                     img( src="img/icons-common/like.svg" ).icon.article__iconLike
@@ -17,7 +17,7 @@
                 h2.article__cost 100500 мемасиков
                 .l-article__actionButtons.items-start.flex-column
                     .article__buttonDetails.items-center
-                        a.article__button Подробнее
+                        a( href="one-article-page.html" ).article__button Подробнее
                     .l-article__toCart.flex
                         a.article__button.article__buttonToCart.items-center.margin-right-5
                             i.s7-cart.toCart__icon

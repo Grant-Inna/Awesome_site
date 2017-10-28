@@ -80,7 +80,7 @@ var tasksCSS = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS'];
 
 var tasksJade = ['jade_pages', 'watch_jade'];
 
-var tasksAll = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS', 'jade_pages', 'watch_jade'];
+var tasksAll = ['CSS', 'minCSS', 'watch_min', 'watch_CSS', 'jade_pages', 'watch_jade'];
 
 // Main tasks
 

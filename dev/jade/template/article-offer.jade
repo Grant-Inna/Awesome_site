@@ -1,0 +1,15 @@
+.container
+    .wrapper
+        aside.l-article__offer
+            h3.margin-left-50 C этим товаром так же покупают
+            .navigation__slider.flex-center
+                i.s7-angle-left.font-4.icon-40
+                .l-navigation__sliderWrapper.items-center.justify-start
+                    .l-navigation__sectionBlock
+                        .l-navigation__sections.justify-start
+                            include ../mixins/_mixin-Offer
+                            +offer-section( '100', 'Книжки', 'books', 'svg', '3', '261 руб' )
+                            +offer-section( '100', 'Камеры', 'cameras', 'svg', '4', '26 руб' )
+                            +offer-section( '100', 'Игрушки', 'puppet', 'svg', '5', '61 руб' )
+                            +offer-section( '100', 'Часы', 'clock', 'svg', '1', '921 руб' )
+                i.s7-angle-right.font-4.margin-left-15.icon-40

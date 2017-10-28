@@ -65,7 +65,7 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
   .l-header__userHolder { justify-content: baseline; }
 }
 
-.header__section {
+.navigation__section {
   @include media( $p: $break-lg ) {
     margin: 5px 6px; /* Увеличим margin по бокам, чтобы не обрезались секции */
   }
@@ -75,6 +75,10 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
   @include media( $p: $break-sm ) {
     margin: 5px; /* И вернём его обратно :D */
   }
+}
+
+@media ( max-width: $break-md + 20px  ) {
+
 }
 
 @media ( max-width: $break-xs ) {
@@ -100,6 +104,14 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
 .relation-min-200-special-xs {
   @include media( $p: $sm-break-sm + 80 ) {
     width: 220px; /* Конкретно этот блок увеличим на меньшее количество */
+  }
+}
+.relation-min-150 {
+  @include media( $p: $break-md ) {
+    width: 200px; /* Сделаем блок крупнее, чтобы ровно вставало */
+  }
+  @include media( $p: $break-xs ) {
+    width: 220px; /* Сделаем блок крупнее, чтобы ровно вставало */
   }
 }
 
