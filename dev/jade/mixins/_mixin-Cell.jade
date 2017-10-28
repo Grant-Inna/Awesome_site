@@ -1,8 +1,8 @@
 mixin cell ( size, img, exhib )
-    .l-content__cell
+    .l-content__cell.relative
+        i.icon-20.cell__icon.like__icon
         div( class= "relation relation-min-#{ size }" )
             .relation__ratio.relation__ratio-11x12
             .relation__content.flex-center
                 a( href="one-article.html" ).content__cellLink.flex-center
                     img.content__cellImage( src="img/sections/#{ img + '.' + exhib }" )
-                    i.icon.s7-star.font-1-3.cell__icon

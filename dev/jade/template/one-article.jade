@@ -1,40 +1,41 @@
-.container-small.border-1.radius-3.relative
-    .wrapper.flex-column
+.container
+    .wrapper-small.flex-column.relative.border-1.radius-3
         a.icon-free.s7-close.font-1-5.close__icon
-        main.l-article__infoHolder.flex
+        main.l-article__infoHolder.justify-center
             .l-article__infoImage
                 include ../mixins/_mixin-articleImage
                 +article-image( 'sticker1', 'png' )
             .l-article__infoMeta.flex-column
                 .l-acticle__rating.justify-start
                     img( src="img/icons-common/like.svg" ).icon.article__iconLike
-                    .icon-20.article__likesCount.flex-center 4
+                    .icon.article__likesCount.flex-center 4
                 .article__sectionName Ну фиг знает, что это
                 h1.article__goodsName Может хомяк, а может и голубь
                 .l-article__averageRating.items-center
                     include ../mixins/_mixin-ratingStars
                     +article-rating( '4' )
                 h2.article__cost 100500 мемасиков
-                .l-article__actionButtons.items-center
-                    a.article__button.article__buttonDetails Подробнее
-                    .l-article__amount.flex-center
-                        i.s7-angle-left.font-2.onHover-left-1
-                        .amount__holder.flex-center 2
-                        i.s7-angle-right.font-2.onHover-right-1
-                    a.article__button.article__buttonToCart.items-center
-                        i.s7-cart.toCart__icon
-                        span.buttonToCart__text Добавить в корзину
-        aside.l-article__moreHolder
-            .wrapper.flex-wrap.justify-center
+                .l-article__actionButtons.items-start.flex-column
+                    .article__buttonDetails.items-center
+                        a.article__button Подробнее
+                    .l-article__toCart.flex
+                        a.article__button.article__buttonToCart.items-center.margin-right-5
+                            i.s7-cart.toCart__icon
+                            span.buttonToCart__text Добавить в корзину
+                        .l-article__amount.flex-center
+                            i.s7-angle-left.font-2.onHover-left-1
+                            input( type="text", palceholder="2" ).amount__holder.flex-center.icon
+                            i.s7-angle-right.font-2.onHover-right-1
+        .container.flex-wrap.justify-center.border-top2
                 include ../mixins/_mixin-moreCell
-                +cell-for-more( '175', '5', 'png', '3746' )
-                +cell-for-more( '175', 'sticker1', 'png', '30' )
-                +cell-for-more( '175', '1', 'png', '26' )
-                +cell-for-more( '175', 'kry', 'png', '91' )
-                +cell-for-more( '175', 'kry', 'png', '31' )
-                +cell-for-more( '175', 'sticker1', 'png', '51' )
-                +cell-for-more( '175', 'sticker1', 'png', '103' )
-                +cell-for-more( '175', '7', 'png', '27' )
+                +cell-for-more( '200', '5', 'png', '3746' )
+                +cell-for-more( '200', 'sticker1', 'png', '30' )
+                +cell-for-more( '200', '1', 'png', '26' )
+                +cell-for-more( '200', 'kry', 'png', '91' )
+                +cell-for-more( '200', 'kry', 'png', '31' )
+                +cell-for-more( '200', 'sticker1', 'png', '51' )
+                +cell-for-more( '200', 'sticker1', 'png', '103' )
+                +cell-for-more( '200', '7', 'png', '27' )
 
 
 

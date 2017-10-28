@@ -1,8 +1,15 @@
 $cell-width: 250px;
-$break-lg: $cell-width * 5 + 15px; /* 1265px; Максимальная ширина секции плитки * 5 + 15px для запаса */
-$break-md: $cell-width * 4 + 15px; /* 1015; Максимальная ширина секции плитки * 4 + 15px для запаса */
-$break-sm: $cell-width * 3 + 15px; /* 765; Максимальная ширина секции плитки * 3 + 15px для запаса */
-$break-xs: $cell-width * 2 + 15px; /* 515; Максимальная ширина секции плитки * 2 + 15px для запаса */
+$break-lg: $cell-width * 5 + 15px; /* 1265px; РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё РїР»РёС‚РєРё * 5 + 15px РґР»СЏ Р·Р°РїР°СЃР° */
+$break-md: $cell-width * 4 + 15px; /* 1015; РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё РїР»РёС‚РєРё * 4 + 15px РґР»СЏ Р·Р°РїР°СЃР° */
+$break-sm: $cell-width * 3 + 15px; /* 765; РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё РїР»РёС‚РєРё * 3 + 15px РґР»СЏ Р·Р°РїР°СЃР° */
+$break-xs: $cell-width * 2 + 15px; /* 515; РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё РїР»РёС‚РєРё * 2 + 15px РґР»СЏ Р·Р°РїР°СЃР° */
+
+
+$sm-cell-width: 200px;
+$sm-break-lg: $sm-cell-width * 4 + 15px; /* 815 */
+$sm-break-md: $sm-cell-width * 3 + 15px; /* 615 */
+$sm-break-sm: $sm-cell-width * 2 + 15px; /* 415 */
+$sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
 
 @mixin media ( $p ) {
   @media screen and (max-width: $p) {
@@ -12,28 +19,45 @@ $break-xs: $cell-width * 2 + 15px; /* 515; Максимальная ширина секции плитки * 2
 
 .wrapper {
 
-  @include media( $p: $break-lg ) {
-    width: 1010px; /* Сбрасываем до 4 блоков */
+  @include media( $p: $break-lg + 20px ) {
+    width: 1010px; /* РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 4 Р±Р»РѕРєРѕРІ */
   }
-  @include media( $p: $break-md ) {
-    width: 760px; /* Сбрасываем до 3 блоков */
+  @include media( $p: $break-md + 20px ) {
+    width: 760px; /* РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 3 Р±Р»РѕРєРѕРІ */
   }
-  @include media( $p: $break-sm ) {
-    width: 510px; /* Сбрасываем до 2 блоков */
+  @include media( $p: $break-sm + 20px ) {
+    width: 510px; /* РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 2 Р±Р»РѕРєРѕРІ */
   }
-  @include media( $p: $break-xs ) {
-    width: 310px; /* Сбрасываем до 1 блоков */
+  @include media( $p: $break-xs + 20px ) {
+    width: 310px; /* РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 1 Р±Р»РѕРєРѕРІ */
+  }
+}
+
+.wrapper-small {
+  width: $sm-break-lg + 60;
+  margin: 100px auto;
+  padding: 20px 30px;
+  transition: .2s;
+  @include media( $p: $sm-break-lg + 80 ) { /* 895 */
+    width: $sm-break-md + 60; /* 675. РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 3 Р±Р»РѕРєРѕРІ */
+  }
+  @include media( $p: $sm-break-md + 80 ) {
+    width: $sm-break-sm + 60; /* 410. РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 2 Р±Р»РѕРєРѕРІ */
+  }
+  @include media( $p: $sm-break-sm + 80 ) {
+    width: 300px; /* РЎР±СЂР°СЃС‹РІР°РµРј РґРѕ 1 Р±Р»РѕРєР° СЃ Р·Р°РїР°СЃРёРєРѕРј */
+    padding: 10px 10px;
   }
 }
 
 
-@media ( max-width: $break-sm ) {  /* Пошаманили с header */
+@media ( max-width: $break-sm ) {  /* РџРѕС€Р°РјР°РЅРёР»Рё СЃ header */
   .l-header__holder { flex-direction: column; padding-right: 7px }
   .l-header__logo { padding-left: 3px; }
   .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
   .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
 }
-@media ( max-width: $break-xs ) { /* Пошаманили с header */
+@media ( max-width: $break-xs ) { /* РџРѕС€Р°РјР°РЅРёР»Рё СЃ header */
   .l-header__wrapper { flex-direction: column; align-items: center; padding-top: 5px; }
   .l-header__logo,
   .l-header__holder { width: 100%; align-items: center; }
@@ -43,28 +67,61 @@ $break-xs: $cell-width * 2 + 15px; /* 515; Максимальная ширина секции плитки * 2
 
 .header__section {
   @include media( $p: $break-lg ) {
-    margin: 5px 6px; /* Увеличим margin по бокам, чтобы не обрезались секции */
+    margin: 5px 6px; /* РЈРІРµР»РёС‡РёРј margin РїРѕ Р±РѕРєР°Рј, С‡С‚РѕР±С‹ РЅРµ РѕР±СЂРµР·Р°Р»РёСЃСЊ СЃРµРєС†РёРё */
   }
   @include media( $p: $break-md ) {
-    margin: 5px 10px; /* Ещё увеличим */
+    margin: 5px 11px; /* Р•С‰С‘ СѓРІРµР»РёС‡РёРј */
   }
   @include media( $p: $break-sm ) {
-    margin: 5px; /* И вернём его обратно :D */
+    margin: 5px; /* Р РІРµСЂРЅС‘Рј РµРіРѕ РѕР±СЂР°С‚РЅРѕ :D */
   }
 }
 
 @media ( max-width: $break-xs ) {
-  .s7-angle-left { margin: 0 } /* Уберём margin — и без того тесно */
-  .s7-angle-right { margin: 0 } /* Уберём margin — и без того тесно */
+  .s7-angle-left { margin: 0 } /* РЈР±РµСЂС‘Рј margin вЂ” Рё Р±РµР· С‚РѕРіРѕ С‚РµСЃРЅРѕ */
+  .s7-angle-right { margin: 0 } /* РЈР±РµСЂС‘Рј margin вЂ” Рё Р±РµР· С‚РѕРіРѕ С‚РµСЃРЅРѕ */
+  .l-article__infoImage {
+    .s7-angle-left, .s7-angle-right { width: 20px }
+  }
+  .article__buttonToCart { height: 45px  }
 }
 
 .relation-min-250 {
   @include media( $p: $break-xs ) {
-    width: 300px; /* Увеличим один блок */
+    width: 300px; /* РЈРІРµР»РёС‡РёРј РѕРґРёРЅ Р±Р»РѕРє */
   }
 }
+
+.relation-min-200 {
+  @include media( $p: $sm-break-sm + 80 ) {
+    width: 260px; /* РЈРІРµР»РёС‡РёРј РѕРґРёРЅ Р±Р»РѕРє РІ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ РјРµРЅСЊС€РёС… breakpoint'РѕРІ */
+  }
+}
+.relation-min-200-special-xs {
+  @include media( $p: $sm-break-sm + 80 ) {
+    width: 220px; /* РљРѕРЅРєСЂРµС‚РЅРѕ СЌС‚РѕС‚ Р±Р»РѕРє СѓРІРµР»РёС‡РёРј РЅР° РјРµРЅСЊС€РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ */
+  }
+}
+
 .content__cellDouble {
   @include media( $p: $break-lg ) {
-    display: none; /* Уберём двойной блок, чтобы не ломал всё нафиг */
+    display: none; /* РЈР±РµСЂС‘Рј РґРІРѕР№РЅРѕР№ Р±Р»РѕРє, С‡С‚РѕР±С‹ РЅРµ Р»РѕРјР°Р» РІСЃС‘ РЅР°С„РёРі */
+  }
+}
+
+.l-article__infoHolder {
+  @include media( $p: $sm-break-lg ) {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto 70px;
+  }
+}
+
+@include media( $p: $break-md ) {
+  .l-article__infoImage {
+    margin: 0 auto;
+  }
+  .article__buttons {
+
   }
 }
