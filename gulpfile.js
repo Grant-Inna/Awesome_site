@@ -7,6 +7,7 @@ var gulp = require( 'gulp' ),
     imagemin = require('gulp-imagemin'),
     sass = require("gulp-sass"),
     jade = require( 'gulp-jade' ),
+    jsmin = require('gulp-jsmin'),
     concat = require('gulp-concat');
 
 
@@ -21,6 +22,19 @@ gulp.task('compress', function() {
     return gulp.src( imdArr )
         .pipe(imagemin())
         .pipe(gulp.dest('app/img/'));
+});
+
+
+// JavaScript ______________________________________________________________
+
+gulp.task('minJS', function(){
+    return gulp.src( 'dev/js/*.js' )
+        .pipe(jsmin())
+        .pipe(gulp.dest('app/js/'));
+});
+
+gulp.task('watch_js', function() {
+    gulp.watch('dev/js/*.js', ['minJS'])
 });
 
 
@@ -80,6 +94,8 @@ var tasksCSS = ['compress', 'CSS', 'minCSS', 'watch_min', 'watch_CSS'];
 
 var tasksJade = ['jade_pages', 'watch_jade'];
 
+var tasksJS = [ 'minJS', 'watch_js'];
+
 var tasksAll = ['CSS', 'minCSS', 'watch_min', 'watch_CSS', 'jade_pages', 'watch_jade'];
 
 // Main tasks
@@ -87,3 +103,4 @@ var tasksAll = ['CSS', 'minCSS', 'watch_min', 'watch_CSS', 'jade_pages', 'watch_
 gulp.task('default', tasksAll);
 gulp.task('css', tasksCSS);
 gulp.task('jade', tasksJade);
+gulp.task('js', tasksJS);

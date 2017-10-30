@@ -900,6 +900,9 @@ input.header__searchInput {
   left: 4px; }
 
 .like__icon {
+  background: url("../img/icons-common/like-disabled.svg") center no-repeat; }
+
+.like__icon-active {
   background: url("../img/icons-common/like.svg") center no-repeat; }
 
 /* ======== ONE ARTICLE ====== */

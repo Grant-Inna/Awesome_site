@@ -1,6 +1,6 @@
-mixin cell ( size, img, exhib )
+mixin cell ( size, img, exhib, active )
     .l-content__cell.relative
-        i.icon-20.cell__icon.like__icon
+        i.like__icon.cell__icon.icon-20( class="#{ active }" )
         div( class= "relation relation-min-#{ size }" )
             .relation__ratio.relation__ratio-11x12
             .relation__content.flex-center
