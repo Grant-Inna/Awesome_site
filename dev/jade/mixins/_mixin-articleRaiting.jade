@@ -1,0 +1,7 @@
+mixin article-raiting ( key, value )
+    .l-article__oneChar.items-center.margin-bottom-5.justify-between
+        .article__oneKey.article__oneKey-small #{ key }
+        .article__oneValueProgress.justify-start
+            .article__progress( class="width-#{ value }" )
+        .article__oneValue.article__oneValue-small #{ value }%
+

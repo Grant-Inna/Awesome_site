@@ -1,0 +1,11 @@
+.container
+    .wrapper
+        .l-article__raiting
+            h3.article__infoBlocksCaption.margin-left-50 Рейтинг товара
+            .l-article__ratingInfo
+                include ../mixins/_mixin-articleRaiting
+                +article-raiting( '5 звёзд',  '90' )
+                +article-raiting( '4 звезды', '40' )
+                +article-raiting( '3 звезды', '10' )
+                +article-raiting( '2 звезды', '2' )
+                +article-raiting( '1 звезда', '5' )

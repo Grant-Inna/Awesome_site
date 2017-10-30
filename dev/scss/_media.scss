@@ -17,6 +17,20 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
   }
 }
 
+body, html, .container, .navigation__slider {
+  @include media( $p: 320px ) {
+    max-width: 320px;
+  }
+}
+@media ( max-width: 320px ) {
+  .navigation__slider {
+    overflow-x: hidden;
+    .s7-angle-left:hover { transform: translateX(-5px) }
+    .s7-angle-right:hover { transform: translateX(5px) }
+
+  }
+}
+
 .wrapper {
 
   @include media( $p: $break-lg + 20px ) {
@@ -138,8 +152,15 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
   }
 }
 
-.l-article__charInfo {
+.l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
+  @include media( $p: $break-md ) {
+    margin-left: 70px;
+  }
+  @include media( $p: $break-sm ) {
+    margin-left: 50px;
+  }
   @include media( $p: $break-xs ) {
-    margin-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

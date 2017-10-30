@@ -41,6 +41,10 @@ body {
 a {
   color: inherit; }
 
+.icon-15 {
+  width: 15px;
+  height: 15px; }
+
 .icon-20 {
   width: 20px;
   height: 20px; }
@@ -164,6 +168,63 @@ a {
 .max-width-90 {
   max-width: 90%; }
 
+.width-2 {
+  width: 2%; }
+
+.width-5 {
+  width: 5%; }
+
+.width-10 {
+  width: 10%; }
+
+.width-20 {
+  width: 20%; }
+
+.width-25 {
+  width: 25%; }
+
+.width-30 {
+  width: 30%; }
+
+.width-35 {
+  width: 35%; }
+
+.width-40 {
+  width: 40%; }
+
+.width-45 {
+  width: 45%; }
+
+.width-50 {
+  width: 50%; }
+
+.width-55 {
+  width: 55%; }
+
+.width-60 {
+  width: 60%; }
+
+.width-65 {
+  width: 65%; }
+
+.width-70 {
+  width: 70%; }
+
+.width-75 {
+  width: 75%; }
+
+.width-80 {
+  width: 80%; }
+
+.width-85 {
+  width: 85%; }
+
+.width-90 {
+  width: 90%; }
+
+.width-95 {
+  width: 95%; }
+
 /* Margin */
 .margin-center {
   margin: 0 auto; }
@@ -198,13 +259,22 @@ a {
 .margin-50 {
   margin: 50px; }
 
+.margin-left-1 {
+  margin-left: 1px; }
+
+.margin-left-2 {
+  margin-left: 2px; }
+
+.margin-left-3 {
+  margin-left: 3px; }
+
 .margin-left-5 {
   margin-left: 5px; }
 
-.margin-left-10 {
+.margin-left-10, .article__likesCount {
   margin-left: 10px; }
 
-.margin-left-15, .article__likesCount {
+.margin-left-15 {
   margin-left: 15px; }
 
 .margin-left-20 {
@@ -231,8 +301,17 @@ a {
 .margin-left-90 {
   margin-left: 90px; }
 
-.margin-left-100, .l-article__charInfo {
+.margin-left-100, .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
   margin-left: 100px; }
+
+.margin-right-1 {
+  margin-right: 1px; }
+
+.margin-right-2, .rating__oneStar {
+  margin-right: 2px; }
+
+.margin-right-3, .article__likesCount {
+  margin-right: 3px; }
 
 .margin-right-5 {
   margin-right: 5px; }
@@ -290,6 +369,12 @@ a {
 
 .margin-bottom-30 {
   margin-bottom: 30px; }
+
+.margin-bottom-40 {
+  margin-bottom: 40px; }
+
+.margin-bottom-50 {
+  margin-bottom: 50px; }
 
 /* Padding */
 .padding-1 {
@@ -581,7 +666,7 @@ a {
   font-size: 0.1rem; }
 
 /* Border */
-.border-1, .article__button, .amount__holder {
+.border-1, .article__button, .amount__holder, .article__oneValueProgress {
   border: 1px solid rgba(5, 32, 51, 0.2); }
 
 .border-2 {
@@ -611,7 +696,7 @@ a {
 .border-top5 {
   border-top: 5px solid rgba(5, 32, 51, 0.2); }
 
-.radius-1 {
+.radius-1, .article__oneValueProgress {
   border-radius: 1px; }
 
 .radius-2, .article__likesCount, .article__button {
@@ -974,10 +1059,31 @@ input.header__searchInput {
   width: 100%; }
 
 .l-article__oneChar {
-  width: 300px; }
+  width: 310px; }
 
 .article__oneKey {
-  font-weight: 600; }
+  font-weight: 700;
+  width: 150px; }
+
+.article__oneKey-small {
+  width: 70px; }
+
+.article__oneValue-small {
+  width: 30px; }
+
+.article__oneValueProgress {
+  height: 20px;
+  width: 165px; }
+
+.article__progress {
+  height: 100%;
+  background-color: #aaaa00; }
+
+.l-article__commentsInfo {
+  width: 500px; }
+
+.article__commentTitle, .article__commentUserName {
+  font-weight: 700; }
 
 /* 1265px; Максимальная ширина секции плитки * 5 + 15px для запаса */
 /* 1015; Максимальная ширина секции плитки * 4 + 15px для запаса */
@@ -987,6 +1093,22 @@ input.header__searchInput {
 /* 615 */
 /* 415 */
 /* 215 */
+@media screen and (max-width: 320px) {
+  body, html, .container, .navigation__slider {
+    max-width: 320px; } }
+
+@media (max-width: 320px) {
+  .navigation__slider {
+    overflow-x: hidden; }
+    .navigation__slider .s7-angle-left:hover {
+      -webkit-transform: translateX(-5px);
+          -ms-transform: translateX(-5px);
+              transform: translateX(-5px); }
+    .navigation__slider .s7-angle-right:hover {
+      -webkit-transform: translateX(5px);
+          -ms-transform: translateX(5px);
+              transform: translateX(5px); } }
+
 @media screen and (max-width: 1285px) {
   .wrapper {
     width: 1010px;
@@ -1144,6 +1266,15 @@ input.header__searchInput {
   .l-article__infoImage {
     margin: 0 auto; } }
 
+@media screen and (max-width: 1015px) {
+  .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
+    margin-left: 70px; } }
+
+@media screen and (max-width: 765px) {
+  .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
+    margin-left: 50px; } }
+
 @media screen and (max-width: 515px) {
-  .l-article__charInfo {
-    margin-left: 10px; } }
+  .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
+    margin-left: 0;
+    margin-right: 0; } }
