@@ -137,3 +137,9 @@ $sm-break-xs: $sm-cell-width * 1 + 15px; /* 215 */
 
   }
 }
+
+.l-article__charInfo {
+  @include media( $p: $break-xs ) {
+    margin-left: 10px;
+  }
+}

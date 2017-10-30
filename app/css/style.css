@@ -222,6 +222,18 @@ a {
 .margin-left-60 {
   margin-left: 60px; }
 
+.margin-left-70 {
+  margin-left: 70px; }
+
+.margin-left-80 {
+  margin-left: 80px; }
+
+.margin-left-90 {
+  margin-left: 90px; }
+
+.margin-left-100, .l-article__charInfo {
+  margin-left: 100px; }
+
 .margin-right-5 {
   margin-right: 5px; }
 
@@ -958,6 +970,15 @@ input.header__searchInput {
 .navigation__offerRating {
   margin-top: 15px; }
 
+.l-article__char {
+  width: 100%; }
+
+.l-article__oneChar {
+  width: 300px; }
+
+.article__oneKey {
+  font-weight: 600; }
+
 /* 1265px; Максимальная ширина секции плитки * 5 + 15px для запаса */
 /* 1015; Максимальная ширина секции плитки * 4 + 15px для запаса */
 /* 765; Максимальная ширина секции плитки * 3 + 15px для запаса */
@@ -1122,3 +1143,7 @@ input.header__searchInput {
 @media screen and (max-width: 1015px) {
   .l-article__infoImage {
     margin: 0 auto; } }
+
+@media screen and (max-width: 515px) {
+  .l-article__charInfo {
+    margin-left: 10px; } }

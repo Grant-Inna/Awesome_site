@@ -240,6 +240,11 @@
 .navigation__section { text-decoration: none; }
 .navigation__offerRating { margin-top: 15px; }
 
+.l-article__char { @include width( $w: 100%)}
+.l-article__charInfo { @extend .margin-left-100; }
+.l-article__oneChar { @include width( $w: 300px) }
+.article__oneKey { font-weight: 600 }
+
 
 
 @import 'media';
