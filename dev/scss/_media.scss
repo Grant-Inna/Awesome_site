@@ -1,8 +1,11 @@
-$cell-width: 250px;
-$break-lg: $cell-width * 5 + 15px; /* 1265px; Максимальная ширина секции плитки * 5 + 15px для запаса */
-$break-md: $cell-width * 4 + 15px; /* 1015; Максимальная ширина секции плитки * 4 + 15px для запаса */
-$break-sm: $cell-width * 3 + 15px; /* 765; Максимальная ширина секции плитки * 3 + 15px для запаса */
-$break-xs: $cell-width * 2 + 15px; /* 515; Максимальная ширина секции плитки * 2 + 15px для запаса */
+$break-max: 1285px;
+$break-lg: 1020px;
+$break-md: 810px;
+$break-sm: 770px;
+$break-xs: 680px;
+$break-extra-xs: 580px;
+$break-tiny: 505px;
+$break-extra-tiny: 450px;
 
 
 $sm-cell-width: 200px;
@@ -22,28 +25,127 @@ body, html, .container, .navigation__slider {
     max-width: 320px;
   }
 }
-@media ( max-width: 320px ) {
+@media ( max-width: $break-extra-tiny ) {
   .navigation__slider {
-    overflow-x: hidden;
+    overflow: hidden;
     .s7-angle-left:hover { transform: translateX(-5px) }
     .s7-angle-right:hover { transform: translateX(5px) }
-
+    .s7-angle-left { font-size: 3rem; width: 20px; height: 20px  } /* 450 */
+    .s7-angle-right { font-size: 3rem; width: 20px; height: 20px  } /* 450 */
+  }
+}
+@media ( max-width: 345px ) {
+  .navigation__slider {
+    .s7-angle-left:hover { transform: translateX(-3px) }
+    .s7-angle-right:hover { transform: translateX(3px) }
+    .s7-angle-left  { font-size: 2.8rem; width: 2px; height: 20px  } /* 345 */
+    .s7-angle-right { font-size: 2.8rem; width: 10px; height: 20px  } /* 345 */
+    }
+  .navigation__section {
+    &:hover .navigation__sectionImage { transform: scale(1.1); }
+    &:hover .navigation__sectionNameText { transform: scale(1) translateY(3px); }
   }
 }
 
 .wrapper {
 
-  @include media( $p: $break-lg + 20px ) {
-    width: 1010px; /* Сбрасываем до 4 блоков */
+  @include media( $p: $break-max) { /* 1285 */
+    width: 1010px;
   }
-  @include media( $p: $break-md + 20px ) {
-    width: 760px; /* Сбрасываем до 3 блоков */
+  @include media( $p: $break-lg) { /* 1020 */
+    width: 760px;
   }
-  @include media( $p: $break-sm + 20px ) {
-    width: 510px; /* Сбрасываем до 2 блоков */
+  @include media( $p: $break-md) { /* 810 */
+    width: 720px;
   }
-  @include media( $p: $break-xs + 20px ) {
-    width: 310px; /* Сбрасываем до 1 блоков */
+  @include media( $p: $break-sm ) { /* 770 */
+    width: 650px;
+  }
+  @include media( $p: $break-xs) { /* 680 */
+    width: 560px;
+  }
+  @include media( $p: $break-extra-xs ) { /* 580 */
+    width: 460px;
+  }
+  @include media( $p: $break-tiny ) { /* 505 */
+    width: 400px;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 330px;
+  }
+  @include media( $p: 345px ) {
+    max-width: 315px;
+    padding-left: 2px;
+  }
+}
+
+.l-navigation__sliderWrapper {
+  @include media( $p: $break-max) { /* 1285 */
+    width: 1000px - 90;
+  }
+  @include media( $p: $break-lg) { /* 1020 */
+    width: 760px - 80;
+  }
+  @include media( $p: $break-md) { /* 810 */
+    width: 720px - 80;
+  }
+  @include media( $p: $break-sm ) { /* 770 */
+    width: 550px;
+  }
+  @include media( $p: $break-xs) { /* 680 */
+    width: 455px;
+  }
+  @include media( $p: $break-extra-xs ) { /* 580 */
+    width: 460px - 85;
+  }
+  @include media( $p: $break-tiny ) { /* 505 */
+    width: 345px;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 230px;
+  }
+  @include media( $p: 345px ) { /* 345 */
+    width: 220px;
+  }
+}
+
+.navigation__section {
+  @include media( $p: $break-md ) { /* 810 */
+    margin: 5px;
+  }
+  @include media( $p: $break-xs) { /* 680 */
+    margin: 3px;
+  }
+  @include media($p: $break-tiny) { /* 505 */
+    margin: 5px;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    margin: 3px;
+  }
+}
+
+
+.relation-min-250 {
+  @include media($p: $break-md) {
+    width: 168px;
+  }
+  @include media($p: $break-sm) {
+    width: 160px;
+  }
+  @include media($p: $break-xs) { /* 680 */
+    width: 137px;
+  }
+  @include media($p: $break-extra-xs) {
+    width: 150px;
+  }
+  @include media($p: $break-tiny) { /* 505 */
+    width: 190px;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 155px;
+  }
+  @include media( $p: 345px ) { /* 345 */
+    width: 138px;
   }
 }
 
@@ -65,7 +167,7 @@ body, html, .container, .navigation__slider {
 }
 
 
-@media ( max-width: $break-sm ) {  /* Пошаманили с header */
+@media ( max-width: $break-md) {  /* Пошаманили с header */
   .l-header__holder { flex-direction: column; padding-right: 7px }
   .l-header__logo { padding-left: 3px; }
   .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
@@ -79,20 +181,47 @@ body, html, .container, .navigation__slider {
   .l-header__userHolder { justify-content: baseline; }
 }
 
-.navigation__section {
+/*.navigation__section {
   @include media( $p: $break-lg ) {
-    margin: 5px 6px; /* Увеличим margin по бокам, чтобы не обрезались секции */
+    margin: 5px 6px; /!* Увеличим margin по бокам, чтобы не обрезались секции *!/
   }
   @include media( $p: $break-md ) {
-    margin: 5px 11px; /* Ещё увеличим */
+    margin: 5px 11px; /!* Ещё увеличим *!/
   }
   @include media( $p: $break-sm ) {
-    margin: 5px; /* И вернём его обратно :D */
+    margin: 5px; /!* И вернём его обратно :D *!/
   }
-}
+}*/
 
-@media ( max-width: $break-md + 20px  ) {
-
+.relation-min-120 {
+  @include media( $p: $break-max ) { /* 1020 */
+    width: 119px;
+  }
+  @include media( $p: $break-lg ) { /* 1020 */
+    width: 125px;
+  }
+  @include media( $p: $break-md ) { /* 810 */
+    width: 115px;
+  }
+  @include media( $p: $break-sm ) { /* 770 */
+    width: 130px;
+  }
+  @include media( $p: $break-xs ) { /* 680 */
+    margin: 3px;
+    width: 105px;
+  }
+  @include media( $p: $break-extra-xs ) { /* 580 */
+    width: 114px;
+  }
+  @include media($p: $break-tiny) { /* 505 */
+    width: 92px;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 103px;
+  }
+  @include media( $p: 345px ) { /* 345 */
+    width: 100px;
+  }
 }
 
 @media ( max-width: $break-xs ) {
@@ -102,16 +231,12 @@ body, html, .container, .navigation__slider {
     .s7-angle-left, .s7-angle-right { width: 20px }
   }
   .article__buttonToCart { height: 45px  }
+
+  h4 { margin: 5px auto 10px; @include media( $p: 345px ) { margin: 3px 5px } }
 }
 
-.relation-min-250 {
-  @include media( $p: $break-sm ) {
-    width: 168px; /* Уменьшим один блок */
-  }
-  @include media( $p: $break-xs ) {
-    width: 150px; /* Уменьшим один блок */
-  }
-}
+.navigation__slider { @include media( $p: $break-extra-tiny ) { justify-content: center } }
+.navigation__offerRating { @include media( $p: 345px ) { margin: 5px 3px } }
 
 .relation-min-200 {
   @include media( $p: $sm-break-sm + 80 ) {
@@ -124,7 +249,7 @@ body, html, .container, .navigation__slider {
   }
 }
 .relation-min-150 {
-  @include media( $p: $break-md ) {
+  @include media( $p: $break-lg) {
     width: 130px; /* Сделаем блок крупнее, чтобы ровно вставало */
   }
   @include media( $p: $break-xs ) {
@@ -133,12 +258,12 @@ body, html, .container, .navigation__slider {
 }
 
 .content__cellDouble {
-  @include media( $p: $break-lg ) {
+  @include media( $p: $break-max) {
     display: none; /* Уберём двойной блок, чтобы не ломал всё нафиг */
   }
 }
 
-@media ( max-width: $break-sm ) {
+@media ( max-width: $break-md) {
   .content__mediaPrice {
     display: block; /* Добавим цену на маленьких расширениях */
   }
@@ -160,7 +285,7 @@ body, html, .container, .navigation__slider {
   }
 }
 
-@include media( $p: $break-md ) {
+@include media( $p: $break-lg) {
   .l-article__infoImage {
     margin: 0 auto;
   }
@@ -170,10 +295,10 @@ body, html, .container, .navigation__slider {
 }
 
 .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
-  @include media( $p: $break-md ) {
+  @include media( $p: $break-lg) {
     margin-left: 70px;
   }
-  @include media( $p: $break-sm ) {
+  @include media( $p: $break-md) {
     margin-left: 50px;
   }
   @include media( $p: $break-xs ) {
@@ -188,12 +313,15 @@ body, html, .container, .navigation__slider {
 }
 
 .l-article__oneComment,.l-article__commentsInfo {
-  @include media( $p: $break-sm ) {
+  @include media( $p: $break-md) {
     width: 450px;
   }
-  @include media( $p: $break-xs ) {
-    width: 310px;
+  @include media( $p: $break-xs ) { /* 680 */
+    width: 500px;
     margin-left: 0;
     margin-right: 0;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 300px;
   }
 }

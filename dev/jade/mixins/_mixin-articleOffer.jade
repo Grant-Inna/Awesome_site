@@ -1,5 +1,5 @@
 mixin offer-section ( size, name, img, exhib, rating, cost )
-    a( href="one-article-page.html" ).l-content__cell.navigation__section( class=" relation-min-#{ +size + 50 } " )
+    a( href="one-article-page.html" ).l-content__cell.navigation__section
         .relation( class="relation-min-#{ size } " )
             .relation__ratio.relation__ratio-1x1
             .relation__content.flex-center
@@ -10,4 +10,4 @@ mixin offer-section ( size, name, img, exhib, rating, cost )
             include ../mixins/_mixin-offerRatingStars
             +article-rating( rating )
         .navigation__offerCost.flex-center
-            h3 #{cost}
+            h4 #{cost}

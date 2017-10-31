@@ -60,13 +60,13 @@
 
 
 .l-navigation__sectionBlock { @include width(); @include height() }
-.l-navigation__sections { list-style: none }
+.l-navigation__sections { list-style: none; overflow-x: hidden; }
 .navigation__sectionNameText { @include transition }
 
-  .navigation__section { @include max-width($w: 30%); @extend .margin-5;
-    &:hover .navigation__sectionImage { transform: scale(1.2); @include transition($t: .1s)}
-    &:hover .navigation__sectionNameText { transform: scale(1.1) translateY(3px); @include transition($t: .1s) }
-  }
+.navigation__section { @include width( ); @extend .margin-6;
+  &:hover .navigation__sectionImage { transform: scale(1.2); @include transition($t: .1s)}
+  &:hover .navigation__sectionNameText { transform: scale(1.1) translateY(3px); @include transition($t: .1s) }
+}
 
   .navigation__sectionName {}
 
@@ -101,11 +101,7 @@
     transform: translateX(10px)
   }}
 
-.l-navigation__sliderWrapper {
-  @include width( $w: 90% );
-  overflow: hidden;
-  margin: 0 auto;
-}
+.l-navigation__sliderWrapper { overflow-x: hidden; margin: 0; }
 
 
 
@@ -242,7 +238,7 @@
 
 .article__about { font-size: 1.3rem }
 .navigation__section { text-decoration: none; }
-.navigation__offerRating { margin-top: 15px; }
+.navigation__offerRating { margin: 15px 3px 5px; }
 
 .l-article__char { @include width( $w: 100%)}
 .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo { @extend .margin-left-100; }
