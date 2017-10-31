@@ -2,4 +2,8 @@
 Testing repo
 
 
-[Content page](https://grant-inna.github.io/Awesome_site/app/)
+[Main page](https://grant-inna.github.io/Awesome_site/app/)
+
+[Vsplyvashka page](https://grant-inna.github.io/Awesome_site/app/one-article.html)
+
+[One stuff page](https://grant-inna.github.io/Awesome_site/app/one-article-page.html)
