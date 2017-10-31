@@ -255,7 +255,7 @@
 .article__progress { @include height( $h: 100% ); background-color: #aaaa00; }
 
 //.l-article__oneComment { @include max-width( $w: 500px ) }
-.l-article__commentsInfo { @include width( $w: 500px) }
+.l-article__commentsInfo { @include width( $w: 650px) }
 .article__commentTitle, .article__commentUserName { font-weight: 700; }
 
 
