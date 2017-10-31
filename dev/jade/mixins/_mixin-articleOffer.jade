@@ -7,7 +7,7 @@ mixin offer-section ( size, name, img, exhib, rating, cost )
         .navigation__sectionName
             .navigation__sectionNameText.txt-center #{ name }
         .navigation__offerRating.flex-center
-            include ../mixins/_mixin-ratingStars
+            include ../mixins/_mixin-offerRatingStars
             +article-rating( rating )
         .navigation__offerCost.flex-center
             h3 #{cost}

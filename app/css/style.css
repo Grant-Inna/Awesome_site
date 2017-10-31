@@ -307,7 +307,7 @@ a {
 .margin-right-1 {
   margin-right: 1px; }
 
-.margin-right-2, .rating__oneStar {
+.margin-right-2, .rating__oneStar, .rating__oneStar-offer {
   margin-right: 2px; }
 
 .margin-right-3, .article__likesCount {
@@ -1250,12 +1250,12 @@ input.header__searchInput {
 
 @media screen and (max-width: 1015px) {
   .relation-min-150 {
-    width: 200px;
+    width: 130px;
     /* Сделаем блок крупнее, чтобы ровно вставало */ } }
 
 @media screen and (max-width: 515px) {
   .relation-min-150 {
-    width: 220px;
+    width: 109px;
     /* Сделаем блок крупнее, чтобы ровно вставало */ } }
 
 @media screen and (max-width: 1265px) {
@@ -1299,5 +1299,19 @@ input.header__searchInput {
 
 @media screen and (max-width: 515px) {
   .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
+    margin-left: 0;
+    margin-right: 0; } }
+
+@media screen and (max-width: 515px) {
+  .rating__oneStar-offer {
+    width: 15px; } }
+
+@media screen and (max-width: 765px) {
+  .l-article__oneComment, .l-article__commentsInfo {
+    width: 450px; } }
+
+@media screen and (max-width: 515px) {
+  .l-article__oneComment, .l-article__commentsInfo {
+    width: 310px;
     margin-left: 0;
     margin-right: 0; } }

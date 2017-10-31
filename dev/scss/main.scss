@@ -221,7 +221,7 @@
 
 .article__iconLike {  }
 
-.rating__oneStar { @extend .margin-right-2; }
+.rating__oneStar, .rating__oneStar-offer { @extend .margin-right-2; }
 .article__likesCount { @extend .margin-left-10; @extend .margin-right-3; @extend .radius-2; color: #515151; font-size: large; font-weight: 600; background-color: $border-color-RGB; }
 
 .article__sectionName { padding: 15px 0 0; font-size: 1.3rem; }
@@ -254,6 +254,7 @@
 .article__oneValueProgress { @include height( $h: 20px); @include width( $w: 165px ); @extend .border-1; @extend .radius-1; }
 .article__progress { @include height( $h: 100% ); background-color: #aaaa00; }
 
+//.l-article__oneComment { @include max-width( $w: 500px ) }
 .l-article__commentsInfo { @include width( $w: 500px) }
 .article__commentTitle, .article__commentUserName { font-weight: 700; }
 
