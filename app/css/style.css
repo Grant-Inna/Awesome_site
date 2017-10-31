@@ -863,9 +863,9 @@ input.header__searchInput {
     -o-transition: 0.1s;
     transition: 0.1s; }
   .navigation__section:hover .navigation__sectionNameText {
-    -webkit-transform: scale(1.1) translateY(3px);
-        -ms-transform: scale(1.1) translateY(3px);
-            transform: scale(1.1) translateY(3px);
+    -webkit-transform: scale(1.07) translateY(3px);
+        -ms-transform: scale(1.07) translateY(3px);
+            transform: scale(1.07) translateY(3px);
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s; }

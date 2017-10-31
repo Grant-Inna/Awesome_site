@@ -65,7 +65,7 @@
 
 .navigation__section { @include width( ); @extend .margin-6;
   &:hover .navigation__sectionImage { transform: scale(1.2); @include transition($t: .1s)}
-  &:hover .navigation__sectionNameText { transform: scale(1.1) translateY(3px); @include transition($t: .1s) }
+  &:hover .navigation__sectionNameText { transform: scale(1.07) translateY(3px); @include transition($t: .1s) }
 }
 
   .navigation__sectionName {}
