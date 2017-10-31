@@ -1002,6 +1002,13 @@ input.header__searchInput {
 .like__icon-active {
   background: url("../img/icons-common/like.svg") center no-repeat; }
 
+.content__mediaPrice {
+  font-size: .8rem;
+  display: none;
+  position: absolute;
+  bottom: 2px;
+  right: 2px; }
+
 /* ======== ONE ARTICLE ====== */
 .l-article__infoHolder {
   margin: 50px auto 80px; }
@@ -1221,14 +1228,19 @@ input.header__searchInput {
   .article__buttonToCart {
     height: 45px; } }
 
+@media screen and (max-width: 765px) {
+  .relation-min-250 {
+    width: 168px;
+    /* Уменьшим один блок */ } }
+
 @media screen and (max-width: 515px) {
   .relation-min-250 {
-    width: 300px;
-    /* Увеличим один блок */ } }
+    width: 150px;
+    /* Уменьшим один блок */ } }
 
 @media screen and (max-width: 495px) {
   .relation-min-200 {
-    width: 260px;
+    width: 137px;
     /* Увеличим один блок в пространстве меньших breakpoint'ов */ } }
 
 @media screen and (max-width: 495px) {
@@ -1250,6 +1262,17 @@ input.header__searchInput {
   .content__cellDouble {
     display: none;
     /* Уберём двойной блок, чтобы не ломал всё нафиг */ } }
+
+@media (max-width: 765px) {
+  .content__mediaPrice {
+    display: block;
+    /* Добавим цену на маленьких расширениях */ }
+  .content__cellImage {
+    max-width: 75%;
+    /* Уменьшим карьтинку на низких расширениях, для лучшей читаемости цены */ }
+  .like__icon {
+    width: 15px;
+    /* Уменьшим иконку на низких расширениях, для лучшей сбалансированности */ } }
 
 @media screen and (max-width: 815px) {
   .l-article__infoHolder {

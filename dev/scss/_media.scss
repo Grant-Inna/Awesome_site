@@ -105,14 +105,17 @@ body, html, .container, .navigation__slider {
 }
 
 .relation-min-250 {
+  @include media( $p: $break-sm ) {
+    width: 168px; /* Уменьшим один блок */
+  }
   @include media( $p: $break-xs ) {
-    width: 300px; /* Увеличим один блок */
+    width: 150px; /* Уменьшим один блок */
   }
 }
 
 .relation-min-200 {
   @include media( $p: $sm-break-sm + 80 ) {
-    width: 260px; /* Увеличим один блок в пространстве меньших breakpoint'ов */
+    width: 137px; /* Увеличим один блок в пространстве меньших breakpoint'ов */
   }
 }
 .relation-min-200-special-xs {
@@ -134,6 +137,20 @@ body, html, .container, .navigation__slider {
     display: none; /* Уберём двойной блок, чтобы не ломал всё нафиг */
   }
 }
+
+@media ( max-width: $break-sm ) {
+  .content__mediaPrice {
+    display: block; /* Добавим цену на маленьких расширениях */
+  }
+  .content__cellImage {
+    max-width: 75%; /* Уменьшим карьтинку на низких расширениях, для лучшей читаемости цены */
+  }
+  .like__icon {
+    width: 15px; /* Уменьшим иконку на низких расширениях, для лучшей сбалансированности */
+  }
+}
+
+
 
 .l-article__infoHolder {
   @include media( $p: $sm-break-lg ) {

@@ -1,5 +1,6 @@
-mixin cell-for-more ( size, img, exhib, amount )
-    .l-content__cell
+mixin cell-for-more ( size, img, exhib, amount, price )
+    .l-content__cell.relative
+        i.content__mediaPrice #{ price }
         div( class= "relation relation-min-#{ size }" )
             .relation__ratio.relation__ratio-11x12
             .relation__content.flex-center
