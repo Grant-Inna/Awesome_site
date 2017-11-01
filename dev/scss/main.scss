@@ -228,7 +228,8 @@
 .article__button { text-decoration: none; @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
 .article__buttonToCart { background-color: $green-color; font-weight: 600; }
-.toCart__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
+.article__buttonBuy { font-weight: 600; background-color: $orange-color }
+.actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
 .amount__holder { @extend .border-1; @extend .padding-5; }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }

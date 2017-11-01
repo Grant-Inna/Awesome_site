@@ -151,7 +151,7 @@ body, html, .container, .navigation__slider {
 
 .wrapper-small {
   width: $sm-break-lg + 60;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px 30px;
   transition: .2s;
   @include media( $p: $sm-break-lg + 80 ) { /* 895 */
@@ -230,8 +230,6 @@ body, html, .container, .navigation__slider {
   .l-article__infoImage {
     .s7-angle-left, .s7-angle-right { width: 20px }
   }
-  .article__buttonToCart { height: 45px  }
-
   h4 { margin: 5px auto 10px; @include media( $p: 345px ) { margin: 3px 5px } }
 }
 
@@ -306,6 +304,7 @@ body, html, .container, .navigation__slider {
     margin-right: 0;
   }
 }
+.buttonToCart-small { @include media( $p:  $sm-break-sm + 80 ) { height: 45px }}
 .rating__oneStar-offer {
   @include media( $p: $break-xs ) {
     width: 15px;

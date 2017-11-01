@@ -32,7 +32,6 @@ body {
 
 .wrapper {
   width: 1260px;
-  /* Должно умещаться ровно 5 блоков + 10px про запас*/
   margin: 0 auto;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -61,7 +60,7 @@ a {
   width: 50px;
   height: 50px; }
 
-.icon-free, .toCart__icon {
+.icon-free, .actionButtons__icon {
   width: auto;
   height: auto; }
 
@@ -322,7 +321,7 @@ a {
 .margin-right-5 {
   margin-right: 5px; }
 
-.margin-right-10, .toCart__icon {
+.margin-right-10, .actionButtons__icon {
   margin-right: 10px; }
 
 .margin-right-15 {
@@ -632,7 +631,7 @@ a {
 .font-1-4 {
   font-size: 1.4rem; }
 
-.font-1-3, .toCart__icon {
+.font-1-3, .actionButtons__icon {
   font-size: 1.3rem; }
 
 .font-1-2 {
@@ -1052,7 +1051,11 @@ input.header__searchInput {
   background-color: #66cc66;
   font-weight: 600; }
 
-.toCart__icon {
+.article__buttonBuy {
+  font-weight: 600;
+  background-color: #fd9729; }
+
+.actionButtons__icon {
   font-weight: 600; }
 
 .l-article__moreHolder {
@@ -1301,7 +1304,7 @@ input.header__searchInput {
 
 .wrapper-small {
   width: 875px;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 20px 30px;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -1430,8 +1433,6 @@ input.header__searchInput {
   /* Уберём margin — и без того тесно */
   .l-article__infoImage .s7-angle-left, .l-article__infoImage .s7-angle-right {
     width: 20px; }
-  .article__buttonToCart {
-    height: 45px; }
   h4 {
     margin: 5px auto 10px; } }
   @media screen and (max-width: 680px) and (max-width: 345px) {
@@ -1511,6 +1512,10 @@ input.header__searchInput {
   .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo {
     margin-left: 0;
     margin-right: 0; } }
+
+@media screen and (max-width: 495px) {
+  .buttonToCart-small {
+    height: 45px; } }
 
 @media screen and (max-width: 680px) {
   .rating__oneStar-offer {
