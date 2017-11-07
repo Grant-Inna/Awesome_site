@@ -126,11 +126,11 @@ body, html, .container, .navigation__slider {
 
 
 .relation-min-250 {
-  @include media($p: $break-md) {
-    width: 168px;
-  }
-  @include media($p: $break-sm) {
-    width: 160px;
+  /*@include media($p: $break-md) { /!* 810 *!/
+    width: 230px;
+  }*/
+  @include media($p: $break-sm) { /* 770 */
+    width: 230px;
   }
   @include media($p: $break-xs) { /* 680 */
     width: 137px;

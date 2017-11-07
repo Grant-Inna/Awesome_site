@@ -2,9 +2,14 @@
     .wrapper-small.flex-column.relative.border-1.radius-3
         a.icon-free.s7-close.font-1-5.close__icon
         main.l-article__infoHolder.justify-center
-            .l-article__infoImage
-                include ../mixins/_mixin-articleImage
-                +article-image( '200', 'sticker1', 'png' )
+            .l-article__infoMeta.flex-column.items-center
+                .l-article__infoImage
+                    include ../mixins/_mixin-articleImage
+                    +article-image( '200', 'sticker1', 'png' )
+                .l-article__buy.flex
+                    a.article__button.article__buttonBuy.items-center
+                        i.icon-fire.actionButtons__icon
+                        span.buttonBuy__text Купить сейчас
             .l-article__infoMeta.flex-column
                 .l-acticle__rating.justify-start
                     img( src="img/icons-common/like.svg" ).icon.article__iconLike
@@ -26,10 +31,6 @@
                             i.s7-angle-left.font-2.onHover-left-1
                             input( type="text", palceholder="2" ).amount__holder.flex-center.icon
                             i.s7-angle-right.font-2.onHover-right-1
-                    .l-article__buy.flex
-                        a.article__button.article__buttonBuy.items-center.margin-top-5
-                            i.icon-fire.actionButtons__icon
-                            span.buttonBuy__text Купить сейчас
         .container.flex-wrap.justify-center.border-top2
                 include ../mixins/_mixin-moreCell
                 +cell-for-more( '200', '5', 'png', '3746', '34p' )
