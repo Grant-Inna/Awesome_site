@@ -2,14 +2,9 @@
     .wrapper-small.flex-column.relative.border-1.radius-3
         a.icon-free.s7-close.font-1-5.close__icon
         main.l-article__infoHolder.justify-center
-            .l-article__infoMeta.flex-column.items-center
-                .l-article__infoImage
-                    include ../mixins/_mixin-articleImage
-                    +article-image( '200', 'sticker1', 'png' )
-                .l-article__buy.flex
-                    a.article__button.article__buttonBuy.items-center
-                        i.icon-fire.actionButtons__icon
-                        span.buttonBuy__text Купить сейчас
+            .l-article__infoImage
+                include ../mixins/_mixin-articleImage
+                +article-image( '200', 'hamster', 'png' )
             .l-article__infoMeta.flex-column
                 .l-acticle__rating.justify-start
                     img( src="img/icons-common/like.svg" ).icon.article__iconLike
@@ -23,10 +18,17 @@
                 .l-article__actionButtons.items-start.flex-column
                     .article__buttonDetails.items-center
                         a( href="one-article-page.html" ).article__button Подробнее
+<<<<<<< HEAD
+                    .l-article__toCart.flex.margin-top-5
+                        a.article__button.article__buttonBuy.items-center
+                            i.icon-fire.actionButtons__icon
+                            span.buttonBuy__text Купить сейчас
+=======
                     .l-article__toCart.flex
-                        a.article__button.article__buttonToCart.buttonToCart-small.items-center.margin-right-5
-                            i.s7-cart.actionButtons__icon
+                        a.article__button.article__buttonToCart.items-center.margin-right-5
+                            i.s7-cart.toCart__icon
                             span.buttonToCart__text Добавить в корзину
+>>>>>>> parent of 6dc1a96... One stuff block and page | new button — 'buy now'
                         .l-article__amount.flex-center
                             i.s7-angle-left.font-2.onHover-left-1
                             input( type="text", palceholder="2" ).amount__holder.flex-center.icon
@@ -34,12 +36,12 @@
         .container.flex-wrap.justify-center.border-top2
                 include ../mixins/_mixin-moreCell
                 +cell-for-more( '200', '5', 'png', '3746', '34p' )
-                +cell-for-more( '200', 'sticker1', 'png', '30', '34p' )
+                +cell-for-more( '200', 'stitch1', 'png', '30', '34p' )
                 +cell-for-more( '200', '1', 'png', '26', '34p' )
-                +cell-for-more( '200', 'kry', 'png', '91', '34p' )
+                +cell-for-more( '200', 'hamster', 'png', '91', '34p' )
                 +cell-for-more( '200', 'kry', 'png', '31', '34p' )
                 +cell-for-more( '200', 'sticker1', 'png', '51', '34p' )
-                +cell-for-more( '200', 'sticker1', 'png', '103', '34p' )
+                +cell-for-more( '200', 'morning', 'png', '103', '94p' )
                 +cell-for-more( '200', '7', 'png', '27', '34p' )
 
 

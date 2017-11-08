@@ -6,19 +6,19 @@
                 .relation__content.flex-center
                     img.header__logoImage( src="img/logo.jpg" alt="Logo" )
         .l-header__holder.items-center.justify-end
-            .l-header__search.items-center.justify-end
+            .l-header__search
                 label.header__searchLabel.flex
                     input.header__searchInput( type="search" placeholder="Поиск")
                     button.search__iconHolder.flex-center( type="submit" )
                         i.icon-lg.s7-search.font-1-6
             .l-header__userHolder.justify-end
-                .header__userCart.justify-end.items-center
-                    a( title="Корзина")
-                        i.icon-lg.s7-cart.font-1-6
-                .header__infoOrders.justify-end.items-center
-                    a( title="Заказы")
+                a( href="cart.html", title="Корзина").header__controlBtn.header__userCart
+                    i.icon-lg.s7-cart.font-1-6
+                a( title="Избранное").header__controlBtn.header__userLikes
+                    i.icon-lg.s7-like.font-1-6
+                a( title="Заказы").header__controlBtn.header__infoOrders
                         i.icon-lg.s7-shopbag.font-1-6
-                .l-header__userInfo.flex-column.items-end
+                .l-header__userInfo.flex-column
                     img.header__userAva( src="img/ava.png" alt="Ava" )
                     span.header__userName Гарольд
                     
