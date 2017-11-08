@@ -1,0 +1,47 @@
+mixin cart-one-item ( seller_name, size, img, exhib, name, availability, price, amount, finalPrice, available_color, not_available_color )
+    .l-cart__holder.wrapper-small
+        .l-cart__tableCaptions.flex
+            .cart__seller.items-center.margin-left-30
+                span.margin-right-10 Продавец:
+                h3
+                    a.cart__sellerName #{ seller_name }
+            .cart__priceTitle Цена
+            .cart__amountTitle Количество
+        .l-cart__oneItem
+            .l-cart__goodsInfo.items-center
+                .cart__goodsImage.margin-right-20
+                    div( class= "relation relation-min-#{ size }" )
+                        .relation__ratio.relation__ratio-1x1
+                        .relation__content.flex-center
+                            a( href="one-article.html" ).content__cellLink.flex-center
+                                img.content__cellImage( src="img/sections/#{ img + '.' + exhib }" )
+                .l-cart__infoText.flex-column
+                    h3.cart__itemCaption #{ name }
+                    case (availability)
+                        when ('есть')
+                            .cart__itemAvailable.color-green В наличии
+                        when ('')
+                            .cart__itemAvailable.color-red Нет в наличии
+                    .l-cart__itemActions.justify-start
+                        .article__button.cart__itemBtn-delete.items-center
+                            i.s7-trash.actionButtons__icon
+                            | Удалить
+                        .article__button.cart__itemBtn-like.items-center
+                            i.s7-like.actionButtons__icon
+                            | Добавить в желаемое
+            h3.cart__price #{ price }p
+            .l-cart__amount.flex-center
+                i.s7-angle-left.font-2.onHover-left-1
+                input( type="text", placeholder="#{ amount }" ).amount__holder.cart__amount.flex-center.icon-40
+                i.s7-angle-right.font-2.onHover-right-1
+        .l-cart__totalHolder.flex-column.margin-bottom-30
+            h4.cart__totalSum.items-center
+                span.font-1-1 ИТОГО товаров:
+                span.font-1-1.color-blue #{ amount }
+                span на сумму
+                span.font-1-1.color-blue #{ price * amount }р
+            a.article__button.cart__totalBtn Начать оформление
+
+
+
+

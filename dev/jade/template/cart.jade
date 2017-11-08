@@ -1,9 +1,9 @@
-.container
+.container.margin-bottom-100
     .wrapper
-        h2.cart__blockTitle Карзина
-        .l-cart__holder
-            .l-cart__tableCaptions.flex
-                .cart__noTitle
-                .cart__priceTitle Цена
-                .cart__amountTitle Количество
+        h2.cart__blockTitle.margin-bottom-50 Карзина
+        include ../mixins/_mixin-cartOneItem
+        +cart-one-item( 'Дед Афанасий', '110', 'hamster', 'png', 'Mama, I\'ma HackerMan', 'есть', '104', '2' )
+        +cart-one-item( 'Дед Афанасий', '110', 'hamster', 'png', 'Mama, I\'ma HackerMan', '', '264', '3' )
+        +cart-one-item( 'Дед Афанасий', '110', 'hamster', 'png', 'Mama, I\'ma HackerMan', 'есть', '25104', '2' )
+        +cart-one-item( 'Дед Афанасий', '110', 'hamster', 'png', 'Mama, I\'ma HackerMan', 'есть', '73', '5' )
 

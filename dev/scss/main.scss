@@ -225,7 +225,8 @@
 .article__button { text-decoration: none; @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
 .article__buttonToCart { background-color: $green-color; font-weight: 600; }
-.toCart__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
+.article__buttonBuy { background-color: $orange-color; font-weight: 600; height: 40px; }
+.actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
 .amount__holder { @extend .border-1; @extend .padding-5; }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
@@ -254,11 +255,33 @@
 
 /* ============ CART ============ */
 
-.l-cart__holder { @include width( $w: 100%) }
+.l-cart__holder { @include width( $w: 100%); background: $color-background-body - 10; border-radius: 4px }
 .l-cart__tableCaptions { @include width( $w: 100%); @include min-height( $h: 40px) }
-.cart__noTitle { @include width( $w: 60%) }
-.cart__priceTitle  { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
-.cart__amountTitle { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+.cart__seller { @include width( $w: 60%) }
+.cart__priceTitle, .cart__amountTitle  { font-size: 1.1rem; font-weight: 400 }
+.cart__priceTitle, .cart__price { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+.cart__amountTitle, .l-cart__amount { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+.cart__goodsInfo {  }
+
+.l-cart__oneItem { @include width( $w: 100%); @include height( $h: 130px); @extend .items-center; background: $color-background-body - 5; border-radius: 5px }
+.l-cart__goodsInfo { @include width( $w: 60%); @include height( $h: 100%); }
+.l-cart__infoText { @include height( $h: 100px); @extend .justify-between; @extend .items-start; }
+.cart__itemCaption { margin: 0; }
+.cart__itemAvailable { font-weight: 600 }
+
+.cart__itemBtn { font-weight: 600; }
+.cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
+.cart__itemBtn-delete { color: $red-color }
+.cart__itemBtn-like { color: $blue-color }
+
+.cart__itemBtn { color: $header-color }
+.cart__itemBtn-delete { @extend .margin-right-10; }
+
+.cart__amount { font-weight: 800; font-size: 1.1rem }
+
+.l-cart__totalHolder { @include width( $w: 100%); @include height( $h: 90px); @extend .justify-between; @extend .items-end; }
+.cart__totalSum { @include width( $w: 270px); @extend .justify-between; @extend .items-center; }
+.cart__totalBtn { background-color: $green-color; color: #fff; font-weight: 600}
 
 
 
