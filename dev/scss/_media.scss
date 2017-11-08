@@ -126,11 +126,11 @@ body, html, .container, .navigation__slider {
 
 
 .relation-min-250 {
-  /*@include media($p: $break-md) { /!* 810 *!/
-    width: 230px;
-  }*/
-  @include media($p: $break-sm) { /* 770 */
-    width: 230px;
+  @include media($p: $break-md) {
+    width: 168px;
+  }
+  @include media($p: $break-sm) {
+    width: 160px;
   }
   @include media($p: $break-xs) { /* 680 */
     width: 137px;
@@ -151,7 +151,7 @@ body, html, .container, .navigation__slider {
 
 .wrapper-small {
   width: $sm-break-lg + 60;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 20px 30px;
   transition: .2s;
   @include media( $p: $sm-break-lg + 80 ) { /* 895 */
@@ -166,19 +166,27 @@ body, html, .container, .navigation__slider {
   }
 }
 
+.l-header__search {
+  @include media( $p: $break-lg) { /* 1020 */
+    width: 55%;
+    justify-content: baseline;
+  }
+}
 
-@media ( max-width: $break-md) {  /* Пошаманили с header */
-  .l-header__holder { flex-direction: column; padding-right: 7px }
+@media ( max-width: $break-md) {  /* Пошаманили с header с 810px */
+  .l-header__holder { flex-direction: column;  }
   .l-header__logo { padding-left: 3px; }
-  .l-header__search { @include width($w: 100%); margin: 5px auto 2px; }
+  .l-header__search { @include width($w: 100%); margin: 5px auto 2px; justify-content: flex-end; }
   .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
 }
-@media ( max-width: $break-xs ) { /* Пошаманили с header */
+@media ( max-width: $break-xs ) { /* Пошаманили с header с 680 */
   .l-header__wrapper { flex-direction: column; align-items: center; padding-top: 5px; }
   .l-header__logo,
   .l-header__holder { width: 100%; align-items: center; }
   .l-header__search { justify-content: center; }
-  .l-header__userHolder { justify-content: baseline; }
+  .l-header__userHolder { justify-content: space-around; }
+  .header__controlBtn { justify-content: center }
+  .l-header__userInfo { align-items: center; }
 }
 
 /*.navigation__section {
@@ -230,6 +238,8 @@ body, html, .container, .navigation__slider {
   .l-article__infoImage {
     .s7-angle-left, .s7-angle-right { width: 20px }
   }
+  .article__buttonToCart { height: 45px  }
+
   h4 { margin: 5px auto 10px; @include media( $p: 345px ) { margin: 3px 5px } }
 }
 
@@ -304,7 +314,6 @@ body, html, .container, .navigation__slider {
     margin-right: 0;
   }
 }
-.buttonToCart-small { @include media( $p:  $sm-break-sm + 80 ) { height: 45px }}
 .rating__oneStar-offer {
   @include media( $p: $break-xs ) {
     width: 15px;

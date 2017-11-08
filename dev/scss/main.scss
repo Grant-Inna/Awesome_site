@@ -30,7 +30,7 @@
 
 .l-header__block { @include width($w: 100%); }
 
-.l-header__search { @include width($w: 60%); }
+.l-header__search { @include width($w: 60%); @extend .justify-end; @extend .items-center; }
 
   .header__searchLabel { width: 90%; height: 35px; border: 1px solid $header-color + 15; border-radius: 2px }
 
@@ -39,21 +39,18 @@
   .search__iconHolder { @include width($w: 10%); outline: none; border: none; background: $header-color + 50; }
 
 
-.l-header__userHolder { @include width($w: 40%); background-color: transparent; // Right icons
-  div {
-    min-width: 80px;
-  }
-}
-
-  .l-header__userInfo { @include width($w: $userNav-width); }
+.l-header__userHolder { @include width($w: 40%); background-color: transparent; } // Right icons
+  .header__controlBtn { @extend .justify-center; @extend .items-center; text-decoration: none }
+  .l-header__userInfo { @include width($w: $userNav-width); min-width: 85px; @extend .items-end;  text-decoration: none }
 
     .header__userName { text-align: center; color: #fefefe }
 
     .header__userAva { @include width(); @include min-width($w: 40px); @include height($h: 40px); border-radius: 25px }
 
-  .header__userCart { @include width($w: $userNav-width); color: #f2f2f2; }
+  .header__userCart { @include width($w: $userNav-width); color: #f2f2f2; min-width: 70px; }
+  .header__userLikes { @include width($w: $userNav-width); color: #f2f2f2; min-width: 70px; }
 
-  .header__infoOrders { @include width($w: $userNav-width); color: #f2f2f2;}
+  .header__infoOrders { @include width($w: $userNav-width); color: #f2f2f2; min-width: 70px;}
   .header__infoHelp { @include width($w: $userNav-width); color: #f2f2f2;}
 
   .header__userLogIn { @include width($w: $userNav-width); color: #f2f2f2; }
@@ -228,8 +225,7 @@
 .article__button { text-decoration: none; @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
 .article__buttonToCart { background-color: $green-color; font-weight: 600; }
-.article__buttonBuy { font-weight: 600; background-color: $orange-color; height: 43px; font-size: 1.1rem }
-.actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
+.toCart__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
 .amount__holder { @extend .border-1; @extend .padding-5; }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
@@ -254,6 +250,16 @@
 //.l-article__oneComment { @include max-width( $w: 500px ) }
 .l-article__commentsInfo { @include width( $w: 650px) }
 .article__commentTitle, .article__commentUserName { font-weight: 700; }
+
+
+/* ============ CART ============ */
+
+.l-cart__holder { @include width( $w: 100%) }
+.l-cart__tableCaptions { @include width( $w: 100%); @include min-height( $h: 40px) }
+.cart__noTitle { @include width( $w: 60%) }
+.cart__priceTitle  { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+.cart__amountTitle { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+
 
 
 
