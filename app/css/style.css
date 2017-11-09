@@ -1424,7 +1424,7 @@ input.header__searchInput {
 
 .wrapper-small {
   width: 1000px;
-  margin: 100px auto;
+  margin: 40px auto;
   padding: 20px 30px;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -1444,13 +1444,13 @@ input.header__searchInput {
       /* 650 */
       width: 400px;
       /* 400 */
-      margin: 50px auto;
+      margin: 25px auto;
       padding: 10px 10px; } }
   @media screen and (max-width: 460px) {
     .wrapper-small {
       /* 450 */
       width: 310px;
-      margin: 30px auto;
+      margin: 15px auto;
       padding: 10px 10px; } }
 
 @media screen and (max-width: 660px) {

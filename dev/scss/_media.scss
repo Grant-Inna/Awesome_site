@@ -151,7 +151,7 @@ body, html, .container, .navigation__slider, .container {
 
 .wrapper-small {
   width: $sm-break-lg;
-  margin: 100px auto;
+  margin: 40px auto;
   padding: 20px 30px;
   transition: .2s;
   @include media( $p: $sm-break-lg + 50 ) { /* 1050 */
@@ -162,13 +162,13 @@ body, html, .container, .navigation__slider, .container {
   }
   @include media( $p: $sm-break-sm + 60 ) { /* 650 */
     width: $sm-break-xs; /* 400 */
-    margin: 50px auto;
+    margin: 25px auto;
     padding: 10px 10px;
 
   }
   @include media( $p: $sm-break-xs + 60 ) { /* 450 */
     width: 310px;
-    margin: 30px auto;
+    margin: 15px auto;
     padding: 10px 10px;
   }
 }
