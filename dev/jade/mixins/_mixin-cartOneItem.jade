@@ -1,13 +1,13 @@
-mixin cart-one-item ( seller_name, size, img, exhib, name, availability, price, amount, finalPrice, available_color, not_available_color )
-    .l-cart__holder.wrapper-small
+mixin cart-one-item ( seller_name, size, img, exhib, name, availability, price, amount, not_available_class, finalPrice, available_color )
+    .l-cart__holder.wrapper-small( class=" #{ not_available_class } " )
         .l-cart__tableCaptions.flex
-            .cart__seller.items-center.margin-left-30
+            .cart__seller.items-center
                 span.margin-right-10 Продавец:
                 h3
                     a.cart__sellerName #{ seller_name }
             .cart__priceTitle Цена
             .cart__amountTitle Количество
-        .l-cart__oneItem
+        .l-cart__oneItem( class=" #{ not_available_class } " )
             .l-cart__goodsInfo.items-center
                 .cart__goodsImage.margin-right-20
                     div( class= "relation relation-min-#{ size }" )
@@ -34,13 +34,17 @@ mixin cart-one-item ( seller_name, size, img, exhib, name, availability, price, 
                 i.s7-angle-left.font-2.onHover-left-1
                 input( type="text", placeholder="#{ amount }" ).amount__holder.cart__amount.flex-center.icon-40
                 i.s7-angle-right.font-2.onHover-right-1
-        .l-cart__totalHolder.flex-column.margin-bottom-30
-            h4.cart__totalSum.items-center
-                span.font-1-1 ИТОГО товаров:
-                span.font-1-1.color-blue #{ amount }
-                span на сумму
-                span.font-1-1.color-blue #{ price * amount }р
-            a.article__button.cart__totalBtn Начать оформление
+        case (availability)
+            when ('есть')
+                .l-cart__totalHolder.flex-column.margin-bottom-30
+                    h4.cart__totalSum.items-center
+                        span.font-1-1 ИТОГО товаров:
+                        span.font-1-1.color-blue #{ amount }
+                        span на сумму
+                        span.font-1-1.color-blue #{ price * amount }р
+                    a.article__button.cart__totalBtn Начать оформление
+            when ('')
+                .margin-bottom-30
 
 
 

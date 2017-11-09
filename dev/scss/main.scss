@@ -255,15 +255,16 @@
 
 /* ============ CART ============ */
 
-.l-cart__holder { @include width( $w: 100%); background: $color-background-body - 10; border-radius: 4px }
+.l-cart__holder { @include width( $w: 100%); background: $color-background-body - 15; border-radius: 4px }
 .l-cart__tableCaptions { @include width( $w: 100%); @include min-height( $h: 40px) }
-.cart__seller { @include width( $w: 60%) }
+.cart__seller { @include width( $w: 60%); margin-left: 30px }
 .cart__priceTitle, .cart__amountTitle  { font-size: 1.1rem; font-weight: 400 }
 .cart__priceTitle, .cart__price { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
 .cart__amountTitle, .l-cart__amount { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
 .cart__goodsInfo {  }
 
 .l-cart__oneItem { @include width( $w: 100%); @include height( $h: 130px); @extend .items-center; background: $color-background-body - 5; border-radius: 5px }
+.disabled-cart { background: rgba(202, 202, 202, 0.7) !important; }
 .l-cart__goodsInfo { @include width( $w: 60%); @include height( $h: 100%); }
 .l-cart__infoText { @include height( $h: 100px); @extend .justify-between; @extend .items-start; }
 .cart__itemCaption { margin: 0; }
@@ -272,7 +273,7 @@
 .cart__itemBtn { font-weight: 600; }
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
 .cart__itemBtn-delete { color: $red-color }
-.cart__itemBtn-like { color: $blue-color }
+.cart__itemBtn-like { color: $blue-color; min-width: 200px }
 
 .cart__itemBtn { color: $header-color }
 .cart__itemBtn-delete { @extend .margin-right-10; }
