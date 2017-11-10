@@ -39,7 +39,8 @@ body {
   transition: .2s; }
 
 a {
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
 
 .icon-15 {
   width: 15px;
@@ -486,7 +487,7 @@ a {
   padding-bottom: 30px; }
 
 /* Flex */
-.flex, .justify-center, .header__controlBtn, .justify-between, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum, .justify-around, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .items-center, .l-cart__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
+.flex, .justify-center, .header__controlBtn, .justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum, .justify-around, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice, .items-center, .article__button, .article__aboutSeller, .l-cart__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -498,7 +499,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.flex-column {
+.flex-column, .l-article__infoImage {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -524,7 +525,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.justify-between, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum {
+.justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -538,12 +539,12 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-.justify-start, .cart__price {
+.justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
-.items-center, .l-header__search, .header__controlBtn, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__price, .l-cart__oneItem, .cart__totalSum {
+.items-center, .l-header__search, .header__controlBtn, .article__button, .article__aboutSeller, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__price, .cart__price-smaller, .cart__fullPrice, .l-cart__oneItem, .cart__totalSum {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -1098,7 +1099,7 @@ input.header__searchInput {
   text-decoration: none;
   width: auto;
   height: 32px;
-  padding: 5px 10px; }
+  padding: 0 10px; }
 
 .article__buttonDetails {
   height: 40px; }
@@ -1107,11 +1108,15 @@ input.header__searchInput {
   background-color: #66cc66;
   font-weight: 600;
   height: 40px; }
+  .article__buttonToCart:active {
+    background-color: #349a34; }
 
 .article__buttonBuy {
   background-color: #f3b531;
   font-weight: 600;
   height: 40px; }
+  .article__buttonBuy:active {
+    background-color: #c18300; }
 
 .actionButtons__icon {
   font-weight: 600; }
@@ -1148,6 +1153,8 @@ input.header__searchInput {
   outline: none; }
   .buttonControl__less:active, .buttonControl__more:active {
     background: #e6d7c3; }
+  .buttonControl__less:disabled, .buttonControl__more:disabled {
+    color: #c7c7c7; }
 
 .l-article__moreHolder {
   border-top: 2px solid rgba(5, 32, 51, 0.2); }
@@ -1155,6 +1162,8 @@ input.header__searchInput {
 /*          One article page            */
 .article__about {
   font-size: 1.3rem; }
+  .article__about p {
+    margin-bottom: 0; }
 
 .navigation__section {
   text-decoration: none; }
@@ -1192,6 +1201,14 @@ input.header__searchInput {
 .article__commentTitle, .article__commentUserName {
   font-weight: 700; }
 
+.article__aboutSeller {
+  margin-left: 15px; }
+
+.article__buttonSeller {
+  background: rgba(149, 166, 187, 0.5); }
+  .article__buttonSeller:active {
+    background: rgba(99, 116, 137, 0.5); }
+
 /* ============ CART ============ */
 .l-cart__holder {
   width: 100%;
@@ -1219,6 +1236,17 @@ input.header__searchInput {
 .cart__price {
   margin: 10px 0 15px; }
 
+.cart__price-smaller {
+  margin: 10px 0 5px; }
+
+.cart__fullPrice {
+  font-size: .9rem;
+  font-weight: normal;
+  margin: 0; }
+
+.cart__fullPrice-sum {
+  font-weight: bold; }
+
 .l-cart__itemActions {
   min-height: 32px;
   margin-top: 10px; }
@@ -1231,7 +1259,7 @@ input.header__searchInput {
   min-height: 185px; }
 
 .l-cart__goodsInfo {
-  width: 60%;
+  width: 90%;
   height: 100%; }
 
 .l-cart__infoText {
@@ -1274,15 +1302,22 @@ input.header__searchInput {
   width: 230px; }
 
 .cart__totalBtn {
-  min-height: 40px;
+  min-height: 50px;
+  padding: 0 15px;
   background-color: #cc201f;
   color: #fff;
   font-weight: 600; }
+  .cart__totalBtn:active {
+    background-color: #9a0000; }
 
 /* 1000 */
 /* 800 */
 /* 600 */
 /* 400 */
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 13px; } }
+
 @media screen and (max-width: 321px) {
   body, html, .container, .navigation__slider, .container {
     max-width: 320px; } }
@@ -1647,7 +1682,7 @@ input.header__searchInput {
   /* Уберём margin — и без того тесно */
   .l-article__infoImage .s7-angle-left, .l-article__infoImage .s7-angle-right {
     width: 20px; }
-  .article__buttonToCart {
+  .article__buttonToCart, .article__buttonBuy {
     height: 45px; }
   h4 {
     margin: 5px auto 10px; } }
@@ -1743,6 +1778,11 @@ input.header__searchInput {
     width: 500px;
     margin-left: 0;
     margin-right: 0; } }
+
+@media screen and (max-width: 505px) {
+  .l-article__oneComment, .l-article__commentsInfo {
+    /* 505 */
+    width: 400px; } }
 
 @media screen and (max-width: 450px) {
   .l-article__oneComment, .l-article__commentsInfo {
@@ -1855,8 +1895,8 @@ input.header__searchInput {
   .l-cart__itemActions {
     margin: 0 auto; }
   .cart__checkbox {
-    margin-right: 8px; }
+    margin-right: 5px; }
   .l-cart__itemActions {
-    margin-left: 33px; }
+    margin-left: 30px; }
   .cart__blockTitle {
     margin-left: 14px; } }

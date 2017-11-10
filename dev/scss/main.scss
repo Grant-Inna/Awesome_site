@@ -209,7 +209,7 @@
 /* ======== ONE ARTICLE ====== */
 
 .l-article__infoHolder { margin: 50px auto 80px }
-.l-article__infoImage { @extend .margin-right-30; }
+.l-article__infoImage { @extend .flex-column; @extend .justify-between; @extend .margin-right-30; }
 .close__icon { position: absolute; right: 5px; top: 4px; color: $border-color; font-weight: 800 }
 
 .article__iconLike {  }
@@ -222,10 +222,14 @@
 .article__goodsName { margin: 15px 0 }
 
 
-.article__button { text-decoration: none; @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2;  @extend .border-1;  }
+.article__button { text-decoration: none; @extend .items-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
-.article__buttonToCart { background-color: $green-color; font-weight: 600; @include height( $h: 40px ); }
-.article__buttonBuy { background-color: $orange-color; font-weight: 600; height: 40px; }
+.article__buttonToCart { background-color: $green-color; font-weight: 600; @include height( $h: 40px );
+  &:active { background-color: $green-color - 50; }
+}
+.article__buttonBuy { background-color: $orange-color; font-weight: 600; height: 40px;
+  &:active { background-color: $orange-color - 50; }
+}
 .actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
 
 .article__buttonMoreInfo { width: 100px }
@@ -236,6 +240,7 @@
 .l-article__amount-cart { width: 107px; height: 30px; margin-right: 10px }
 .buttonControl__less, .buttonControl__more { height: 30px; @extend.icon-20; @extend .flex-center; background: antiquewhite; border: none; outline: none;
   &:active { background: antiquewhite - 20; }
+  &:disabled { color: #c7c7c7 }
 }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
@@ -243,7 +248,9 @@
 
 /*          One article page            */
 
-.article__about { font-size: 1.3rem }
+.article__about { font-size: 1.3rem;
+  p { margin-bottom: 0 }
+}
 .navigation__section { text-decoration: none; }
 .navigation__offerRating { margin: 15px 3px 5px; }
 
@@ -261,6 +268,11 @@
 .l-article__commentsInfo { @include width( $w: 650px) }
 .article__commentTitle, .article__commentUserName { font-weight: 700; }
 
+.article__aboutSeller { @extend .items-center; margin-left: 15px; }
+.article__buttonSeller { background: rgba(149, 166, 187, 0.5);  // $header-color + 100
+  &:active { background: rgba(149, 166, 187, 0.5) - 50; }
+}
+
 
 /* ============ CART ============ */
 
@@ -274,6 +286,9 @@
 .cart__amountTitle, .l-cart__amount { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
 .cart__goodsInfo {  }
 .cart__price { @extend .justify-start; @extend .items-center; margin: 10px 0 15px; }
+.cart__price-smaller { @extend .justify-start; @extend .items-center; margin: 10px 0 5px; }
+.cart__fullPrice { font-size: .9rem; font-weight: normal; @extend .justify-start; @extend .items-center; margin: 0 ; }
+.cart__fullPrice-sum { font-weight: bold; }
 .l-cart__itemActions { @include min-height( $h: 32px ); margin-top: 10px }
 
 .cart__checkbox { margin-right: 20px }
@@ -283,7 +298,7 @@
 }
 .cart__goodsImage { @extend .margin-right-20;}
 .disabled-cart {  }
-.l-cart__goodsInfo { @include width( $w: 60%); @include height( $h: 100%); }
+.l-cart__goodsInfo { @include width( $w: 90%); @include height( $h: 100%); }
 .l-cart__infoText { @include height( $h: auto); @extend .justify-between; @extend .items-start; }
 .cart__caption { @extend .justify-end; margin-bottom: 20px; }
 .cart__itemCaption { margin: 0; }
@@ -301,7 +316,9 @@
 
 .l-cart__totalHolder { @include width( $w: 100%); @include height( $h: 90px); @extend .justify-between; @extend .items-end; }
 .cart__totalSum { @include width( $w: 230px); @extend .justify-between; @extend .items-center; }
-.cart__totalBtn { @include min-height( $h: 40px);  @extend .flex-center; background-color: $red-color; color: #fff; font-weight: 600}
+.cart__totalBtn { @include min-height( $h: 50px); padding: 0 15px; @extend .flex-center; background-color: $red-color; color: #fff; font-weight: 600;
+  &:active { background-color: $red-color - 50; }
+}
 
 
 

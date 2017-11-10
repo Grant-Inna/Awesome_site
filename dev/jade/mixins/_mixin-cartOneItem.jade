@@ -14,18 +14,30 @@ mixin cart-one-item ( size, img, exhib, name, availability, price, amount )
                 case (availability)
                     when ('есть')
                         .cart__itemAvailable.color-green В наличии
-                        h3.cart__price #{ price }p
+                        case ( amount )
+                            when ( '1' )
+                                h3.cart__price #{ price }p
+                            default
+                                h3.cart__price-smaller #{ price }p
+                                h5.cart__fullPrice Общая сумма —&nbsp;
+                                    span.cart__fullPrice-sum #{ price * amount }p
                     when ('')
                         .cart__itemAvailable.color-red Нет в наличии
         .l-cart__itemActions.justify-start
             .l-article__amount-cart.flex-center
-                button.buttonControl__less.font-1-4 -
-                input( type="text", placeholder="2" ).amount__holder.amount__holder-cart.flex-center
-                button.buttonControl__more.font-1-4 +
+                case ( amount )
+                    when ( '1' )
+                        button( disabled ).buttonControl__less.font-1-4 -
+                        input( type="text", placeholder="#{ amount }" ).amount__holder.amount__holder-cart.flex-center
+                        button.buttonControl__more.font-1-4 +
+                    default
+                        button.buttonControl__less.font-1-4 -
+                        input( type="text", placeholder="#{ amount }" ).amount__holder.amount__holder-cart.flex-center
+                        button.buttonControl__more.font-1-4 +
             .l-cart__articleButtonsHolder.flex
                 .article__button.cart__itemBtn-like.items-center
                     i.s7-like.actionButtons__icon
-                    | Добавить в желаемое
+                    | Добавить в избранное
                 .article__button.cart__itemBtn-delete.items-center
                     i.s7-trash.actionButtons__icon
                     | Удалить

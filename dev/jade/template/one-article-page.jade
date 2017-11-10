@@ -1,9 +1,11 @@
 .container
     .wrapper
         main.l-article__infoHolder.justify-start
-            .l-article__infoImage.margin-right-70
+            .l-article__infoImage
                 include ../mixins/_mixin-articleImage
                 +article-image( '270', 'hamster', 'png' )
+                .article__aboutSeller.flex Продавец:
+                    a.article__button.article__buttonSeller.margin-left-10 Дед Афанасий
             .l-article__infoMeta.flex-column
                 .article__sectionName Ну фиг знает, что это
                 h1.article__goodsName Может хомяк, а может и голубь
@@ -27,6 +29,5 @@
                 .article__about
                     p.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa debitis, ducimus eligendi enim eos expedita fugiat iure magnam minima provident quae repellat reprehenderit repudiandae similique unde ut voluptate? Magni nemo officiis voluptatum. Animi at consequatur delectus deleniti dolorem dolores excepturi fugit illum impedit, ipsum itaque iure iusto maxime minus mollitia nam necessitatibus nemo nisi nobis praesentium quasi qui quis ratione, repudiandae tenetur velit voluptate? Enim, expedita, illo!
-                    .article__aboutSeller.flex Продавец:
-                            a( href ).margin-left-10 Дед Афанасий
+
 

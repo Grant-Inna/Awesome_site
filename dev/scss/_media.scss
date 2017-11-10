@@ -20,6 +20,12 @@ $sm-break-xs: $sm-cell-width * 2; /* 400 */
   }
 }
 
+html {
+  @include media( $p: 570px ) {
+    font-size: 13px;
+  }
+}
+
 body, html, .container, .navigation__slider, .container {
   @include media( $p: 321px ) {
     max-width: 320px;
@@ -254,10 +260,11 @@ body, html, .container, .navigation__slider, .container {
   .l-article__infoImage {
     .s7-angle-left, .s7-angle-right { width: 20px }
   }
-  .article__buttonToCart { height: 45px  }
+  .article__buttonToCart, .article__buttonBuy { height: 45px  }
 
   h4 { margin: 5px auto 10px; @include media( $p: 345px ) { margin: 3px 5px } }
 }
+
 
 .navigation__slider { @include media( $p: $break-extra-tiny ) { justify-content: center } }
 .navigation__offerRating { @include media( $p: 345px ) { margin: 5px 3px } }
@@ -345,6 +352,9 @@ body, html, .container, .navigation__slider, .container {
     margin-left: 0;
     margin-right: 0;
   }
+  @include media( $p: $break-tiny ) { /* 505 */
+    width: 400px;
+  }
   @include media( $p: $break-extra-tiny ) { /* 450 */
     width: 300px;
   }
@@ -387,8 +397,8 @@ body, html, .container, .navigation__slider, .container {
   .l-cart__goodsInfo { margin: 5px 0}
   .l-cart__infoText { height: auto; font-size: 12px; }
   .l-cart__itemActions { margin: 0 auto }
-  .cart__checkbox { margin-right: 8px }
-  .l-cart__itemActions { margin-left: 33px }
+  .cart__checkbox { margin-right: 5px }
+  .l-cart__itemActions { margin-left: 30px }
 
   .cart__blockTitle { margin-left: 14px; }
 }
