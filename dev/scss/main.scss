@@ -224,10 +224,19 @@
 
 .article__button { text-decoration: none; @include width; @include height( $h: 32px ); padding: 5px 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
-.article__buttonToCart { background-color: $green-color; font-weight: 600; }
+.article__buttonToCart { background-color: $green-color; font-weight: 600; @include height( $h: 40px ); }
 .article__buttonBuy { background-color: $orange-color; font-weight: 600; height: 40px; }
 .actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
-.amount__holder { @extend .border-1; @extend .padding-5; }
+
+.article__buttonMoreInfo { width: 100px }
+.amount__holder { height: 30px; width: 60px; text-align: center; @extend .border-1; @extend .padding-5; }
+.amount__holder-cart { width: 66px; }
+.l-article__amount { width: 100px; height: 30px; margin-right: 10px }
+.l-article__amount-margin {  width: 100px; margin: 10px 0 0 }
+.l-article__amount-cart { width: 107px; height: 30px; margin-right: 10px }
+.buttonControl__less, .buttonControl__more { height: 30px; @extend.icon-20; @extend .flex-center; background: antiquewhite; border: none; outline: none;
+  &:active { background: antiquewhite - 20; }
+}
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
 
@@ -255,34 +264,44 @@
 
 /* ============ CART ============ */
 
-.l-cart__holder { @include width( $w: 100%); background: $color-background-body - 15; border-radius: 4px }
+.l-cart__holder { @include width( $w: 100%); background: $color-background-body - 2; border-radius: 4px;
+  &:first-child { @extend .border-top1; }
+}
 .l-cart__tableCaptions { @include width( $w: 100%); @include min-height( $h: 40px) }
 .cart__seller { @include width( $w: 60%); margin-left: 30px }
 .cart__priceTitle, .cart__amountTitle  { font-size: 1.1rem; font-weight: 400 }
-.cart__priceTitle, .cart__price { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
+.cart__priceTitle { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
 .cart__amountTitle, .l-cart__amount { @include width( $w: 20%); @extend .justify-end; @extend .items-center; }
 .cart__goodsInfo {  }
+.cart__price { @extend .justify-start; @extend .items-center; margin: 10px 0 15px; }
+.l-cart__itemActions { @include min-height( $h: 32px ); margin-top: 10px }
 
-.l-cart__oneItem { @include width( $w: 100%); @include height( $h: 130px); @extend .items-center; background: $color-background-body - 5; border-radius: 5px }
-.disabled-cart { background: rgba(202, 202, 202, 0.7) !important; }
+.cart__checkbox { margin-right: 20px }
+
+.l-cart__oneItem { @include width( $w: 100%); @include min-height( $h: 185px); @extend .items-center; @extend .border-bottom1;
+  &:nth-of-type(2) { @extend .border-top1; }
+}
+.cart__goodsImage { @extend .margin-right-20;}
+.disabled-cart {  }
 .l-cart__goodsInfo { @include width( $w: 60%); @include height( $h: 100%); }
-.l-cart__infoText { @include height( $h: 100px); @extend .justify-between; @extend .items-start; }
+.l-cart__infoText { @include height( $h: auto); @extend .justify-between; @extend .items-start; }
+.cart__caption { @extend .justify-end; margin-bottom: 20px; }
 .cart__itemCaption { margin: 0; }
 .cart__itemAvailable { font-weight: 600 }
 
 .cart__itemBtn { font-weight: 600; }
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
 .cart__itemBtn-delete { color: $red-color }
-.cart__itemBtn-like { color: $blue-color; min-width: 200px }
+.cart__itemBtn-like { @extend .margin-right-10; color: $blue-color; min-width: 200px }
 
 .cart__itemBtn { color: $header-color }
-.cart__itemBtn-delete { @extend .margin-right-10; }
+.cart__itemBtn-delete {  }
 
-.cart__amount { font-weight: 800; font-size: 1.1rem }
+.cart__amount { font-weight: 600; font-size: 1rem }
 
 .l-cart__totalHolder { @include width( $w: 100%); @include height( $h: 90px); @extend .justify-between; @extend .items-end; }
-.cart__totalSum { @include width( $w: 270px); @extend .justify-between; @extend .items-center; }
-.cart__totalBtn { background-color: $green-color; color: #fff; font-weight: 600}
+.cart__totalSum { @include width( $w: 230px); @extend .justify-between; @extend .items-center; }
+.cart__totalBtn { @include min-height( $h: 40px);  @extend .flex-center; background-color: $red-color; color: #fff; font-weight: 600}
 
 
 

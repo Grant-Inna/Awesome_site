@@ -169,7 +169,7 @@ body, html, .container, .navigation__slider, .container {
   @include media( $p: $sm-break-xs + 60 ) { /* 450 */
     width: 310px;
     margin: 15px auto;
-    padding: 10px 10px;
+    padding: 10px 5px;
   }
 }
 
@@ -352,6 +352,11 @@ body, html, .container, .navigation__slider, .container {
 
 /*  ========= Cart =========  */
 
+@media( max-width: $sm-break-lg + 50 ) { /* 1050 */
+  .l-cart__oneItem { flex-direction: column; justify-content: center; align-items: flex-start; }
+  .l-cart__itemActions { margin-left: 53px }
+}
+
 @media screen and ( max-width: $sm-break-md + 60 ) {  /* 860 */
   .l-cart__itemActions {
     flex-direction: column;
@@ -359,20 +364,32 @@ body, html, .container, .navigation__slider, .container {
     align-items: flex-start;
     height: 76px;
   }
-  .l-cart__oneItem { height: 200px; }
+  .l-cart__oneItem { height: auto; padding-bottom: 15px; }
   .l-cart__infoText { height: auto; }
   .cart__seller { margin-left: 10px }
 }
 @media screen and ( max-width: $sm-break-sm + 60 ) {  /* 660 */
-  .cart__priceTitle, .cart__amountTitle { display: none }
-  .cart__seller { width: 90% }
+  .cart__checkbox { margin-right: 10px }
+  .l-cart__itemActions { height: 115px; margin-left: 42px }
   .l-cart__oneItem { flex-wrap: wrap; justify-content: flex-end; align-items: flex-start; }
   .l-cart__goodsInfo { width: 100%; height: auto }
   .l-cart__amount { width: 100px; }
   .cart__price { margin: 0; height: 40px; line-height: 40px }
+  .l-cart__articleButtonsHolder { height: 75px; flex-direction: column; justify-content: space-around; align-items: flex-start; }
+  .cart__itemBtn-delete { width: 200px; display: flex; justify-content: center; align-items: center; }
+  .content__cellImage { max-width: 90% }
 }
 @media screen and ( max-width: $sm-break-xs + 60 ) {  /* 460 */
-  .l-cart__oneItem { height: 300px; }
-  .l-cart__goodsInfo { flex-wrap: wrap; margin: 0 5px}
+  .cart__caption { font-size: 1rem }
+  .l-cart__oneItem { height: auto; }
+  .cart__goodsImage { margin-right: 5px; }
+  .relation-min-110 { width: 80px; }
+  .l-cart__goodsInfo { margin: 5px 0}
+  .l-cart__infoText { height: auto; font-size: 12px; }
+  .l-cart__itemActions { margin: 0 auto }
+  .cart__checkbox { margin-right: 8px }
+  .l-cart__itemActions { margin-left: 33px }
+
+  .cart__blockTitle { margin-left: 14px; }
 }
 
