@@ -1171,6 +1171,10 @@ input.header__searchInput {
 .navigation__offerRating {
   margin: 15px 3px 5px; }
 
+.article__infoBlocksCaption {
+  margin: 15px auto;
+  text-align: center; }
+
 .l-article__char {
   width: 100%; }
 
@@ -1285,7 +1289,7 @@ input.header__searchInput {
 
 .cart__itemBtn-like {
   color: #5075d5;
-  min-width: 200px; }
+  min-width: 206px; }
 
 .cart__itemBtn {
   color: #314257; }
@@ -1835,7 +1839,7 @@ input.header__searchInput {
     margin-right: 10px; }
   .l-cart__itemActions {
     height: 115px;
-    margin-left: 42px; }
+    margin-left: 37px; }
   .l-cart__oneItem {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1866,7 +1870,7 @@ input.header__searchInput {
         -ms-flex-align: start;
             align-items: flex-start; }
   .cart__itemBtn-delete {
-    width: 200px;
+    min-width: 206px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

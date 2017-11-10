@@ -254,6 +254,8 @@
 .navigation__section { text-decoration: none; }
 .navigation__offerRating { margin: 15px 3px 5px; }
 
+.article__infoBlocksCaption { margin: 15px auto; text-align: center }
+
 .l-article__char { @include width( $w: 100%)}
 .l-article__charInfo, .l-article__ratingInfo, .l-article__commentsInfo { @extend .margin-left-100; }
 .l-article__oneChar { @include width( $w: 310px) }
@@ -307,7 +309,7 @@
 .cart__itemBtn { font-weight: 600; }
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
 .cart__itemBtn-delete { color: $red-color }
-.cart__itemBtn-like { @extend .margin-right-10; color: $blue-color; min-width: 200px }
+.cart__itemBtn-like { @extend .margin-right-10; color: $blue-color; min-width: 206px }
 
 .cart__itemBtn { color: $header-color }
 .cart__itemBtn-delete {  }
