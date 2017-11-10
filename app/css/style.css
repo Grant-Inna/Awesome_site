@@ -487,7 +487,7 @@ a {
   padding-bottom: 30px; }
 
 /* Flex */
-.flex, .justify-center, .header__controlBtn, .justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum, .justify-around, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice, .items-center, .article__button, .article__aboutSeller, .l-cart__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
+.flex, .justify-center, .header__controlBtn, .justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .justify-around, .cart__totalSum, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice, .items-center, .article__button, .article__aboutSeller, .l-cart__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -525,12 +525,12 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .cart__totalSum {
+.justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.justify-around {
+.justify-around, .cart__totalSum {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
@@ -1296,10 +1296,12 @@ input.header__searchInput {
 
 .l-cart__totalHolder {
   width: 100%;
-  height: 90px; }
+  height: auto;
+  margin: 20px 0; }
 
 .cart__totalSum {
-  width: 230px; }
+  width: 310px;
+  margin: 0 0 15px; }
 
 .cart__totalBtn {
   min-height: 50px;
@@ -1875,7 +1877,11 @@ input.header__searchInput {
         -ms-flex-align: center;
             align-items: center; }
   .content__cellImage {
-    max-width: 90%; } }
+    max-width: 90%; }
+  .l-cart__totalHolder {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 @media screen and (max-width: 460px) {
   /* 460 */
@@ -1888,7 +1894,7 @@ input.header__searchInput {
   .relation-min-110 {
     width: 80px; }
   .l-cart__goodsInfo {
-    margin: 5px 0; }
+    margin: 7px 0; }
   .l-cart__infoText {
     height: auto;
     font-size: 12px; }

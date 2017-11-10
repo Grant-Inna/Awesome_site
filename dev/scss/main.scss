@@ -314,8 +314,8 @@
 
 .cart__amount { font-weight: 600; font-size: 1rem }
 
-.l-cart__totalHolder { @include width( $w: 100%); @include height( $h: 90px); @extend .justify-between; @extend .items-end; }
-.cart__totalSum { @include width( $w: 230px); @extend .justify-between; @extend .items-center; }
+.l-cart__totalHolder { @include width( $w: 100%); @include height(); @extend .justify-between; @extend .items-end; margin: 20px 0 }
+.cart__totalSum { @include width( $w: 310px); @extend .justify-around; @extend .items-center; margin: 0 0 15px}
 .cart__totalBtn { @include min-height( $h: 50px); padding: 0 15px; @extend .flex-center; background-color: $red-color; color: #fff; font-weight: 600;
   &:active { background-color: $red-color - 50; }
 }
