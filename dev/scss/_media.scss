@@ -130,6 +130,7 @@ body, html, .container, .navigation__slider, .container {
   }
 }
 
+.l-article__infoImage { @include media( $p: $break-lg) { align-items: center } }
 
 .relation-min-250 {
   @include media($p: $break-md) {
@@ -210,18 +211,6 @@ body, html, .container, .navigation__slider, .container {
   .header__controlBtn { justify-content: center }
   .l-header__userInfo { align-items: center; }
 }
-
-/*.navigation__section {
-  @include media( $p: $break-lg ) {
-    margin: 5px 6px; /!* Увеличим margin по бокам, чтобы не обрезались секции *!/
-  }
-  @include media( $p: $break-md ) {
-    margin: 5px 11px; /!* Ещё увеличим *!/
-  }
-  @include media( $p: $break-sm ) {
-    margin: 5px; /!* И вернём его обратно :D *!/
-  }
-}*/
 
 .relation-min-120 {
   @include media( $p: $break-max ) { /* 1020 */
@@ -404,3 +393,13 @@ body, html, .container, .navigation__slider, .container {
   .cart__blockTitle { margin-left: 14px; }
 }
 
+/*  ========= SELLER'S Page ==========  */
+
+.sellerPage__banner {
+  @include media($p: $break-md) {
+    min-height: 150px;
+  }
+  @include media($p: $break-xs) {
+    min-height: 100px;
+  }
+}

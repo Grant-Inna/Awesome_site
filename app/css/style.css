@@ -332,7 +332,7 @@ a {
 .margin-right-15 {
   margin-right: 15px; }
 
-.margin-right-20, .cart__goodsImage {
+.margin-right-20, .cart__goodsImage, .sellerPage__avatar, .sellerPage__sellerInfo {
   margin-right: 20px; }
 
 .margin-right-30, .l-article__infoImage {
@@ -364,6 +364,9 @@ a {
 
 .margin-top-30 {
   margin-top: 30px; }
+
+.margin-bottom-0 {
+  margin-bottom: 0; }
 
 .margin-bottom-5 {
   margin-bottom: 5px; }
@@ -1044,6 +1047,9 @@ input.header__searchInput {
 .content__doubleCellTitle {
   margin-bottom: 7px; }
 
+.content__doubleCellTitle-link {
+  text-decoration: none; }
+
 .content__doubleCellImage {
   max-width: 20%;
   max-height: 90%; }
@@ -1316,6 +1322,19 @@ input.header__searchInput {
   .cart__totalBtn:active {
     background-color: #9a0000; }
 
+/*  ========= SELLER'S Page ==========  */
+.sellerPage__info {
+  width: 50%; }
+
+.sellerPage__sellerInfo {
+  width: 80%; }
+
+.sellerPage__seller .sellerPage__banner {
+  display: block;
+  height: 160px;
+  width: 50%;
+  background-color: rgba(149, 166, 187, 0.5); }
+
 /* 1000 */
 /* 800 */
 /* 600 */
@@ -1489,6 +1508,12 @@ input.header__searchInput {
     /* 450 */
     margin: 3px; } }
 
+@media screen and (max-width: 1020px) {
+  .l-article__infoImage {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
 @media screen and (max-width: 810px) {
   .relation-min-250 {
     width: 168px; } }
@@ -1622,17 +1647,6 @@ input.header__searchInput {
         -ms-flex-align: center;
             align-items: center; } }
 
-/*.navigation__section {
-  @include media( $p: $break-lg ) {
-    margin: 5px 6px; /!* Увеличим margin по бокам, чтобы не обрезались секции *!/
-  }
-  @include media( $p: $break-md ) {
-    margin: 5px 11px; /!* Ещё увеличим *!/
-  }
-  @include media( $p: $break-sm ) {
-    margin: 5px; /!* И вернём его обратно :D *!/
-  }
-}*/
 @media screen and (max-width: 1285px) {
   .relation-min-120 {
     /* 1020 */
@@ -1910,3 +1924,12 @@ input.header__searchInput {
     margin-left: 30px; }
   .cart__blockTitle {
     margin-left: 14px; } }
+
+/*  ========= SELLER'S Page ==========  */
+@media screen and (max-width: 810px) {
+  .sellerPage__banner {
+    min-height: 150px; } }
+
+@media screen and (max-width: 680px) {
+  .sellerPage__banner {
+    min-height: 100px; } }

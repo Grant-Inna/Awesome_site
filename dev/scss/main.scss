@@ -190,6 +190,7 @@
 .content__doubleCellTitle {
   margin-bottom: 7px;
 }
+.content__doubleCellTitle-link { text-decoration: none }
 .content__doubleCellImage {
   @include max-width($w: 20%);
   @include max-height($h: 90%);
@@ -322,6 +323,14 @@
   &:active { background-color: $red-color - 50; }
 }
 
+
+/*  ========= SELLER'S Page ==========  */
+
+.sellerPage__info { width: 50%; }
+.sellerPage__avatar { @extend .margin-right-20 }
+.sellerPage__sellerInfo { width: 80%; @extend .margin-right-20 }
+.sellerPage__seller
+.sellerPage__banner { display: block; height: 160px; width: 50%; background-color: rgba(149, 166, 187, 0.5); }
 
 
 

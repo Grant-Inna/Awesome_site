@@ -4,7 +4,8 @@ mixin double-cell ( title, by, img1, exhib1, img2, exhib2, img3, exhib3, img4, e
             .relation__ratio.relation__ratio-2x1
             .relation__content.flex-column.flex-center
                 h4.content__doubleCellTitle #{ title }
-                sup.content__doubleCellTitle-sub #{ by }
+                sup.content__doubleCellTitle-sub
+                    a( href="seller-page.html" ).content__doubleCellTitle-link.color-blue #{ by }
                 .content__doubleCellHolder.justify-around.items-center
                     .content__doubleCellImage
                         img.content__cellImage( src="img/sections/#{ img1 + '.' + exhib1 }" )
