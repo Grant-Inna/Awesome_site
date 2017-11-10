@@ -17,15 +17,18 @@
                 h2.article__cost 100500 мемасиков
                 .l-article__actionButtons.items-start.flex-column
                     .article__buttonDetails.items-center
-                        a( href="one-article-page.html" ).article__button Подробнее
+                        a( href="one-article-page.html" ).article__button.article__buttonMoreInfo Подробнее
+                    .l-article__amount-margin.flex-center
+                        button.buttonControl__less.font-1-4 -
+                        input( type="text", placeholder="2" ).amount__holder.flex-center
+                        button.buttonControl__more.font-1-4 +
                     .l-article__toCart.flex.margin-top-5
+                        a( href="cart.html" ).article__button.article__buttonToCart.items-center.margin-right-5
+                            i.s7-cart.actionButtons__icon
+                            span.buttonToCart__text Добавить в корзину
                         a.article__button.article__buttonBuy.items-center
                             i.icon-fire.actionButtons__icon
                             span.buttonBuy__text Купить сейчас
-                        .l-article__amount.flex-center
-                            i.s7-angle-left.font-2.onHover-left-1
-                            input( type="text", placeholder="2" ).amount__holder.flex-center.icon
-                            i.s7-angle-right.font-2.onHover-right-1
         .container.flex-wrap.justify-center.border-top2
                 include ../mixins/_mixin-moreCell
                 +cell-for-more( '230', '5', 'png', '3746', '34p' )

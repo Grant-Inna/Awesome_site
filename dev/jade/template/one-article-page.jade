@@ -11,16 +11,22 @@
                     include ../mixins/_mixin-ratingStars
                     +article-rating( '4' )
                 .l-article__actionButtons.items-center.flex-wrap
-                    h2.article__cost.margin-right-50 100500 мемасиков
-                    .l-article__toCart.flex
+                    h2.article__cost 100500 мемасиков
+                .l-article__actionButtons.items-start.flex-column
+                    .l-article__amount-margin.flex-center
+                        button.buttonControl__less.font-1-4 -
+                        input( type="text", placeholder="2" ).amount__holder.flex-center
+                        button.buttonControl__more.font-1-4 +
+                    .l-article__toCart.flex.margin-top-5
                         a( href="cart.html" ).article__button.article__buttonToCart.items-center.margin-right-5
                             i.s7-cart.actionButtons__icon
                             span.buttonToCart__text Добавить в корзину
-                        .l-article__amount.flex-center
-                            i.s7-angle-left.font-2.onHover-left-1
-                            input( type="text", placeholder="2" ).amount__holder.flex-center.icon
-                            i.s7-angle-right.font-2.onHover-right-1
+                        a.article__button.article__buttonBuy.items-center
+                            i.icon-fire.actionButtons__icon
+                            span.buttonBuy__text Купить сейчас
                 .article__about
                     p.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa debitis, ducimus eligendi enim eos expedita fugiat iure magnam minima provident quae repellat reprehenderit repudiandae similique unde ut voluptate? Magni nemo officiis voluptatum. Animi at consequatur delectus deleniti dolorem dolores excepturi fugit illum impedit, ipsum itaque iure iusto maxime minus mollitia nam necessitatibus nemo nisi nobis praesentium quasi qui quis ratione, repudiandae tenetur velit voluptate? Enim, expedita, illo!
+                    .article__aboutSeller.flex Продавец:
+                            a( href ).margin-left-10 Дед Афанасий
 
