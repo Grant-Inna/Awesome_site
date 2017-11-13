@@ -78,11 +78,11 @@ a {
 .relation {
   position: relative; }
   .relation-min-50 {
-    min-width: 50px; }
+    width: 50px; }
   .relation-min-70 {
-    min-width: 70px; }
+    width: 70px; }
   .relation-min-90 {
-    min-width: 90px; }
+    width: 90px; }
   .relation-min-110 {
     width: 110px; }
   .relation-min-120 {
@@ -245,7 +245,7 @@ a {
 .margin-5 {
   margin: 5px; }
 
-.margin-6, .navigation__section {
+.margin-6 {
   margin: 6px; }
 
 .margin-7 {
@@ -332,7 +332,7 @@ a {
 .margin-right-15 {
   margin-right: 15px; }
 
-.margin-right-20, .cart__goodsImage, .sellerPage__avatar, .sellerPage__sellerInfo {
+.margin-right-20, .cart__goodsImage, .sellerPage__avatar, .sellerPage__sellerInfo-sm {
   margin-right: 20px; }
 
 .margin-right-30, .l-article__infoImage {
@@ -495,20 +495,20 @@ a {
   display: -ms-flexbox;
   display: flex; }
 
-.flex-wrap {
+.flex-wrap, .article__sectionName, .sellerPage__categories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.flex-column, .l-article__infoImage {
+.flex-column, .l-article__infoImage, .sellerPage__sellerInfo-bg, .sellerPage__sellerInfo-sm {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.flex-center, .navigation__slider, .buttonControl__less, .buttonControl__more, .cart__totalBtn {
+.flex-center, .navigation__slider, .article__sectionTag, .sellerPage__category, .buttonControl__less, .buttonControl__more, .cart__totalBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -697,7 +697,7 @@ a {
   font-size: 0.1rem; }
 
 /* Border */
-.border-1, .article__button, .amount__holder, .article__oneValueProgress {
+.border-1, .article__sectionTag, .sellerPage__category, .article__button, .amount__holder, .article__oneValueProgress {
   border: 1px solid rgba(5, 32, 51, 0.2); }
 
 .border-2 {
@@ -745,7 +745,7 @@ a {
 .radius-1, .article__oneValueProgress {
   border-radius: 1px; }
 
-.radius-2, .article__likesCount, .article__button {
+.radius-2, .article__likesCount, .article__sectionTag, .sellerPage__category, .article__button {
   border-radius: 2px; }
 
 .radius-3 {
@@ -930,6 +930,7 @@ input.header__searchInput {
     transition: 0.1s; }
 
 .navigation__sectionImage {
+  width: 80%;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s; }
@@ -1097,7 +1098,16 @@ input.header__searchInput {
 
 .article__sectionName {
   padding: 15px 0 0;
-  font-size: 1.3rem; }
+  font-size: 1.2rem; }
+
+.article__sectionTag, .sellerPage__category {
+  width: auto;
+  height: 25px;
+  padding: 3px 7px;
+  margin: 5px;
+  background: #f0f0f0; }
+  .article__sectionTag:first-of-type, .sellerPage__category:first-of-type {
+    margin-left: 0; }
 
 .article__goodsName {
   margin: 15px 0; }
@@ -1329,12 +1339,41 @@ input.header__searchInput {
 
 /*  ========= SELLER'S Page ==========  */
 .sellerPage__info {
-  width: 50%; }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.sellerPage__sellerInfo {
-  width: 80%; }
+.sellerPage__avatar {
+  width: auto; }
 
-.sellerPage__seller .sellerPage__banner {
+.sellerPage__sellerInfoHolder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sellerPage__sellerInfo-bg {
+  width: auto; }
+
+.sellerPage__sellerInfo-sm {
+  width: auto;
+  min-width: 250px; }
+
+.sellerPage__category {
+  margin: 0 5px 5px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.sellerPage__seller {
+  width: 100%;
+  margin-bottom: 0; }
+
+.sellerPage__banner {
   display: block;
   height: 160px;
   width: 50%;
@@ -1356,6 +1395,7 @@ input.header__searchInput {
 .headhesive--stick {
   position: fixed;
   top: 0;
+  width: 100%;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-transition: .7s ease-in-out;
@@ -1504,25 +1544,30 @@ input.header__searchInput {
       /* 450 */
       width: 75%; } }
 
-@media screen and (max-width: 810px) {
-  .navigation__section {
-    /* 810 */
-    margin: 5px; } }
-
-@media screen and (max-width: 680px) {
-  .navigation__section {
-    /* 680 */
-    margin: 3px; } }
-
 @media screen and (max-width: 505px) {
   .navigation__section {
     /* 505 */
-    margin: 5px; } }
+    margin: 4px; } }
 
-@media screen and (max-width: 450px) {
-  .navigation__section {
-    /* 450 */
-    margin: 3px; } }
+@media screen and (max-width: 680px) {
+  .relation-min-70 {
+    /* 680 */
+    width: 55px; } }
+
+@media screen and (max-width: 505px) {
+  .navigation__sectionImage {
+    /* 505 */
+    width: 90%; } }
+
+@media screen and (max-width: 680px) {
+  .navigation__sectionNameText {
+    /* 680 */
+    font-size: .9rem; } }
+
+@media screen and (max-width: 505px) {
+  .navigation__sectionNameText {
+    /* 505 */
+    font-size: .8rem; } }
 
 @media screen and (max-width: 1020px) {
   .l-article__infoImage {
@@ -1562,7 +1607,7 @@ input.header__searchInput {
 @media screen and (max-width: 450px) {
   .l-content__cell {
     /* 450 */
-    width: 45%; } }
+    width: 48%; } }
 
 .wrapper-small {
   width: 1000px;
@@ -1944,10 +1989,25 @@ input.header__searchInput {
     margin-left: 14px; } }
 
 /*  ========= SELLER'S Page ==========  */
-@media screen and (max-width: 810px) {
-  .sellerPage__banner {
-    min-height: 150px; } }
+@media screen and (max-width: 450px) {
+  .sellerPage__avatar {
+    margin-right: 10px; } }
 
-@media screen and (max-width: 680px) {
-  .sellerPage__banner {
-    min-height: 100px; } }
+@media screen and (max-width: 505px) {
+  .sellerPage__info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+@media screen and (max-width: 505px) {
+  .sellerPage__sellerInfo-sm, .sellerPage__sellerInfo-bg {
+    width: 100%; }
+  .sellerPage__sellerInfo-sm h4, .sellerPage__sellerInfo-bg h4 {
+    width: 100%;
+    text-align: center; }
+  .sellerPage__sellerInfo-sm {
+    margin-right: 0; }
+  .sellerPage__sellerInfo-bg {
+    margin-top: 10px; } }

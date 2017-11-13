@@ -60,7 +60,7 @@
 .l-navigation__sections { list-style: none; overflow-x: hidden; }
 .navigation__sectionNameText { @include transition }
 
-.navigation__section { @include width( ); @extend .margin-6;
+.navigation__section { @include width( );
   &:hover .navigation__sectionImage { transform: scale(1.2); @include transition($t: .1s)}
   &:hover .navigation__sectionNameText { transform: scale(1.07) translateY(3px); @include transition($t: .1s) }
 }
@@ -69,7 +69,7 @@
 
   .navigation__sectionNameText {}
 
-  .navigation__sectionImage {  @include transition }
+  .navigation__sectionImage { width: 80%; @include transition }
 
 
 .l-header__infoHolder { @include width($w: 33%); }
@@ -218,7 +218,10 @@
 .rating__oneStar, .rating__oneStar-offer { @extend .margin-right-2; }
 .article__likesCount { @extend .margin-left-10; @extend .margin-right-3; @extend .radius-2; color: #515151; font-size: large; font-weight: 600; background-color: $border-color-RGB; }
 
-.article__sectionName { padding: 15px 0 0; font-size: 1.3rem; }
+.article__sectionName { padding: 15px 0 0; font-size: 1.2rem; @extend .flex-wrap; }
+.article__sectionTag { @include width(); height: 25px; padding: 3px 7px; @extend .flex-center; @extend .border-1; @extend .radius-2; margin: 5px; background: $color-background-body - 15;
+  &:first-of-type { margin-left: 0 }
+}
 
 .article__goodsName { margin: 15px 0 }
 
@@ -327,10 +330,15 @@
 
 /*  ========= SELLER'S Page ==========  */
 
-.sellerPage__info { width: 50%; }
-.sellerPage__avatar { @extend .margin-right-20 }
-.sellerPage__sellerInfo { width: 80%; @extend .margin-right-20 }
-.sellerPage__seller
+.sellerPage__info { width: 100%; display: flex; justify-content: space-between }
+.sellerPage__avatar { width: auto; @extend .margin-right-20 }
+.sellerPage__sellerInfoHolder { width: 100%; display: flex; }
+.sellerPage__sellerInfo-bg { width: auto; @extend .flex-column}
+.sellerPage__sellerInfo-sm { width: auto; min-width: 250px; @extend .margin-right-20; @extend .flex-column}
+.sellerPage__categories { @extend .flex-wrap;  }
+.sellerPage__category { @extend .article__sectionTag; margin: 0 5px 5px 0; justify-content: space-between }
+
+.sellerPage__seller { width: 100%; margin-bottom: 0 }
 .sellerPage__banner { display: block; height: 160px; width: 50%; background-color: rgba(149, 166, 187, 0.5); }
 
 

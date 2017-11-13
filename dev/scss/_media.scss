@@ -26,6 +26,7 @@ $sm-break-xs: $sm-cell-width * 2; /* 400 */
 .headhesive--stick {
   position: fixed;
   top: 0;
+  width: 100%;
   opacity: 1;
   background-color: rgba( 255, 255, 255, .8 );
   transition: .7s ease-in-out;
@@ -140,19 +141,29 @@ body, html, .container, .navigation__slider, .container {
 }
 
 .navigation__section {
-  @include media( $p: $break-md ) { /* 810 */
-    margin: 5px;
-  }
-  @include media( $p: $break-xs) { /* 680 */
-    margin: 3px;
-  }
   @include media($p: $break-tiny) { /* 505 */
-    margin: 5px;
-  }
-  @include media( $p: $break-extra-tiny ) { /* 450 */
-    margin: 3px;
+    margin: 4px;
   }
 }
+.relation-min-70 {
+  @include media($p: $break-xs) { /* 680 */
+    width: 55px;
+  }
+}
+.navigation__sectionImage {
+  @include media($p: $break-tiny) { /* 505 */
+    width: 90%;
+  }
+}
+.navigation__sectionNameText {
+  @include media($p: $break-xs) { /* 680 */
+    font-size: .9rem;
+  }
+  @include media($p: $break-tiny) { /* 505 */
+    font-size: .8rem;
+  }
+}
+
 
 .l-article__infoImage { @include media( $p: $break-lg) { align-items: center } }
 
@@ -184,7 +195,7 @@ body, html, .container, .navigation__slider, .container {
     width: 32%;
   }
   @include media( $p: $break-extra-tiny ) { /* 450 */
-  width: 45%;
+  width: 48%;
   }
 }
 
@@ -427,11 +438,28 @@ body, html, .container, .navigation__slider, .container {
 
 /*  ========= SELLER'S Page ==========  */
 
-.sellerPage__banner {
-  @include media($p: $break-md) {
-    min-height: 150px;
-  }
-  @include media($p: $break-xs) {
-    min-height: 100px;
+.sellerPage__avatar {
+  @include media($p: $break-extra-tiny) {
+    margin-right: 10px;
   }
 }
+.sellerPage__info {
+  @include media($p: $break-tiny) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and ( max-width: $break-tiny ) {
+  .sellerPage__sellerInfo-sm, .sellerPage__sellerInfo-bg {
+    width: 100%;
+  }
+  .sellerPage__sellerInfo-sm h4, .sellerPage__sellerInfo-bg h4 {
+    width: 100%;
+    text-align: center;
+  }
+  .sellerPage__sellerInfo-sm { margin-right: 0 }
+  .sellerPage__sellerInfo-bg { margin-top: 10px }
+}
+
+
