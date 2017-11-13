@@ -111,7 +111,7 @@
 
 /* ============ CONTENT ============ */
 
-.l-content__holder { @include max-width( 1260px )}
+.l-content__holder { @include max-width( 1260px ); @include width( 100% ) }
 .l-content__cell {
   @extend .margin-1;
   background-color: rgba( 0, 0, 0, .0200);
@@ -237,12 +237,13 @@
 .amount__holder { height: 30px; width: 60px; text-align: center; @extend .border-1; @extend .padding-5; }
 .amount__holder-cart { width: 66px; }
 .l-article__amount { width: 100px; height: 30px; margin-right: 10px }
-.l-article__amount-margin {  width: 100px; margin: 10px 0 0 }
-.l-article__amount-cart { width: 107px; height: 30px; margin-right: 10px }
-.buttonControl__less, .buttonControl__more { height: 30px; @extend.icon-20; @extend .flex-center; background: antiquewhite; border: none; outline: none;
+.l-article__amount-margin {  width: auto; margin: 10px 0 0 }
+.l-article__amount-cart { width: auto; height: 30px; margin-right: 10px }
+.buttonControl__less, .buttonControl__more { height: 30px; width: 30px; @extend.icon-20; @extend .flex-center; background: antiquewhite; border: none; outline: none;
   &:active { background: antiquewhite - 20; }
   &:disabled { color: #c7c7c7 }
 }
+.buttonControl__more { padding-bottom: 3px; }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
 

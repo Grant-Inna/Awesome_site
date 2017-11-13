@@ -65,20 +65,20 @@ body, html, .container, .navigation__slider, .container {
     width: 720px;
   }
   @include media( $p: $break-sm ) { /* 770 */
-    width: 650px;
+    width: 96%;
   }
   @include media( $p: $break-xs) { /* 680 */
-    width: 560px;
+    width: 96%;
   }
-  @include media( $p: $break-extra-xs ) { /* 580 */
-    width: 460px;
+  /*@include media( $p: $break-extra-xs ) { /!* 580 *!/
+    width: 98%;
   }
-  @include media( $p: $break-tiny ) { /* 505 */
-    width: 400px;
+  @include media( $p: $break-tiny ) { /!* 505 *!/
+    width: 99%;
   }
-  @include media( $p: $break-extra-tiny ) { /* 450 */
+  @include media( $p: $break-extra-tiny ) { /!* 450 *!/
     width: 330px;
-  }
+  }*/
   @include media( $p: 345px ) {
     max-width: 315px;
     padding-left: 2px;
@@ -99,20 +99,20 @@ body, html, .container, .navigation__slider, .container {
     width: 550px;
   }
   @include media( $p: $break-xs) { /* 680 */
-    width: 455px;
+    width: 76%;
   }
   @include media( $p: $break-extra-xs ) { /* 580 */
-    width: 460px - 85;
+    width: 82%;
   }
-  @include media( $p: $break-tiny ) { /* 505 */
-    width: 345px;
-  }
-  @include media( $p: $break-extra-tiny ) { /* 450 */
-    width: 230px;
-  }
-  @include media( $p: 345px ) { /* 345 */
-    width: 220px;
-  }
+  /*@include media( $p: $break-tiny ) { /!* 505 *!/
+   width: 345px;
+ }*/
+ @include media( $p: $break-extra-tiny ) { /* 450 */
+   width: 75%;
+ }
+ /*@include media( $p: 345px ) { /!* 345 *!/
+   width: 220px;
+ }*/
 }
 
 .navigation__section {
@@ -136,23 +136,31 @@ body, html, .container, .navigation__slider, .container {
   @include media($p: $break-md) {
     width: 168px;
   }
-  @include media($p: $break-sm) {
-    width: 160px;
+  @include media($p: $break-sm) { /* 770 */
+    width: 100%;
   }
-  @include media($p: $break-xs) { /* 680 */
+  /*@include media($p: $break-xs) { /!* 680 *!/
     width: 137px;
   }
   @include media($p: $break-extra-xs) {
     width: 150px;
   }
-  @include media($p: $break-tiny) { /* 505 */
+  @include media($p: $break-tiny) { /!* 505 *!/
     width: 190px;
   }
-  @include media( $p: $break-extra-tiny ) { /* 450 */
+  @include media( $p: $break-extra-tiny ) { /!* 450 *!/
     width: 155px;
   }
-  @include media( $p: 345px ) { /* 345 */
+  @include media( $p: 345px ) { /!* 345 *!/
     width: 138px;
+  }*/
+}
+.l-content__cell {
+  @include media($p: $break-sm) { /* 770 */
+    width: 32%;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+  width: 45%;
   }
 }
 
