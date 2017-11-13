@@ -14,6 +14,30 @@ $sm-break-md: $sm-cell-width * 4; /* 800 */
 $sm-break-sm: $sm-cell-width * 3; /* 600 */
 $sm-break-xs: $sm-cell-width * 2; /* 400 */
 
+
+/* sticky navigation styles */
+
+.headhesive {
+  position: absolute;
+  top: -999px;
+  opacity: 0;
+  transition: .7s ease-in-out; }
+
+.headhesive--stick {
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  background-color: rgba( 255, 255, 255, .8 );
+  transition: .7s ease-in-out;
+  z-index: 100; }
+
+.headhesive--unstick {
+  position: fixed;
+  transform: translateY(-100%);
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease-in-out; }
+
 @mixin media ( $p ) {
   @media screen and (max-width: $p) {
     @content

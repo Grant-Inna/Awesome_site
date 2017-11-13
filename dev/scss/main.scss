@@ -82,7 +82,7 @@
 
 .navigation__sliderCaption {}
 
-.navigation__slider { position: relative }
+.navigation__slider { position: relative; @extend .flex-center }
 .header__slider-before,
 .header__slider-after { display: block; position: absolute; width: 50px; padding-top: 2%; height: 100%; @include transition(); }
 
