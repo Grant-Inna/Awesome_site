@@ -1,0 +1,51 @@
+mixin order-one-item ( number, date, size, img, exhib, name, price, amount, status, finish_date )
+    .l-order__oneItem.flex-column
+        .l-order__infoHolder.justify-between
+            .l-order__info-left.flex
+                .order__info.order__info-number Заказ № #{ number }
+                .order__info.order__info-date Время заказа: #{ date }
+            .l-order__info-right.flex
+                .order__info.order__info-price #{ price * amount }
+                .order__info.action__button.s7-trash
+        .l-cart__goodsInfo.items-center
+            .cart__goodsImage
+                div( class= "relation relation-min-#{ size }" )
+                    .relation__ratio.relation__ratio-1x1
+                    .relation__content.flex-center
+                        a( href="one-article-page.html" ).content__cellLink.flex-center
+                            img.content__cellImage( src="img/sections/#{ img + '.' + exhib }" )
+            .l-cart__infoText.flex-column
+                h3.cart__itemCaption #{ name }
+                    h4.cart__price-smaller #{ price }p x #{ amount }
+        .l-cart__itemActions.justify-start
+            .l-order__delivertStatusHolder.flex-center
+                case ( status )
+                    when 'Заказ завершён'
+                        .order__deliveryStatus #{ status }
+                        .order__deliveryStatus-date #{ finish_date }
+                    default
+                        .order__deliveryStatus #{ status }
+            case ( status )
+                when 'Ожидается оплата'
+                    .l-cart__articleButtonsHolder.flex
+                        .article__button.cart__itemBtn-delete.items-center Отменить заказ
+                when 'Ожидается отправка'
+                    .l-cart__articleButtonsHolder.flex
+                        .article__button.cart__itemBtn-delete.items-center Отменить заказ
+                when 'Заказ подтверждён'
+                    .l-cart__articleButtonsHolder.flex
+                        .article__button.cart__itemBtn-rate.items-center Оценить заказ
+                when 'Заказ завершён'
+                    .l-cart__articleButtonsHolder.flex
+                        .article__button.cart__itemBtn-addAgain.items-center Добавить в корзину
+                default
+                    .l-cart__articleButtonsHolder.flex
+                        .article__button.cart__itemBtn-like.items-center Отследить
+                        .article__button.cart__itemBtn-delete.items-center Подтвердить получение
+
+
+
+
+
+
+

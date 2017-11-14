@@ -315,6 +315,8 @@
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
 .cart__itemBtn-delete { color: $red-color }
 .cart__itemBtn-like { @extend .margin-right-10; color: $blue-color; min-width: 206px }
+.cart__itemBtn-rate { color: $orange-color }
+.cart__itemBtn-addAgain { color: $green-color }
 
 .cart__itemBtn { color: $header-color }
 .cart__itemBtn-delete {  }
@@ -341,7 +343,8 @@
 .sellerPage__seller { width: 100%; margin-bottom: 0 }
 .sellerPage__banner { display: block; height: 160px; width: 50%; background-color: rgba(149, 166, 187, 0.5); }
 
-
+/*  ========= Orders =========  */
+.l-order__oneItem { width: 100%; min-height: 180px; @extend .items-center; @extend .border-bottom1 }
 
 
 @import 'media';

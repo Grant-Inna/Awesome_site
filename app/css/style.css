@@ -490,7 +490,7 @@ a {
   padding-bottom: 30px; }
 
 /* Flex */
-.flex, .justify-center, .header__controlBtn, .justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .justify-around, .cart__totalSum, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice, .items-center, .article__button, .article__aboutSeller, .l-cart__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
+.flex, .justify-center, .header__controlBtn, .justify-between, .l-article__infoImage, .l-cart__infoText, .l-cart__totalHolder, .justify-around, .cart__totalSum, .justify-end, .l-header__search, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__caption, .justify-start, .cart__price, .cart__price-smaller, .cart__fullPrice, .items-center, .article__button, .article__aboutSeller, .l-cart__oneItem, .l-order__oneItem, .items-baseline, .items-end, .l-header__userInfo, .items-start, .items-stretch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -547,7 +547,7 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
-.items-center, .l-header__search, .header__controlBtn, .article__button, .article__aboutSeller, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__price, .cart__price-smaller, .cart__fullPrice, .l-cart__oneItem, .cart__totalSum {
+.items-center, .l-header__search, .header__controlBtn, .article__button, .article__aboutSeller, .cart__priceTitle, .cart__amountTitle, .l-cart__amount, .cart__price, .cart__price-smaller, .cart__fullPrice, .l-cart__oneItem, .cart__totalSum, .l-order__oneItem {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -727,7 +727,7 @@ a {
 .border-top5 {
   border-top: 5px solid rgba(5, 32, 51, 0.2); }
 
-.border-bottom1, .l-cart__oneItem {
+.border-bottom1, .l-cart__oneItem, .l-order__oneItem {
   border-bottom: 1px solid rgba(5, 32, 51, 0.2); }
 
 .border-bottom2 {
@@ -1312,6 +1312,12 @@ input.header__searchInput {
   color: #5075d5;
   min-width: 206px; }
 
+.cart__itemBtn-rate {
+  color: #f3b531; }
+
+.cart__itemBtn-addAgain {
+  color: #66cc66; }
+
 .cart__itemBtn {
   color: #314257; }
 
@@ -1378,6 +1384,11 @@ input.header__searchInput {
   height: 160px;
   width: 50%;
   background-color: rgba(149, 166, 187, 0.5); }
+
+/*  ========= Orders =========  */
+.l-order__oneItem {
+  width: 100%;
+  min-height: 180px; }
 
 /* 1000 */
 /* 800 */
