@@ -1414,9 +1414,9 @@ input.header__searchInput {
   position: absolute;
   top: -999px;
   opacity: 0;
-  -webkit-transition: .7s ease-in-out;
-  -o-transition: .7s ease-in-out;
-  transition: .7s ease-in-out; }
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
 
 .headhesive--stick {
   position: fixed;
@@ -1424,9 +1424,9 @@ input.header__searchInput {
   width: 100% !important;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: .7s ease-in-out;
-  -o-transition: .7s ease-in-out;
-  transition: .7s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   z-index: 100; }
 
 .headhesive--unstick {
