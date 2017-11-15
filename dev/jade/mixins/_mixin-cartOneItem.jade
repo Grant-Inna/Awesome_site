@@ -10,7 +10,7 @@ mixin cart-one-item ( size, img, exhib, name, availability, price, amount )
                         a( href="one-article-page.html" ).content__cellLink.flex-center
                             img.content__cellImage( src="img/sections/#{ img + '.' + exhib }" )
             .l-cart__infoText.flex-column
-                h3.cart__itemCaption #{ name }
+                h4.cart__itemCaption #{ name }
                 case (availability)
                     when ('есть')
                         .cart__itemAvailable.color-green В наличии
@@ -39,10 +39,10 @@ mixin cart-one-item ( size, img, exhib, name, availability, price, amount )
                         button.buttonControl__more.font-1-4
                             span +
             .l-cart__articleButtonsHolder.flex
-                .article__button.cart__itemBtn-like.items-center
+                button.article__button.cart__itemBtn-like.items-center
                     i.s7-like.actionButtons__icon
                     | Добавить в избранное
-                .article__button.cart__itemBtn-delete.items-center
+                button.article__button.cart__itemBtn-delete.items-center
                     i.s7-trash.actionButtons__icon
                     | Удалить
 

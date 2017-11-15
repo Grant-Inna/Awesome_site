@@ -46,10 +46,18 @@ $sm-break-xs: $sm-cell-width * 2; /* 400 */
 }
 
 html {
-  @include media( $p: 570px ) {
+  @include media( $p: $break-sm ) {
     font-size: 13px;
   }
+  @include media( $p: $break-extra-xs ) {
+    font-size: 12px;
+  }
+  @include media( $p: $break-tiny ) {
+    font-size: 11px;
+  }
 }
+
+
 
 body, html, .container, .navigation__slider, .container {
   @include media( $p: 321px ) {
@@ -190,7 +198,7 @@ body, html, .container, .navigation__slider, .container {
     width: 138px;
   }*/
 }
-.l-content__cell {
+.content__cell-bg {
   @include media($p: $break-sm) { /* 770 */
     width: 32%;
   }
@@ -208,27 +216,43 @@ body, html, .container, .navigation__slider, .container {
     width: $sm-break-md; /* 800 */
   }
   @include media( $p: $sm-break-md + 60 ) { /* 850 */
-    width: $sm-break-sm; /* 600 */
+    width: 90%; /*  */
   }
   @include media( $p: $sm-break-sm + 60 ) { /* 650 */
-    width: $sm-break-xs; /* 400 */
+    width: 94%; /* 400 */
     margin: 25px auto;
-    padding: 10px 10px;
+    padding: 10px;
 
   }
   @include media( $p: $sm-break-xs + 60 ) { /* 450 */
-    width: 310px;
+    width: 98%;
     margin: 15px auto;
-    padding: 10px 5px;
+    padding: 5px;
+  }
+}
+
+.content__cell-sm {
+  @include media( $p: $sm-break-md + 60 ) { /* 850 */
+    width: 32%; /*  */
+  }
+  @include media($p: $break-sm) { /* 650 */
+    width: 48%;
+  }
+  @include media( $p: $break-extra-tiny ) { /* 450 */
+    width: 49%;
   }
 }
 
 .relation-min-230 {
+  @include media( $p: $sm-break-md + 60 ) { /* 850 */
+    width: 90%; /*  */
+    margin: 0 auto;
+  }
   @include media( $p: $sm-break-sm + 60 ) { /* 660 */
-    width: 185px;
+    width: 90%;
   }
   @include media( $p: $sm-break-xs + 60 ) { /* 460 */
-    width: 135px;
+    width: 95%;
   }
 }
 
@@ -331,7 +355,7 @@ body, html, .container, .navigation__slider, .container {
     display: block; /* Добавим цену на маленьких расширениях */
   }
   .content__cellImage {
-    max-width: 75%; /* Уменьшим карьтинку на низких расширениях, для лучшей читаемости цены */
+    max-width: 85%; /* Уменьшим карьтинку на низких расширениях, для лучшей читаемости цены */
   }
   .like__icon {
     width: 15px; /* Уменьшим иконку на низких расширениях, для лучшей сбалансированности */
@@ -412,12 +436,12 @@ body, html, .container, .navigation__slider, .container {
 }
 @media screen and ( max-width: $sm-break-sm + 60 ) {  /* 660 */
   .cart__checkbox { margin-right: 10px }
-  .l-cart__itemActions { height: 115px; margin-left: 37px }
+  .l-cart__itemActions { height: 115px; margin-left: 37px; width: -webkit-fill-available; }
   .l-cart__oneItem { flex-wrap: wrap; justify-content: flex-end; align-items: flex-start; }
   .l-cart__goodsInfo { width: 100%; height: auto }
   .l-cart__amount { width: 100px; }
   .cart__price { margin: 0; height: 40px; line-height: 40px }
-  .l-cart__articleButtonsHolder { height: 75px; flex-direction: column; justify-content: space-around; align-items: flex-start; }
+  .l-cart__articleButtonsHolder { height: 75px; width: 100%; flex-direction: column; justify-content: space-around; align-items: flex-start; }
   .cart__itemBtn-delete { min-width: 206px; display: flex; justify-content: center; align-items: center; }
   .content__cellImage { max-width: 90% }
   .l-cart__totalHolder { align-items: center }
@@ -429,10 +453,10 @@ body, html, .container, .navigation__slider, .container {
   .relation-min-110 { width: 80px; }
   .l-cart__goodsInfo { margin: 7px 0}
   .l-cart__infoText { height: auto; font-size: 12px; }
-  .l-cart__itemActions { margin: 0 auto }
   .cart__checkbox { margin-right: 5px }
-  .l-cart__itemActions { margin-left: 30px }
+  .l-cart__itemActions { margin: 0 30px; }
 
+  .cart__itemBtn-like, .cart__itemBtn-delete, .cart__itemBtn-rate, .cart__itemBtn-addAgain { width: 100%; display: flex; justify-content: center; align-items: center;  }
   .cart__blockTitle { margin-left: 14px; }
 }
 
