@@ -50,7 +50,7 @@ gulp.task('CSS', function() {
 gulp.task('minCSS', function() {
     return gulp.src('app/css/style.css')
         .pipe(cleanCSS())
-        .pipe(rename("style.min.css"))
+        .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest('app/css/'));
 });
 

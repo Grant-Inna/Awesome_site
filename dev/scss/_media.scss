@@ -89,13 +89,13 @@ body, html, .container, .navigation__slider, .container {
 .wrapper {
 
   @include media( $p: $break-max) { /* 1285 */
-    width: 1010px;
+    width: 90%;
   }
   @include media( $p: $break-lg) { /* 1020 */
-    width: 760px;
+    width: 92%;
   }
   @include media( $p: $break-md) { /* 810 */
-    width: 720px;
+    width: 94%;
   }
   @include media( $p: $break-sm ) { /* 770 */
     width: 96%;
@@ -176,10 +176,10 @@ body, html, .container, .navigation__slider, .container {
 .l-article__infoImage { @include media( $p: $break-lg) { align-items: center } }
 
 .relation-min-250 {
-  @include media($p: $break-md) {
+  /*@include media($p: $break-md) {
     width: 168px;
-  }
-  @include media($p: $break-sm) { /* 770 */
+  }*/
+  @include media($p: $break-max) { /* 1285 */
     width: 100%;
   }
   /*@include media($p: $break-xs) { /!* 680 *!/
@@ -199,6 +199,15 @@ body, html, .container, .navigation__slider, .container {
   }*/
 }
 .content__cell-bg {
+  @include media( $p: $break-max) { /* 1285 */
+    width: 19%;
+  }
+  @include media( $p: $break-lg) { /* 1020 */
+    width: 24%;
+  }
+  @include media( $p: $break-md) { /* 810 */
+    width: 24%;
+  }
   @include media($p: $break-sm) { /* 770 */
     width: 32%;
   }

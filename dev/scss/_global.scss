@@ -420,3 +420,27 @@ i[class^="s7-angle"]:hover {
 .color-green { color: $green-color }
 .color-red { color: $red-color }
 .color-blue { color: $blue-color }
+
+.btn-yellow { text-decoration: none; background-color: $yellow-color; color: #5c4a0b; box-shadow: none; }
+.btn-yellow:hover { background: #ffdb4d; color: #7e660e;  /*box-shadow: 0 0 12px 3px rgba(255,204,0,.25);*/ }
+
+.btn-green { text-decoration: none; background-color: $green-back1;  color: #d5dae3; box-shadow: none; }
+.btn-green:hover { background:  linear-gradient(to bottom, #74D571 0%, #44BA6E 100%); color: #fff;}
+
+
+.btn-blue { text-decoration: none; background: #446DB2;  color: #d5dae3;
+  &:hover { background: #3964ad; color: #fff /*box-shadow: 0 0 13px 3px rgba(0, 140, 255, 0.25);*/ }
+}
+
+.btn-green { text-decoration: none; background-color: #1bb049;  color: #2f5137; box-shadow: none; }
+.btn-green:hover { background: #3fc467; color: #95e8a6;}
+
+
+
+
+
+
+
+
+
+

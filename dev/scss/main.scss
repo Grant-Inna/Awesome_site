@@ -228,11 +228,11 @@
 
 .article__button { text-decoration: none; @extend .items-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1;  }
 .article__buttonDetails { @include height( $h: 40px );  }
-.article__buttonToCart { background-color: $green-color; font-weight: 600; @include height( $h: 40px );
-  &:active { background-color: $green-color - 50; }
+.article__buttonToCart {@extend .btn-green; font-weight: 600; @include height( $h: 40px );
+  &:active { background-color: #326296; }
 }
-.article__buttonBuy { background-color: $orange-color; font-weight: 600; height: 40px;
-  &:active { background-color: $orange-color - 50; }
+.article__buttonBuy { @extend .btn-yellow; font-weight: 600; height: 40px;
+  &:active { background-color: $yellow-color - 50; }
 }
 .actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
 
@@ -246,7 +246,7 @@
   &:active { background: antiquewhite - 20; }
   &:disabled { color: #c7c7c7 }
 }
-.buttonControl__more { padding-bottom: 3px; }
+.buttonControl__more { padding-top: 3px; }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
 
@@ -305,7 +305,7 @@
 }
 .cart__goodsImage { @extend .margin-right-20;}
 .disabled-cart {  }
-.l-cart__goodsInfo { @include width( $w: 90%); @include height( $h: 100%); }
+.l-cart__goodsInfo { @include width( $w: 90%); @include height( $h: 100%); margin-right: 15px; }
 .l-cart__infoText { @include height( $h: auto); @extend .justify-between; @extend .items-start; }
 .cart__caption { @extend .justify-end; margin-bottom: 20px; }
 .cart__itemCaption { margin: 0; }
@@ -348,3 +348,4 @@
 
 
 @import 'media';
+
