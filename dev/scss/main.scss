@@ -218,25 +218,26 @@
 .rating__oneStar, .rating__oneStar-offer { @extend .margin-right-2; }
 .article__likesCount { @extend .margin-left-10; @extend .margin-right-3; @extend .radius-2; color: #515151; font-size: large; font-weight: 600; background-color: $border-color-RGB; }
 
-.article__sectionName { padding: 15px 0 0; font-size: 1.2rem; @extend .flex-wrap; }
+.article__sectionName { padding: 15px 0 0; font-size: 1.7rem; @extend .flex-wrap; }
 .article__sectionTag { @include width(); height: 25px; padding: 3px 7px; @extend .flex-center; @extend .border-1; @extend .radius-2; margin: 5px; background: $color-background-body - 15;
   &:first-of-type { margin-left: 0 }
 }
 
 .article__goodsName { margin: 15px 0 }
 
+.l-article__actionButtons { @extend .items-start; @extend .flex-column }
+.article__actionButton { margin-top: 10px }
 
-.article__button { text-decoration: none; @extend .items-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1;  }
-.article__buttonDetails { @include height( $h: 40px );  }
+.article__button { text-decoration: none; @extend .items-center;  @extend .justify-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1; font-size: 1.6rem  }
+.article__buttonDetails {   }
 .article__buttonToCart {@extend .btn-green; font-weight: 600; @include height( $h: 40px );
-  &:active { background-color: #326296; }
 }
 .article__buttonBuy { @extend .btn-yellow; font-weight: 600; height: 40px;
   &:active { background-color: $yellow-color - 50; }
 }
-.actionButtons__icon { @extend .icon-free; @extend .font-1-3; @extend .margin-right-10; font-weight: 600; }
+.actionButtons__icon { @extend .icon-free; @extend .font-1-8; @extend .margin-right-10; font-weight: 600; }
 
-.article__buttonMoreInfo { width: 100px }
+.article__buttonMoreInfo { width: 120px }
 .amount__holder { height: 30px; width: 60px; text-align: center; @extend .border-1; @extend .padding-5; }
 .amount__holder-cart { width: 66px; }
 .l-article__amount { width: 100px; height: 30px; margin-right: 10px }
@@ -294,9 +295,9 @@
 .cart__goodsInfo {  }
 .cart__price { @extend .justify-start; @extend .items-center; margin: 10px 0 15px; }
 .cart__price-smaller { @extend .justify-start; @extend .items-center; margin: 10px 0 5px; }
-.cart__fullPrice { font-size: .9rem; font-weight: normal; @extend .justify-start; @extend .items-center; margin: 0 ; }
+.cart__fullPrice { font-size: 1.3rem; font-weight: normal; @extend .justify-start; @extend .items-center; margin: 0 ; }
 .cart__fullPrice-sum { font-weight: bold; }
-.l-cart__itemActions { @include min-height( $h: 32px ); margin-top: 10px }
+.l-cart__itemActions { @include min-height( $h: 32px ); margin: 10px 0; @extend .items-center}
 
 .cart__checkbox { margin-right: 20px }
 
@@ -311,14 +312,17 @@
 .cart__itemCaption { margin: 0; }
 .cart__itemAvailable { font-weight: 600 }
 
-.cart__itemBtn { font-weight: 600; }
+
+.l-cart__articleButtonsHolder { @extend .flex-column; justify-content: space-around; align-items: flex-end; }
+
+.cart__itemBtn { width: 220px; @extend .items-center}
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
-.cart__itemBtn-delete { color: $red-color }
-.cart__itemBtn-like { @extend .margin-right-10; color: $blue-color; min-width: 206px }
+.cart__itemBtn-delete { color: $red-color; margin-top: 10px }
+.cart__itemBtn-like { color: $blue-color; min-width: 206px }
 .cart__itemBtn-rate { color: $orange-color }
 .cart__itemBtn-addAgain { color: $green-color }
 
-.cart__itemBtn { color: $header-color }
+.cart__itemBtn { }
 .cart__itemBtn-delete {  }
 
 .cart__amount { font-weight: 600; font-size: 1rem }

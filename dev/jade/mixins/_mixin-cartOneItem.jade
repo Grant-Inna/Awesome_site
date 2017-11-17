@@ -16,33 +16,33 @@ mixin cart-one-item ( size, img, exhib, name, availability, price, amount )
                         .cart__itemAvailable.color-green В наличии
                         case ( amount )
                             when ( '1' )
-                                h3.cart__price #{ price }p
+                                .h3.cart__price #{ price }p
                             default
-                                h3.cart__price-smaller #{ price }p
-                                h5.cart__fullPrice Общая сумма —&nbsp;
+                                .h3.cart__price-smaller #{ price }p
+                                .h5.cart__fullPrice Общая сумма —&nbsp;
                                     span.cart__fullPrice-sum #{ price * amount }p
                     when ('')
                         .cart__itemAvailable.color-red Нет в наличии
-        .l-cart__itemActions.justify-start
+        .l-cart__itemActions
             .l-article__amount-cart.flex-center
                 case ( amount )
                     when ( '1' )
-                        button( disabled ).buttonControl__less.font-1-4
+                        button( disabled ).buttonControl__less.font-1-7
                             span -
                         input( type="text", placeholder="#{ amount }" ).amount__holder.amount__holder-cart.flex-center
                         button.buttonControl__more.font-1-4
                             span +
                     default
-                        button.buttonControl__less.font-1-4
+                        button.buttonControl__less.font-1-7
                             span -
                         input( type="text", placeholder="#{ amount }" ).amount__holder.amount__holder-cart.flex-center
                         button.buttonControl__more.font-1-4
                             span +
-            .l-cart__articleButtonsHolder.flex
-                button.article__button.cart__itemBtn-like.items-center
+            .l-cart__articleButtonsHolder
+                button.article__button.cart__itemBtn-like.cart__itemBtn
                     i.s7-like.actionButtons__icon
                     | Добавить в избранное
-                button.article__button.cart__itemBtn-delete.items-center
+                button.article__button.cart__itemBtn-delete.cart__itemBtn
                     i.s7-trash.actionButtons__icon
                     | Удалить
 

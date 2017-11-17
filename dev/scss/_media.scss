@@ -46,14 +46,8 @@ $sm-break-xs: $sm-cell-width * 2; /* 400 */
 }
 
 html {
-  @include media( $p: $break-sm ) {
-    font-size: 13px;
-  }
-  @include media( $p: $break-extra-xs ) {
-    font-size: 12px;
-  }
-  @include media( $p: $break-tiny ) {
-    font-size: 11px;
+  @include media( $p: $break-xs ) {
+    font-size: 9px;
   }
 }
 
@@ -233,12 +227,22 @@ body, html, .container, .navigation__slider, .container {
     padding: 10px;
 
   }
-  @include media( $p: $sm-break-xs + 60 ) { /* 450 */
+  @include media( $p: $sm-break-xs + 60 ) { /* 460 */
     width: 98%;
     margin: 15px auto;
     padding: 5px;
   }
 }
+@media ( max-width: $sm-break-xs + 60 ) { /* 460 */
+  .l-article__toCart {
+    flex-direction: column;
+    .article__button {
+      width: 200px;
+      &:last-of-type { margin-top: 10px }
+    }
+  }
+}
+
 
 .content__cell-sm {
   @include media( $p: $sm-break-md + 60 ) { /* 850 */
@@ -437,8 +441,9 @@ body, html, .container, .navigation__slider, .container {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    height: 76px;
   }
+  .l-cart__goodsInfo {  margin-top: 10px  }
+  .l-cart__articleButtonsHolder { margin-top: 10px }
   .l-cart__oneItem { height: auto; padding-bottom: 15px; }
   .l-cart__infoText { height: auto; }
   .cart__seller { margin-left: 10px }

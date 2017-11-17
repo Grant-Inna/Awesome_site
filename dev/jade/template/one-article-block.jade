@@ -15,16 +15,16 @@
                     include ../mixins/_mixin-ratingStars
                     +article-rating( '4' )
                 h2.article__cost 100500 мемасиков
-                .l-article__actionButtons.items-start.flex-column
-                    .article__buttonDetails.items-center
+                .l-article__actionButtons
+                    .article__actionButton.article__buttonDetails.items-center
                         a( href="one-article-page.html" ).article__button.article__buttonMoreInfo Подробнее
-                    .l-article__amount-margin.flex-center
-                        button.buttonControl__less.font-1-4
+                    .article__actionButton.l-article__amount-margin.flex-center
+                        button.buttonControl__less.font-1-7
                             span -
                         input( type="text", placeholder="2" ).amount__holder.flex-center
-                        button.buttonControl__more.font-1-4
+                        button.buttonControl__more.font-1-7
                             span +
-                    .l-article__toCart.flex.margin-top-5
+                    .article__actionButton.l-article__toCart.flex
                         a( href="cart.html" ).article__button.article__buttonToCart.items-center.margin-right-5
                             i.s7-cart.actionButtons__icon
                             span.buttonToCart__text Добавить в корзину

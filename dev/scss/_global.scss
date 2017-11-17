@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 14px;
+  font-size: 10px;
 }
 body,
 html {
@@ -12,8 +12,8 @@ html {
   padding: 0;
 }
 body {
-  font-family: "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont,  sans-serif;
+  font-size: 1.4rem;
   font-weight: normal;
   color: #303030;
   background-color: $color-background-body;
@@ -33,11 +33,11 @@ body {
   margin: 0 auto;
   transition: .2s;
 }
-h1 { font-size: 2rem }
-h2 { font-size: 1.7rem }
-h3 { font-size: 1.4rem }
-h4 { font-size: 1.2rem }
-h5 { font-size: 1.1rem }
+h1, .h1 { font-size: 2.1rem; font-weight: 700; }
+h2, .h2 { font-size: 1.9rem; font-weight: 700; }
+h3, .h3 { font-size: 1.8rem; font-weight: 600; }
+h4, .h4 { font-size: 1.6rem; font-weight: 600; }
+h5, .h5 { font-size: 1.5rem; font-weight: 600; }
 
 
 a {
@@ -272,6 +272,7 @@ a {
   flex-wrap: wrap;
 }
 .flex-column {
+  display: flex;
   flex-direction: column;
 }
 .flex-center {
@@ -423,9 +424,11 @@ i[class^="s7-angle"]:hover {
 
 .btn-yellow { text-decoration: none; background-color: $yellow-color; color: #5c4a0b; box-shadow: none; }
 .btn-yellow:hover { background: #ffdb4d; color: #7e660e;  /*box-shadow: 0 0 12px 3px rgba(255,204,0,.25);*/ }
+.btn-yellow:active { background: $yellow-color - 50; ; color: #7e660e;  /*box-shadow: 0 0 12px 3px rgba(255,204,0,.25);*/ }
 
 .btn-green { text-decoration: none; background-color: $green-back1;  color: #d5dae3; box-shadow: none; }
 .btn-green:hover { background:  linear-gradient(to bottom, #74D571 0%, #44BA6E 100%); color: #fff;}
+.btn-green:active { background:  #19943f; color: #fff;}
 
 
 .btn-blue { text-decoration: none; background: #446DB2;  color: #d5dae3;
@@ -433,7 +436,8 @@ i[class^="s7-angle"]:hover {
 }
 
 .btn-green { text-decoration: none; background-color: #1bb049;  color: #2f5137; box-shadow: none; }
-.btn-green:hover { background: #3fc467; color: #95e8a6;}
+.btn-green:hover { background: #3fc467; color: #41704c;}
+.btn-green:active { background: #19943f; color: #79ae7f;}
 
 
 
