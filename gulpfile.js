@@ -40,8 +40,9 @@ gulp.task('watch_js', function() {
 // CSS _____________________________________________________________________
 
 gulp.task( 'concatFonts', function(){
-
-    return gulp.src(  )
+    return gulp.src( 'dev/fonts/*.css' )
+        .pipe( concat('fonts.css'))
+        .pipe( gulp.dest( 'app/css/'))
 
 });
 

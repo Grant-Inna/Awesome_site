@@ -228,7 +228,7 @@
 .l-article__actionButtons { @extend .items-start; @extend .flex-column }
 .article__actionButton { margin-top: 10px }
 
-.article__button { text-decoration: none; @extend .items-center;  @extend .justify-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1; font-size: 1.6rem  }
+.article__button { transition: all .1s; text-decoration: none; @extend .items-center;  @extend .justify-center; @include width; @include height( $h: 32px ); padding: 0 10px; @extend .radius-2;  @extend .border-1; font-size: 1.6rem  }
 .article__buttonDetails {   }
 .article__buttonToCart {@extend .btn-green; font-weight: 600; @include height( $h: 40px );
 }
@@ -247,7 +247,7 @@
   &:active { background: antiquewhite - 20; }
   &:disabled { color: #c7c7c7 }
 }
-.buttonControl__more { padding-top: 3px; }
+.buttonControl__more { }
 
 .l-article__moreHolder { border-top: 2px solid $border-color-RGB; }
 
@@ -315,7 +315,10 @@
 
 .l-cart__articleButtonsHolder { @extend .flex-column; justify-content: space-around; align-items: flex-end; }
 
-.cart__itemBtn { width: 220px; @extend .items-center}
+.cart__itemBtn { width: 220px; @extend .items-center;
+  &:hover { background-color: rgba(213, 218, 227, 0.2) }
+  &:active { background-color: rgba(213, 218, 227, 0.5) }
+}
 .cart__itemBtn-like, .cart__itemBtn-delete { background-color: $color-background-body }
 .cart__itemBtn-delete { color: $red-color; margin-top: 10px }
 .cart__itemBtn-like { color: $blue-color; min-width: 206px }

@@ -28,7 +28,7 @@ $sm-break-xs: $sm-cell-width * 2; /* 400 */
   top: 0;
   width: 100% !important;
   opacity: 1;
-  background-color: rgba( 255, 255, 255, .8 );
+  background-color: rgba( 255, 255, 255, .9 );
   transition: .3s ease-in-out;
   z-index: 100; }
 
@@ -469,6 +469,7 @@ body, html, .container, .navigation__slider, .container {
   .l-cart__infoText { height: auto; font-size: 12px; }
   .cart__checkbox { margin-right: 5px }
   .l-cart__itemActions { margin: 0 30px; }
+  .l-cart__infoText { margin-right: 30px }
 
   .cart__itemBtn-like, .cart__itemBtn-delete, .cart__itemBtn-rate, .cart__itemBtn-addAgain { width: 100%; display: flex; justify-content: center; align-items: center;  }
   .cart__blockTitle { margin-left: 14px; }
