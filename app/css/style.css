@@ -670,7 +670,7 @@ a {
 .font-1-9 {
   font-size: 1.9rem; }
 
-.font-1-8, .actionButtons__icon {
+.font-1-8 {
   font-size: 1.8rem; }
 
 .font-1-7 {
@@ -679,7 +679,7 @@ a {
 .font-1-6 {
   font-size: 1.6rem; }
 
-.font-1-5 {
+.font-1-5, .actionButtons__icon {
   font-size: 1.5rem; }
 
 .font-1-4 {
@@ -786,22 +786,22 @@ a {
   border-radius: 5px; }
 
 /* Animation */
-i[class^="s7-angle"] {
+i[class^="lnr-chevron"] {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s; }
 
-i[class^="s7-angle"]:hover {
+i[class^="lnr-chevron"]:hover {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s; }
 
-.s7-angle-left:hover {
+.lnr-chevron-left:hover {
   -webkit-transform: translateX(-10px);
       -ms-transform: translateX(-10px);
           transform: translateX(-10px); }
 
-.s7-angle-right:hover {
+.lnr-chevron-right:hover {
   -webkit-transform: translateX(10px);
       -ms-transform: translateX(10px);
           transform: translateX(10px); }
@@ -1150,13 +1150,16 @@ input.header__searchInput {
 .cell__moreHolder, .cell__icon {
   position: absolute;
   top: 4px;
-  left: 4px; }
-
-.like__icon {
-  background: url("../img/icons-common/like-disabled.svg") center no-repeat; }
+  left: 4px;
+  font-size: 2rem; }
 
 .like__icon-active {
-  background: url("../img/icons-common/like.svg") center no-repeat; }
+  color: #e3425b;
+  font-weight: 600; }
+
+.star__icon-active {
+  color: #ffe16c;
+  font-weight: 600; }
 
 .content__mediaPrice {
   font-size: .8rem;
@@ -1265,7 +1268,7 @@ input.header__searchInput {
 
 /*          One article page            */
 .article__about {
-  font-size: 1.3rem; }
+  font-size: 1.7rem; }
   .article__about p {
     margin-bottom: 0; }
 
@@ -1829,7 +1832,9 @@ input.header__searchInput {
             justify-content: flex-end; }
   .l-header__userHolder {
     width: 100%;
-    margin: 3px auto 5px; } }
+    margin: 3px auto 5px; }
+  .cell__moreHolder, .cell__icon {
+    font-size: 1rem; } }
 
 @media (max-width: 680px) {
   /* Пошаманили с header с 680 */

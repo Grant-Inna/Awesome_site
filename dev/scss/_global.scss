@@ -405,14 +405,14 @@ a {
 
 /* Animation */
 
-i[class^="s7-angle"] {
+i[class^="lnr-chevron"] {
   transition: .2s;
 }
-i[class^="s7-angle"]:hover {
+i[class^="lnr-chevron"]:hover {
   transition: .2s;
 }
-.s7-angle-left:hover { transform: translateX(-10px) }
-.s7-angle-right:hover { transform: translateX(10px) }
+.lnr-chevron-left:hover { transform: translateX(-10px) }
+.lnr-chevron-right:hover { transform: translateX(10px) }
 
 .onHover-left-5:hover { transform: translateX(-5px) }
 .onHover-right-5:hover { transform: translateX(5px) }

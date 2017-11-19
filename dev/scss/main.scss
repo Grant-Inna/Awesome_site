@@ -200,9 +200,10 @@
   @include max-height($h: 90%);
   background-size: contain;
 }
-.cell__moreHolder, .cell__icon { position: absolute; top: 4px; left: 4px }
-.like__icon { background: url("../img/icons-common/like-disabled.svg") center no-repeat; }
-.like__icon-active { background: url("../img/icons-common/like.svg") center no-repeat; }
+.cell__moreHolder, .cell__icon { position: absolute; top: 4px; left: 4px; font-size: 2rem }
+.like__icon { }
+.like__icon-active {color: $red-color; font-weight: 600; }
+.star__icon-active {color: $yellow-color; font-weight: 600; }
 
 .content__mediaPrice { font-size: .8rem ;display: none; position: absolute; bottom: 2px; right: 2px; }
 
@@ -235,7 +236,7 @@
 .article__buttonBuy { @extend .btn-yellow; font-weight: 600; height: 40px;
   &:active { background-color: $yellow-color - 50; }
 }
-.actionButtons__icon { @extend .icon-free; @extend .font-1-8; @extend .margin-right-10; font-weight: 600; }
+.actionButtons__icon { @extend .icon-free; @extend .font-1-5; @extend .margin-right-10; font-weight: 600; }
 
 .article__buttonMoreInfo { width: 120px }
 .amount__holder { height: 30px; width: 60px; text-align: center; @extend .border-1; @extend .padding-5; }
@@ -254,7 +255,7 @@
 
 /*          One article page            */
 
-.article__about { font-size: 1.3rem;
+.article__about { font-size: 1.7rem;
   p { margin-bottom: 0 }
 }
 .navigation__section { text-decoration: none; }

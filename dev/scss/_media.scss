@@ -281,6 +281,8 @@ body, html, .container, .navigation__slider, .container {
   .l-header__logo { padding-left: 3px; }
   .l-header__search { @include width($w: 100%); margin: 5px auto 2px; justify-content: flex-end; }
   .l-header__userHolder { @include width($w: 100%); margin: 3px auto 5px; }
+
+  .cell__moreHolder, .cell__icon { font-size: 1rem }
 }
 @media ( max-width: $break-xs ) { /* Пошаманили с header с 680 */
   .l-header__wrapper { flex-direction: column; align-items: center; padding-top: 5px; }
