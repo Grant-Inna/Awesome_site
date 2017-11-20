@@ -58,7 +58,7 @@ body, html, .container, .navigation__slider, .container {
     max-width: 320px;
   }
 }
-@media ( max-width: $break-extra-tiny ) {
+@media screen and ( max-width: $break-extra-tiny ) {
   .navigation__slider {
     overflow: hidden;
     .s7-angle-left:hover { transform: translateX(-5px) }
@@ -67,7 +67,7 @@ body, html, .container, .navigation__slider, .container {
     .s7-angle-right { font-size: 3rem; width: 20px; height: 20px  } /* 450 */
   }
 }
-@media ( max-width: 345px ) {
+@media screen and ( max-width: 345px ) {
   .navigation__slider {
     .s7-angle-left:hover { transform: translateX(-3px) }
     .s7-angle-right:hover { transform: translateX(3px) }
@@ -112,31 +112,23 @@ body, html, .container, .navigation__slider, .container {
   }
 }
 
-.l-navigation__sliderWrapper {
-  @include media( $p: $break-max) { /* 1285 */
-    width: 1000px - 90;
-  }
-  @include media( $p: $break-lg) { /* 1020 */
-    width: 760px - 80;
-  }
-  @include media( $p: $break-md) { /* 810 */
-    width: 720px - 80;
-  }
-  @include media( $p: $break-sm ) { /* 770 */
+.navigation__section {
+
+/*  @include media( $p: $break-sm ) { /!* 770 *!/
     width: 550px;
   }
-  @include media( $p: $break-xs) { /* 680 */
+  @include media( $p: $break-xs) { /!* 680 *!/
     width: 76%;
   }
-  @include media( $p: $break-extra-xs ) { /* 580 */
+  @include media( $p: $break-extra-xs ) { /!* 580 *!/
     width: 82%;
-  }
+  }*/
   /*@include media( $p: $break-tiny ) { /!* 505 *!/
    width: 345px;
  }*/
- @include media( $p: $break-extra-tiny ) { /* 450 */
+/* @include media( $p: $break-extra-tiny ) { /!* 450 *!/
    width: 75%;
- }
+ }*/
  /*@include media( $p: 345px ) { /!* 345 *!/
    width: 220px;
  }*/
@@ -233,7 +225,7 @@ body, html, .container, .navigation__slider, .container {
     padding: 5px;
   }
 }
-@media ( max-width: $sm-break-xs + 60 ) { /* 460 */
+@media screen and ( max-width: $sm-break-xs + 60 ) { /* 460 */
   .l-article__toCart {
     flex-direction: column;
     .article__button {
@@ -276,7 +268,7 @@ body, html, .container, .navigation__slider, .container {
   }
 }
 
-@media ( max-width: $break-md) {  /* Пошаманили с header с 810px */
+@media screen and ( max-width: $break-md) {  /* Пошаманили с header с 810px */
   .l-header__holder { flex-direction: column;  }
   .l-header__logo { padding-left: 3px; }
   .l-header__search { @include width($w: 100%); margin: 5px auto 2px; justify-content: flex-end; }
@@ -284,7 +276,7 @@ body, html, .container, .navigation__slider, .container {
 
   .cell__moreHolder, .cell__icon { font-size: 1rem }
 }
-@media ( max-width: $break-xs ) { /* Пошаманили с header с 680 */
+@media screen and ( max-width: $break-xs ) { /* Пошаманили с header с 680 */
   .l-header__wrapper { flex-direction: column; align-items: center; padding-top: 5px; }
   .l-header__logo,
   .l-header__holder { width: 100%; align-items: center; }
@@ -325,7 +317,7 @@ body, html, .container, .navigation__slider, .container {
   }
 }
 
-@media ( max-width: $break-xs ) {
+@media screen and ( max-width: $break-xs ) {
   .s7-angle-left { margin: 0 } /* Уберём margin — и без того тесно */
   .s7-angle-right { margin: 0 } /* Уберём margin — и без того тесно */
   .l-article__infoImage {
@@ -365,7 +357,7 @@ body, html, .container, .navigation__slider, .container {
   }
 }
 
-@media ( max-width: $break-md) {
+@media screen and ( max-width: $break-md) {
   .content__mediaPrice {
     display: block; /* Добавим цену на маленьких расширениях */
   }

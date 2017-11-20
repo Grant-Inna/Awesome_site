@@ -1,6 +1,6 @@
 mixin cell ( size, img, exhib, price, active )
     .l-content__cell.content__cell-bg.relative
-        i.lnr.lnr-heart.cell__icon.icon-20( class="#{ active }" )
+        .lnr.lnr-heart.cell__icon.icon-20( class="#{ active }" )
         i.content__mediaPrice #{ price }
         div( class= "relation relation-min-#{ size }" )
             .relation__ratio.relation__ratio-11x12

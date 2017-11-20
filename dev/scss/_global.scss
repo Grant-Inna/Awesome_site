@@ -55,6 +55,10 @@ a {
   width: 20px;
   height: 20px;
 }
+.icon-25 {
+  width: 25px;
+  height: 25px;
+}
 .icon {
   width: 30px;
   height: 30px;
@@ -87,7 +91,7 @@ a {
 .relation {
   position: relative;
   &-min-50 { width: 50px; }
-  &-min-70 { width: 70px; }
+  &-min-70 { width: 100%; }
   &-min-90 { width: 90px; }
   &-min-110 { width: 110px; }
   &-min-120 { width: 120px; }
@@ -287,44 +291,44 @@ a {
 }
 
 .justify-center {
-  @extend .flex;
+  display: flex;
   justify-content: center;
 }
 .justify-between {
-  @extend .flex;
+  display: flex;
   justify-content: space-between;
 }
 .justify-around {
-  @extend .flex;
+  display: flex;
   justify-content: space-around;
 }
 .justify-end {
-  @extend .flex;
+  display: flex;
   justify-content: flex-end;
 }
 .justify-start {
-  @extend .flex;
+  display: flex;
   justify-content: flex-start;
 }
 
 .items-center {
-  @extend .flex;
+  display: flex;
   align-items: center;
 }
 .items-baseline {
-  @extend .flex;
+  display: flex;
   align-items: baseline;
 }
 .items-end {
-  @extend .flex;
+  display: flex;
   align-items: flex-end;
 }
 .items-start {
-  @extend .flex;
+  display: flex;
   align-items: flex-start;
 }
 .items-stretch {
-  @extend .flex;
+  display: flex;
   align-items: stretch;
 }
 
