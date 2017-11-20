@@ -46,6 +46,12 @@ gulp.task( 'concatFonts', function(){
 
 });
 
+gulp.task('groupMediaCSS', function() {
+    return gulp.src('app/css/style.css')
+        .pipe(groupMedia())
+        .pipe(gulp.dest('app/css/'));
+});
+
 
 gulp.task('CSS', function() {
     return gulp.src('dev/scss/main.scss')
