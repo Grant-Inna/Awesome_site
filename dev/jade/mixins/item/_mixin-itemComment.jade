@@ -1,7 +1,7 @@
 mixin article-comment ( rating, title, name, date, text )
     .l-article__oneComment.margin-bottom-40.flex-column
         .l-article__commentTopInfo.flex
-            include ../mixins/_mixin-commentRatingStars
+            include ../common-stars/_mixin-commentRatingStars
             +comment-rating( rating )
             .article__commentTitle.margin-left-10 #{ title }
         .l-article__commentUserMeta.flex

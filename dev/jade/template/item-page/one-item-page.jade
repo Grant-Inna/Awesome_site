@@ -2,7 +2,7 @@
     .wrapper
         main.l-article__infoHolder.justify-start
             .l-article__infoImage
-                include ../mixins/_mixin-articleImage
+                include ../../mixins/item/_mixin-itemImage
                 +article-image( '270', 'hamster', 'png' )
                 .article__aboutSeller.flex Продавец:
                     a( href="seller-page.html" ).article__button.article__buttonSeller.margin-left-10 Дед Афанасий
@@ -14,7 +14,7 @@
                     .article__sectionTag Милаш, каких поискать
                 h1.article__goodsName Может хомяк, а может и голубь
                 .l-article__averageRating.items-center
-                    include ../mixins/_mixin-ratingStars
+                    include ../../mixins/common-stars/_mixin-ratingStars
                     +article-rating( '4' )
                 .l-article__actionButtons.items-center.flex-wrap
                     h2.article__cost 100500 мемасиков

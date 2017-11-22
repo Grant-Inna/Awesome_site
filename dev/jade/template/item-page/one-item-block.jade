@@ -3,7 +3,7 @@
         a.icon-free.s7-close.font-1-5.close__icon
         main.l-article__infoHolder.justify-center
             .l-article__infoImage
-                include ../mixins/_mixin-articleImage
+                include ../../mixins/item/_mixin-itemImage
                 +article-image( '200', 'hamster', 'png' )
             .l-article__infoMeta.flex-column
                 .l-acticle__rating.justify-start
@@ -12,7 +12,7 @@
                 .article__sectionName Ну фиг знает, что это
                 h1.article__goodsName Может хомяк, а может и голубь
                 .l-article__averageRating.items-center
-                    include ../mixins/_mixin-ratingStars
+                    include ../../mixins/common-stars/_mixin-ratingStars
                     +article-rating( '4' )
                 h2.article__cost 100500 мемасиков
                 .l-article__actionButtons
@@ -34,7 +34,7 @@
                             i.icon-fire.actionButtons__icon
                             span.buttonBuy__text Мгновенная покупка
         .container.flex-wrap.justify-center.border-top1.padding-top-30
-                include ../mixins/_mixin-moreCell
+                include ../../mixins/tile/_mixin-moreCell
                 +cell-for-more( '230', '5', 'png', '3746', '34p' )
                 +cell-for-more( '230', 'stitch1', 'png', '30', '34p' )
                 +cell-for-more( '230', '1', 'png', '26', '34p' )
