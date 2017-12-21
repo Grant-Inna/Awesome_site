@@ -90,16 +90,16 @@ gulp.task( 'watch_jade', ['browser-sync'], function() {
 
 gulp.task('smartGrid', function() {
     var options = {
-        offset: "8px",
+        offset: "5px",
         container: {
             maxWidth: "1100px",
-            fields: "8px"
+            fields: "10px"
         },
         breakPoints: {
             lg: {
                 width: '1100px', /* -> @media (max-width: 1100px) */
-                offset: '6px',
-                fields: '3px'
+                offset: '5px',
+                fields: '6px'
             },
             md: {
                 width: '960px'
@@ -107,13 +107,15 @@ gulp.task('smartGrid', function() {
             sm: {
                 width: '780px',
                 offset: '4px',
-                fields: '2px'
+                fields: '5px'
             },
             xs: {
                 width: '560px'
             },
             xxs: {
-                width: '450px'
+                width: '450px',
+                offset: '2px',
+                fields: '4px'
             },
             tiny: {
                 width: '350px'

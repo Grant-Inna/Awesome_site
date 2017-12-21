@@ -14,7 +14,7 @@ body { background: @back-body }
   width: 100%;
   height: auto;
   margin: 50px 0;
-  .row-offsets()
+
 }
 
 .header {
@@ -59,9 +59,9 @@ body { background: @back-body }
 .header__buttons {
   min-width: 320px;
   height: calc( @height-header - 20px );
+  display: flex;
   flex-grow: 3;
   justify-content: space-between;
-  .row-flex();
 }
 .header__btn {
   background: transparent;
@@ -84,14 +84,13 @@ body { background: @back-body }
 
 
 .holder {
-  .row-flex();
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  .wrapper();
+  flex-wrap: wrap;
 }
 
 .cell {
-  margin: @offset_one_side auto;
   background-color: rgba(190, 199, 250, 0.4);
   .col();
   .size(2.4);
@@ -101,8 +100,7 @@ body { background: @back-body }
   .size-xs(6);
   .size-xxs(6);
   .size-tiny(12);
-  .lg( margin, @offset_lg_one_side auto );
-  .sm( margin, @offset_sm_one_side auto );
+  .cell-offsets(margin);
 }
 
 .relation { position: relative; }
