@@ -1,6 +1,22 @@
 @import "smart-grid";
 @import "_var";
 
+.cell-offsets(@type){
+  @{type}: @offset_one_side;
+
+  .lg-block({
+    @{type}: @offset_lg_one_side;
+  });
+
+  .sm-block({
+    @{type}: @offset_sm_one_side;
+  });
+
+  .xxs-block({
+    @{type}: @offset_xxs_one_side;
+  });
+}
+
 .reset();
 .wrapper { .wrapper(); }
 
