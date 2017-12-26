@@ -24,14 +24,8 @@
 
 html { font-size: 14px; }
 html, body { width: 100%; height: auto }
-body { background: @back-body }
+body { background: @back-body; background-size: @back-body-size; background-attachment: @back-body-attach }
 
-.container {
-  width: 100%;
-  height: auto;
-  margin: 50px 0;
-
-}
 
 .header {
   background-color: @back-header;
@@ -85,25 +79,43 @@ body { background: @back-body }
   display: flex;
   justify-content: center;
   align-items: center;
-  color: @back-body;
+  color: @back-white;
   .col();
   .size(2.4);
-
-
+  .size-tiny(2.2)
 }
 .header__personal {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 
+/*  CONTAINER  */
+
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 50px 0;
+  background: rgba( 252, 252, 252, .95 );
+}
+
+.navigation {
+  height: 80px;
+  background: @back-white;
+}
 
 .holder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  /*flex-direction: column;
+  flex: 1 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 0;*/
 }
 
 .cell {
