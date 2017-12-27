@@ -12,4 +12,4 @@ Testing repo
 
 ## Variant 2
 
-[Main page](https://grant-inna.github.io/Awesome_site/dev/on_smartGrid/app/)
+[Main page](https://grant-inna.github.io/Awesome_site/variant_2/app/)
