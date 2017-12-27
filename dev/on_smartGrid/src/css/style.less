@@ -84,15 +84,19 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 .container {
   width: 100%;
   height: auto;
-  margin: 0;
+  margin: 0 auto 50px;
 }
 
 .navigation {
   min-height: @height-nav;
   background: @back-white;
 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -100,18 +104,46 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   flex-grow: 2;
   min-width: 200px;
   flex-basis: 300px;
-  height: calc( @height-nav - 20px );
+  height: calc(@height-nav - 20px);
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  > input { width: 80%; height: calc( @height-nav / 3 ); }
+  padding: 0 10px;
 
-  .sm ( justify-content, flex-start );
-  .xxs( justify-content, center )
+  .xxs(justify-content, center);
+
+  &:after {
+    content: '❯';
+    color: @back-white - 100;
+    display: block;
+    height: 30px;
+    width: 8px;
+    position: absolute;
+    top: calc((@height-nav - 50px) / 2);
+    right: 0
+  }
+  &:before {
+    content: '❮';
+    color: @back-white - 100;
+    display: block;
+    height: 30px;
+    width: 8px;
+    position: absolute;
+    top: calc((@height-nav - 50px) / 2);
+    left: 0
+  }
 }
+
 .nav__item {
-  flex-basis: 50px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 70px;
+  min-width: 30px;
+  height: calc( @height-nav - 10px );
+
+  /*img { margin: 0 0 auto 0 }*/
 }
 
 .nav__search {
@@ -120,7 +152,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   flex-basis: 300px;
   height: calc( @height-nav - 20px );
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   > input { width: 80%; height: calc( @height-nav / 3 ); }
 
@@ -135,7 +167,9 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   align-items: center;
   flex-wrap: wrap;
 
-  background: @back-white;
+  background: @back-white-opacity;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /*flex-direction: column;
   flex: 1 0 auto;
   overflow-x: hidden;
@@ -145,7 +179,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 }
 
 .cell {
-  background-color: rgba(190, 199, 250, 0.4);
+  background-color: rgba(220, 220, 220, 0.95);
   .col();
   .size(2.4);
   .size-lg(3);
@@ -165,6 +199,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   &-2x1 { padding-top: 50%} /* Разделить на первое, умножить на второе*/
   &-4x3 { padding-top: 75%;} /* Если первое больше второго, то будет горизонтальный прямоугольник */
   &-3x4 { padding-top: 133.33%;}
+  &-5x4 { padding-top: 80%;}
   &-6x5 { padding-top: 83.33%;}
   &-8x7 { padding-top: 87.5%;}
   &-7x8 { padding-top: 114%;}
