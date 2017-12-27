@@ -47,30 +47,18 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   height: @height-header;
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 3;
   > img { height: calc( @height-header - 20px ); }
   .xxs( justify-content, center )
 }
 
 
-.header__search {
-  flex-grow: 2;
-  min-width: 200px;
-  flex-basis: 300px;
-  height: calc( @height-header  - 20px );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  > input { width: 80%; height: calc( @height-header / 3 ); }
-
-  .sm ( justify-content, flex-end );
-  .xxs( justify-content, center )
-}
 .header__buttons {
   min-width: 320px;
   height: calc( @height-header - 20px );
   display: flex;
-  flex-grow: 3;
+  flex-basis: 400px;
+  flex-grow: 1;
   justify-content: space-between;
 }
 .header__btn {
@@ -96,20 +84,58 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 .container {
   width: 100%;
   height: auto;
-  margin: 50px 0;
-  background: rgba( 252, 252, 252, .95 );
+  margin: 0;
 }
 
 .navigation {
-  height: 80px;
+  min-height: @height-nav;
   background: @back-white;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+.nav__menu {
+  flex-grow: 2;
+  min-width: 200px;
+  flex-basis: 300px;
+  height: calc( @height-nav - 20px );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > input { width: 80%; height: calc( @height-nav / 3 ); }
+
+  .sm ( justify-content, flex-start );
+  .xxs( justify-content, center )
+}
+.nav__item {
+  flex-basis: 50px;
+  height: 100%;
+}
+
+.nav__search {
+  flex-grow: 2;
+  min-width: 200px;
+  flex-basis: 300px;
+  height: calc( @height-nav - 20px );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > input { width: 80%; height: calc( @height-nav / 3 ); }
+
+  .sm ( justify-content, flex-end );
+  .xxs( justify-content, center )
+}
+
 
 .holder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+
+  background: @back-white;
   /*flex-direction: column;
   flex: 1 0 auto;
   overflow-x: hidden;
