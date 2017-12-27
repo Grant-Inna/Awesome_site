@@ -109,28 +109,28 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
 
   .xxs(justify-content, center);
 
   &:after {
     content: '❯';
-    color: @back-white - 100;
+    color: @back-white - 150;
     display: block;
-    height: 30px;
+    height: auto;
     width: 8px;
     position: absolute;
-    top: calc((@height-nav - 50px) / 2);
+    top: calc((@height-nav - 20px) / 3);
     right: 0
   }
   &:before {
     content: '❮';
-    color: @back-white - 100;
+    color: @back-white - 150;
     display: block;
-    height: 30px;
+    height: auto;
     width: 8px;
     position: absolute;
-    top: calc((@height-nav - 50px) / 2);
+    top: calc((@height-nav - 20px) / 3);
     left: 0
   }
 }
@@ -156,8 +156,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   align-items: center;
   > input { width: 80%; height: calc( @height-nav / 3 ); }
 
-  .sm ( justify-content, flex-end );
-  .xxs( justify-content, center )
+  .sm ( justify-content, center );
 }
 
 
