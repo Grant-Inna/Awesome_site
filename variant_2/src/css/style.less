@@ -1,0 +1,236 @@
+@import "smart-grid";
+@import "_var";
+
+.cell-offsets(@type){
+  @{type}: @offset_one_side;
+
+  .lg-block({
+    @{type}: @offset_lg_one_side;
+  });
+
+  .sm-block({
+    @{type}: @offset_sm_one_side;
+  });
+
+  .xxs-block({
+    @{type}: @offset_xxs_one_side;
+  });
+}
+
+.reset();
+.wrapper { .wrapper(); }
+
+/*.debug { .debug( rgba(0, 0, 0, .2), rgba(255, 255, 0, 0.6)) }*/
+
+html { font-size: 14px; font-family: sans-serif; -webkit-text-size-adjust: 100%; }
+html, body { width: 100%; height: auto }
+body { background: @back-body; background-size: @back-body-size; background-attachment: @back-body-attach }
+
+
+.header {
+  background-color: @back-header;
+  width: 100%;
+  height: auto;
+}
+.header__wrapper {
+  min-height: @height-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .wrapper-full()
+}
+
+
+.header__logo {
+  min-width: 100px;
+  height: @height-header;
+  display: flex;
+  align-items: center;
+  flex-grow: 3;
+  > img { height: calc( @height-header - 20px ); }
+  .xxs( justify-content, center )
+}
+
+
+.header__buttons {
+  min-width: 320px;
+  height: calc( @height-header - 20px );
+  display: flex;
+  flex-basis: 400px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.header__btn {
+  background: transparent;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 100;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: @back-white;
+  .col();
+  .size(2.4);
+  .size-tiny(2.2)
+}
+.header__personal {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*  CONTAINER  */
+
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 50px;
+}
+
+.navigation {
+  min-height: @height-nav;
+  background: @back-white;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__menu {
+  flex-grow: 2;
+  min-width: 200px;
+  flex-basis: 300px;
+  height: calc(@height-nav - 20px);
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+
+  .xxs(justify-content, center);
+
+  &:after {
+    content: '❯';
+    color: @back-white - 150;
+    display: block;
+    height: auto;
+    width: 8px;
+    position: absolute;
+    top: calc((@height-nav - 20px) / 3);
+    right: 0
+  }
+  &:before {
+    content: '❮';
+    color: @back-white - 150;
+    display: block;
+    height: auto;
+    width: 8px;
+    position: absolute;
+    top: calc((@height-nav - 20px) / 3);
+    left: 0
+  }
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 70px;
+  min-width: 30px;
+  height: calc( @height-nav - 10px );
+
+  /*img { margin: 0 0 auto 0 }*/
+}
+
+.nav__search {
+  flex-grow: 2;
+  min-width: 200px;
+  flex-basis: 300px;
+  height: calc( @height-nav - 20px );
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  > input {
+    width: 80%;
+    height: calc( @height-nav / 2 );
+    padding: 0 20px
+  }
+
+  .sm ( justify-content, center );
+}
+
+
+.holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background: @back-white-opacity;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*flex-direction: column;
+  flex: 1 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 0;*/
+}
+
+.cell {
+  background-color: rgba(220, 220, 220, 0.95);
+  .col();
+  .size(2.4);
+  .size-lg(3);
+  .size-md(3);
+  .size-sm(4);
+  .size-xs(6);
+  .size-xxs(6);
+  .size-tiny(12);
+  .cell-offsets(margin);
+}
+
+.relation { position: relative; }
+
+.relation__ratio {
+  height: 0;
+  &-1x1 { padding-top: 100%}
+  &-2x1 { padding-top: 50%} /* Разделить на первое, умножить на второе*/
+  &-4x3 { padding-top: 75%;} /* Если первое больше второго, то будет горизонтальный прямоугольник */
+  &-3x4 { padding-top: 133.33%;}
+  &-5x4 { padding-top: 80%;}
+  &-6x5 { padding-top: 83.33%;}
+  &-8x7 { padding-top: 87.5%;}
+  &-7x8 { padding-top: 114%;}
+  &-8x9 { padding-top: 112.5%;}
+  &-9x10 { padding-top: 111.11%;}
+  &-10x11 { padding-top: 110%;}
+  &-11x12 { padding-top: 109.09%;}
+  &-16x9 { padding-top: 56.25%;}
+}
+
+.relation__content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    width: 90%;
+    max-height: 80%;
+  }
+}
+
+@import "media";
+
+@import "fonts";
