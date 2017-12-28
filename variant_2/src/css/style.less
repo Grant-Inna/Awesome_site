@@ -22,9 +22,9 @@
 
 /*.debug { .debug( rgba(0, 0, 0, .2), rgba(255, 255, 0, 0.6)) }*/
 
-html { font-size: 14px; font-family: sans-serif; -webkit-text-size-adjust: 100%; }
-html, body { font-family: Montserrat, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300; width: 100%; height: auto }
-body { background: @back-body; background-size: @back-body-size; background-attachment: @back-body-attach }
+html { font-size: 14px; font-family: sans-serif; -webkit-text-size-adjust: 100%; .xs( font-size, 12px ) }
+html, body { font-family: Montserrat, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Open Sans", sans-serif, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300; width: 100%; min-width: 320px; height: auto }
+body { background: @back-body; background-size: @back-body-size; background-attachment: @back-body-attach; .tiny( overflow-x, hidden ); }
 
 /*  COMMON  */
 
@@ -74,6 +74,8 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   flex-basis: 400px;
   flex-grow: 1;
   justify-content: space-between;
+
+  .xxs( justify-content, space-evenly )
 }
 .header__btn {
   background: transparent;
@@ -86,16 +88,20 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   color: @back-calm-white;
   .col();
   .size(3);
-  .size-tiny(2.1);
+  .size-xxs(2);
+  .size-tiny(1.5);
+
 
   &-small {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background: transparent;
     text-decoration: none;
     font-weight: 100;
     color: @back-calm-white;
+    .col();
+    .size(1);
   }
 }
 
@@ -115,6 +121,8 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   justify-content: space-between;
   align-items: center;
   color: @back-calm-white;
+  text-decoration: none;
+  min-width: 80px;
   .col();
   .size(2.4);
   .size-tiny(2.1);
@@ -122,19 +130,25 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 
 .header__avatar {
   max-width: 100%;
-  min-height: calc( @height-header - 55px );
-  height: calc( @height-header - 40px );
-  >img { max-width: 100%; max-height: 100% }
+  min-height: 55%;
+  height: 70%;
+
+  .xxs( height, 50% );
+
+  > img { max-width: 100%; max-height: 100% }
 }
 .header__userName {
   text-align: center;
+  .items-center;
   line-height: 85%;
   font-size: 1.1rem;
   font-weight: 500;
-  max-height: 35px;
+  max-height: 45%;
   height: auto;
-  min-height: 15px;
+  min-height: 15%;
   color: @red;
+
+  .xxs( height, 50% )
 }
 
 
@@ -145,6 +159,9 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   width: 100%;
   height: auto;
   margin: 0 auto 50px;
+
+  .xs( margin-top, 3px );
+  .xxs( margin-top, 5px )
 }
 
 .navigation {
@@ -177,7 +194,6 @@ body { background: @back-body; background-size: @back-body-size; background-atta
     color: @back-white - 150;
     display: block;
     height: auto;
-    width: 8px;
     position: absolute;
     top: calc((@height-nav - 20px) / 3);
     right: 0
@@ -186,7 +202,6 @@ body { background: @back-body; background-size: @back-body-size; background-atta
     color: @back-white - 150;
     display: block;
     height: auto;
-    width: 8px;
     position: absolute;
     top: calc((@height-nav - 20px) / 3);
     left: 0
@@ -231,6 +246,8 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   background: @back-white-opacity;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  .tiny( padding-top, 7px )
   /*flex-direction: column;
   flex: 1 0 auto;
   overflow-x: hidden;
