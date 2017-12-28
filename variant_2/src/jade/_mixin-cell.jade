@@ -1,0 +1,9 @@
+mixin cell( count, img, active )
+    .cell.relation
+        .cell__rating
+            .lnr.lnr-heart.icon-like( class=' #{active} ' )
+            .cell__likeCount #{count}
+        .relation__ratio.relation__ratio-7x8
+        .relation__content
+            img( src="img/#{img}" )
+
