@@ -43,8 +43,9 @@ gulp.task('imageMIN', function() {
         .pipe(gulp.dest( build + dir.images ));
 });
 
+
 gulp.task('watch_imageMIN', ['browser-sync'], function() {
-    gulp.watch( devImages, ['imageMIN']);
+    gulp.watch( devImages, ['imageMIN', 'iconsMIN']);
     gulp.watch( devImages ).on('change', browserSync.reload); // Вызываемый таким образом browserSync работает почему то стабильнее
 });
 
