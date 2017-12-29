@@ -3,7 +3,7 @@
 [Main page](https://grant-inna.github.io/Awesome_site/variant_2/app/)
 
 
-## Last variant
+### Last variant
 
 [Main page](https://grant-inna.github.io/Awesome_site/app/)
 
