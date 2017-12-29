@@ -22,6 +22,7 @@ var dev = 'src',
     };
 
 var devImages = dev + dir.images + '*.{png,jpg,jpeg,svg}',
+    devImgDir = dev + dir.images + '**/*.{png,jpg,jpeg,svg}',
     devStyle = dev + dir.style + '*.less',
     devHTML = dev + dir.html + '*.jade';
 
@@ -38,9 +39,9 @@ gulp.task('browser-sync', function() {
 // Images
 
 gulp.task('imageMIN', function() {
-    return gulp.src( devImages )
+    return gulp.src( devImgDir )
         .pipe(imagemin())
-        .pipe(gulp.dest( build + dir.images ));
+        .pipe(gulp.dest( build + dir.images + 'goods/' ));
 });
 
 
