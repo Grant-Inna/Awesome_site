@@ -30,7 +30,11 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 
 .icon { font-size: 1.5rem; }
 .flex { display: flex }
+.flex-center { display: flex; align-items: center; justify-content: center }
 .items-center { display: flex; align-items: center }
+.justify-center { display: flex; justify-content: center }
+.justify-start { display: flex; justify-content: flex-start }
+.justify-end { display: flex; justify-content: flex-end }
 .items-start { display: flex; align-items: flex-start }
 .column { display: flex; flex-direction: column }
 .column-start-items { display: flex; flex-direction: column; align-items: flex-start }
@@ -51,8 +55,11 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  .wrapper-full()
+  .wrapper-full();
+
+
+  .xs( padding-bottom, 2px );
+  .xxs( min-height, 60px)
 }
 
 
@@ -62,20 +69,21 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   display: flex;
   align-items: center;
   flex-grow: 3;
-  > img { height: calc( @height-header - 20px ); }
-  .xxs( justify-content, center )
+  > img { height: calc( @height-header - 20px );
+    .xxs( height, 54px)
+  }
+  .xxs-block({ height: 56px })
 }
 
 
 .header__buttons {
-  min-width: 320px;
   height: calc( @height-header - 20px );
   display: flex;
   flex-basis: 400px;
   flex-grow: 1;
   justify-content: space-between;
 
-  .xxs( justify-content, space-evenly )
+  .xxs( justify-content, flex-end )
 }
 .header__btn {
   background: transparent;
@@ -85,11 +93,10 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   display: flex;
   justify-content: center;
   align-items: center;
-  color: @back-calm-white;
+  color: @color-header-icons;
   .col();
-  .size(3);
-  .size-xxs(2);
-  .size-tiny(1.5);
+  .size(3.5);
+  /*.size-tiny(1.5);*/
 
 
   &-small {
@@ -99,11 +106,16 @@ body { background: @back-body; background-size: @back-body-size; background-atta
     background: transparent;
     text-decoration: none;
     font-weight: 100;
-    color: @back-calm-white;
+    color: @color-header-icons;
     .col();
     .size(1);
+    .size-xxs(2);
+
+    /*.xxs( justify-content, center )*/
   }
 }
+
+a[title="Orders"], a[title="Favorite"] { .xxs( display, none ) }
 
 .header__btnName {
   text-align: center;
@@ -112,7 +124,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 
   &:first-letter { color: @red; font-size: 1.1rem; font-weight: 600 }
 
-  .xxs( display, none )
+  .xs( display, none )
 }
 
 .header__personal {
@@ -121,12 +133,9 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: @back-calm-white;
   text-decoration: none;
-  min-width: 80px;
   .col();
-  .size(2.4);
-  .size-tiny(2.1);
+  .size(3.5);
 }
 
 .header__avatar {
@@ -134,22 +143,21 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   min-height: 55%;
   height: 70%;
 
-  .xxs( height, 50% );
+  .xs( display, none );
 
   > img { max-width: 100%; max-height: 100% }
 }
 .header__userName {
   text-align: center;
   .items-center;
+  .justify-center;
   line-height: 85%;
   font-size: 1.1rem;
   font-weight: 500;
-  max-height: 45%;
   height: auto;
-  min-height: 15%;
   color: @red;
 
-  .xxs( height, 50% )
+  .xs( height, 100% )
 }
 
 
@@ -159,15 +167,14 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 .container {
   width: 100%;
   height: auto;
-  margin: 0 auto 50px;
+  margin: 50px auto;
 
   .xs( margin-top, 3px );
-  .xxs( margin-top, 5px )
 }
 
 .navigation {
   min-height: @height-nav;
-  background: @back-white;
+  background: @back-nav;
 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -181,32 +188,33 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 .nav__menu {
   flex-grow: 2;
   min-width: 200px;
-  flex-basis: 300px;
+  flex-basis: 100%;
   height: calc(@height-nav - 20px);
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 20px;
 
   .xxs(justify-content, center);
 
-  .la-angle-right  {
-    color: @back-white - 150;
+  .la-arrow-left, .la-arrow-right  {
+    color: @back-header;
     display: block;
-    height: auto;
-    position: absolute;
-    top: calc((@height-nav - 20px) / 3);
-    right: 0
+    font-size: 1.8rem;
+    height: 100%;
+    width: auto;
+    .items-center
   }
-  .la-angle-left {
-    color: @back-white - 150;
-    display: block;
-    height: auto;
-    position: absolute;
-    top: calc((@height-nav - 20px) / 3);
-    left: 0
-  }
+  .la-arrow-left { .justify-start; padding-right: .5rem } .la-arrow-right { .justify-end; padding-left: .5rem }
+}
+
+.nav__itemsHolder {
+  .flex;
+  .justify-start;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .nav__item {
@@ -214,8 +222,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 70px;
-  min-width: 30px;
-  height: calc( @height-nav - 10px );
+  min-width: 60px;
 
   /*img { margin: 0 0 auto 0 }*/
 }
@@ -244,21 +251,15 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   align-items: center;
   flex-wrap: wrap;
 
-  background: @back-white-opacity;
+  background: @back-holder;
   padding-top: 10px;
   padding-bottom: 10px;
 
-  .tiny( padding-top, 7px )
-  /*flex-direction: column;
-  flex: 1 0 auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  z-index: 0;*/
+  .tiny( padding-top, 6px )
 }
 
 .cell {
-  background-color: rgba(220, 220, 220, 0.95);
+  background-color: @back-cell;
   .col();
   .size(2.4);
   .size-lg(3);
@@ -276,7 +277,7 @@ body { background: @back-body; background-size: @back-body-size; background-atta
   left: 0;
   width: 100%;
   height: 10%;
-  padding: 5px;
+  padding: 5px 0 0 5px;
   box-sizing: border-box;
   color: @back-white - 150;
   .items-start
@@ -321,17 +322,16 @@ body { background: @back-body; background-size: @back-body-size; background-atta
 
 .relation__content {
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   > img {
     width: 90%;
-    max-height: 85%;
-    margin-top: 5%;
+    max-height: 100%;
   }
 }
 
