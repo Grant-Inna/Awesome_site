@@ -27,49 +27,31 @@ html
                         .header__btnName Избранное
                     a( href="#", title="Personal Page" ).header__personal
                         .header__avatar
-                            img( src="img/logo.jpg" )
-                        .header__userName Алан
+                            img( src="img/favicon.png" )
+                        .header__userName Алан, эй Алан
                     a( href="#", title="Exit" ).header__btn-small
                         i.lnr.lnr-exit.icon
         .container
             .navigation.wrapper
                 .nav__menu
-                    i.la.la-angle-left
-                    i.la.la-angle-right
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/1.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/2.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/3.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/4.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/1.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/5.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/3.png', alt="Ooops..." )
-                    .nav__item.relation
-                        .relation__ratio.relation__ratio-1x1
-                        .relation__content
-                            img( src='img/2.png', alt="Ooops..." )
-                .nav__search
-                    input( type='search' )
+                    i.la.la-arrow-left
+                    .nav__itemsHolder
+                        include jade/_mixin-navItem
+                        +nav-item( '1.png' )
+                        +nav-item( '2.png' )
+                        +nav-item( '3.png' )
+                        +nav-item( '4.png' )
+                        +nav-item( '5.png' )
+                        +nav-item( '4.png' )
+                        +nav-item( '2.png' )
+                        +nav-item( '3.png' )
+                        +nav-item( '5.png' )
+                        +nav-item( '2.png' )
+                        +nav-item( '3.png' )
+                        +nav-item( '4.png' )
+                        +nav-item( '5.png' )
+                        +nav-item( '4.png' )
+                    i.la.la-arrow-right
             .holder.wrapper
                 include jade/_mixin-cell
                 +cell(0, 'favicon.png')
@@ -109,19 +91,5 @@ html
                 +cell(0)
                 +cell(0)
                 +cell(0)
-
-    .debug
-        div
-            div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
-                div
+        script( src="js/lory.min.js" )
+        script( src="js/lory.custom.js" )
