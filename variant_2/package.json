@@ -17,5 +17,8 @@
     "smart-grid": "^2.0.1"
   },
   "author": "Inna Grant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tiny-slider": "^2.4.0"
+  }
 }
