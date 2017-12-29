@@ -1,6 +1,9 @@
 # Awesome_site
-Testing repo
 
+[Main page](https://grant-inna.github.io/Awesome_site/variant_2/app/)
+
+
+## Last variant
 
 [Main page](https://grant-inna.github.io/Awesome_site/app/)
 
@@ -10,6 +13,4 @@ Testing repo
 
 [Cart page](https://grant-inna.github.io/Awesome_site/app/cart.html)
 
-## Variant 2
 
-[Main page](https://grant-inna.github.io/Awesome_site/variant_2/app/)
