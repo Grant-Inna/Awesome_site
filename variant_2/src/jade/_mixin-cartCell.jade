@@ -1,6 +1,6 @@
 mixin cartCell( img, name, available, price, amount )
     .cartCell.relation
-        .relation__ratio.relation__ratio-6x5
+        .relation__ratio.relation__ratio-5x4
         case (available)
             when ('+')
                 .relation__content-cart
@@ -9,7 +9,7 @@ mixin cartCell( img, name, available, price, amount )
                             input( type="checkbox" )
                             .common__checked
                     .cartCell__imageContainer.relation
-                        .relation__ratio.relation__ratio-16x9
+                        .relation__ratio.relation__ratio-19x8
                         .relation__content-justify-end
                             img( src="../img/goods/#{img}" )
                     .cartCell__goodsNameContainer
@@ -35,7 +35,7 @@ mixin cartCell( img, name, available, price, amount )
                             button
                             i.cart__delete
                     .cartCell__imageContainer.relation
-                        .relation__ratio.relation__ratio-16x9
+                        .relation__ratio.relation__ratio-19x8
                         .relation__content-justify-end
                             img( src="../img/goods/#{img}" )
                     .cartCell__goodsNameContainer

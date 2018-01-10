@@ -19,7 +19,8 @@ var dev = 'src',
         style: '/css/',
         html: '/',
         images: '/img/',
-        fonts: '/fonts/'
+        fonts: '/fonts/',
+        js: '/js/'
     };
 
 var devImages = dev + dir.images + '*.{png,jpg,jpeg,svg}',
@@ -27,7 +28,8 @@ var devImages = dev + dir.images + '*.{png,jpg,jpeg,svg}',
     devFonts = dev + dir.fonts + '**/*.{ttf,woff,woff2,eot,svg}',
     devStyle = dev + dir.style + '*.less',
     devHTML = dev + dir.html + '*.jade',
-    devHTMLDir = dev + dir.html + '**/*.jade';
+    devHTMLDir = dev + dir.html + '**/*.jade',
+    devJS = dev + dir.js + '*.js';
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -44,6 +46,11 @@ gulp.task('browser-sync', function() {
 gulp.task( 'copyFonts', function() {
     return gulp.src( devFonts )
         .pipe(gulp.dest( build + dir.fonts ))
+});
+
+gulp.task( 'copyJS', function() {
+    return gulp.src( devJS )
+        .pipe(gulp.dest( build + dir.js ))
 });
 
 // Images
@@ -85,7 +92,7 @@ gulp.task('watch_CSS', ['browser-sync'], function() {
 // JADE
 
 gulp.task( 'jade', function() {
-    return gulp.src([ devHTML, devHTMLDir ])
+    return gulp.src([ devHTML ])
         .pipe(jade())
         .pipe(gulp.dest( build + dir.html ))
 });
@@ -140,7 +147,7 @@ var tasksCSS = ['CSS', 'watch_CSS'];
 
 var tasksJade = ['jade', 'watch_jade'];
 
-var tasksAll = [ 'copyFonts', 'imageMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
+var tasksAll = [ 'copyFonts', 'copyJS', 'imageMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
 
 
 // Main tasks
