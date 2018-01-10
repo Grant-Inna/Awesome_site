@@ -1,0 +1,228 @@
+/*  COMMON  */
+
+
+.icon { font-size: 1.5rem; }
+.icon-button { font-size: @height-button / 2; }
+.flex { display: flex }
+.flex-center { display: flex; align-items: center; justify-content: center }
+.items-center { display: flex; align-items: center }
+.justify-center { display: flex; justify-content: center }
+.justify-around { display: flex; justify-content: space-around }
+.justify-between { display: flex; justify-content: space-between }
+.justify-evenly { display: flex; justify-content: space-evenly }
+.justify-start { display: flex; justify-content: flex-start }
+.justify-end { display: flex; justify-content: flex-end }
+.items-start { display: flex; align-items: flex-start }
+.column { display: flex; flex-direction: column }
+.column-start-items { display: flex; flex-direction: column; align-items: flex-start }
+
+.un-button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.un-input {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+.mainCaption__wrapper {
+  .flex;
+  .justify-center;
+  .items-start;
+
+  width: 100%;
+  height: @font-size-page-caption + 2rem;
+}
+.mainCaption {
+  font-size: @font-size-page-caption;
+  font-weight: 500;
+}
+
+
+.navigation {
+  height: @height-nav;
+  background: @back-nav;
+
+  .flex;
+  .justify-between;
+  .items-center;
+  flex-wrap: wrap;
+}
+
+
+.holder {
+  .flex;
+  .justify-start;
+  flex-wrap: wrap;
+
+  background: @back-holder;
+}
+
+.common__btnName {
+  text-align: center;
+  font-size: .8rem;
+  padding-left: 3px;
+
+  &:first-letter { font-size: 1.1rem; font-weight: 400 }
+
+  .sm( display, none )
+}
+.common__btnName-reverse {
+  .common__btnName;
+  padding: 0 3px 0 0;
+}
+
+/* Checkbox */
+.common__checkboxContainer{
+  .col();
+
+  .flex;
+  .justify-start;
+  .items-center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    &:checked {
+      +.common__checked { display: block }
+    }
+  }
+}
+.common__checkbox {
+  background: @color-header-icons;
+  border: 1px solid @color-border-checkbox;
+  border-radius: 3px;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  .flex-center;
+}
+.common__checked {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: @back-checkbox--checked;
+  border: 1px solid @color-border-checkbox--checked;
+  border-radius: 3px;
+
+  display: none;
+}
+
+.common__deleteContainer {
+  .col();
+
+  .flex-center;
+
+  button {
+    position: absolute;
+    opacity: 0;
+
+    &:active {
+      + i {
+        color: @color-delete-button--active;
+      }
+    }
+  }
+}
+.common__delete {
+  .icon__delete;
+  color: @color-delete-button;
+}
+
+
+
+
+
+.relation { position: relative; }
+
+.relation__ratio {
+  height: 0;
+  &-1x1 { padding-top: 100%}
+
+  /* Разделить на первое, умножить на второе */
+  /* Горизонт */
+  &-2x1 { padding-top: 50%}
+  &-16x9 { padding-top: 56.25%;}
+  &-3x2 { padding-top: 66.66%;}
+  &-7x5 { padding-top: 71.42%;}
+  &-4x3 { padding-top: 75%}
+  &-5x4 { padding-top: 80%;}
+  &-6x5 { padding-top: 83.33%;}
+  &-8x7 { padding-top: 87.5%;}
+
+  /* Вертикаль */
+  &-3x4 { padding-top: 133.33%;}
+  &-4x5 { padding-top: 125%;}
+  &-7x8 { padding-top: 114%;}
+  &-8x9 { padding-top: 112.5%;}
+  &-9x10 { padding-top: 111.11%;}
+  &-10x11 { padding-top: 110%;}
+  &-11x12 { padding-top: 109.09%;}
+
+}
+
+.relation__content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  > img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 2px;
+  }
+}
+
+.relation__content-justify-end {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .justify-end;
+
+  > img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 2px;
+  }
+}
+
+.relation__content-cart {
+  .relation__content;
+
+  .flex;
+  .items-start;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+  padding: .5rem;
+}
+
+.relation__content-mainCell {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  .flex-center;
+  > img {
+    width: 90%;
+    max-height: 90%;
+    border-radius: 2px;
+  }
+
+}
+

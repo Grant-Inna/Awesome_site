@@ -1,134 +1,76 @@
 doctype
 html
-    head
-        meta( name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0" )
-        meta( http-equiv="X-UA-Compatible", content="IE=edge" )
-        meta( name="MobileOptimized", content="width" )
-        meta( name="HandheldFriendly", content="True" )
-        meta( charset="UTF-8")
-        title Тестовая страница
-        link( href="css/style.min.css", type="text/css", rel="stylesheet" )
-        link( href="img/favicon.png" rel="shortcut icon" type="image/x-icon" )
-        link( rel="stylesheet", href="http://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800%7CRoboto:300,400,500,600,700", media="all" )
+    include jade/static/m-head
+    +head( 'Home Page' )
     body
-        .header
-            .wrapper.header__wrapper
-                .header__logo
-                    img( src="img/logo.jpg" )
-                .header__buttons
-                    a( href="#", title="Cart" ).header__btn
-                        i.lnr.lnr-cart.icon
-                        .header__btnName Корзина
-                    a( href="#", title="Orders" ).header__btn
-                        i.s7-shopbag.icon
-                        .header__btnName Заказы
-                    a( href="#", title="Favorite" ).header__btn
-                        i.lnr.lnr-heart.icon
-                        .header__btnName Избранное
-                    a( href="#", title="Personal Page" ).header__personal
-                        .header__avatar
-                            img( src="img/favicon.png" )
-                        .header__userName Алан, эй Алан
-                    a( href="#", title="Exit" ).header__btn-small
-                        i.lnr.lnr-exit.icon
-        .container
-            .navigation.wrapper
-                .nav__menu
-                    i.la.la-arrow-left
-                    .nav__itemsHolder
-                        include jade/_mixin-navItem
-                        +nav-item( '1.png' )
-                        +nav-item( '2.png' )
-                        +nav-item( '3.png' )
-                        +nav-item( '4.png' )
-                        +nav-item( '5.png' )
-                        +nav-item( '4.png' )
-                        +nav-item( '2.png' )
-                        +nav-item( '3.png' )
-                        +nav-item( '5.png' )
-                        +nav-item( '2.png' )
-                        +nav-item( '3.png' )
-                        +nav-item( '4.png' )
-                        +nav-item( '5.png' )
-                        +nav-item( '4.png' )
-                        +nav-item( '5.png' )
-                        +nav-item( '4.png' )
-                        +nav-item( '1.png' )
-                        +nav-item( '3.png' )
-                        +nav-item( '4.png' )
-                    i.la.la-arrow-right
-            .holder.wrapper
-                include jade/_mixin-cell
-                +cell(2, 'bg1', 'active-like')
-                +cell(99999, 'logo', 'active-like')
-                +cell(24, '1')
-                +cell(56, '2')
-                +cell(127, '3')
-                +cell(6, '4')
-                +cell(270, '5', 'active-like')
-                +cell(694, '6')
-                +cell(53, '7')
-                +cell(538, '8')
-                +cell(567, '9', 'active-like')
-                +cell(56, '10')
-                +cell(23, '11', 'active-like')
-                +cell(58, '12')
-                +cell(5, '13')
-                +cell(1, '14')
-                +cell(0, '15')
-                +cell(9, '16')
-                +cell(41, '17')
-                +cell(47, '18', 'active-like')
-                +cell(25, '19')
-                +cell(73, '20')
-                +cell(2, '21')
-                +cell(6, '22')
-                +cell(52, '23')
-                +cell(86, '24', 'active-like')
-                +cell(2, '25')
-                +cell(73, '26')
-                +cell(84, '27')
-                +cell(674, '28', 'active-like')
-                +cell(83, '29')
-                +cell(94, '30')
-                +cell(54, '31')
-                +cell(7, '32')
-                +cell(94, '33')
-                +cell(13, '34')
-                +cell(82, '35')
-                +cell(94, '36')
-                +cell(54, '37')
-                +cell(73, '38')
-                +cell(636, '39', 'active-like')
-                +cell(103, '40')
-                //+cell(82, '41')
-                //+cell(83, '42')
-                //+cell(4, '43')
-                //+cell(54, '44')
-                //+cell(73, '45', 'active-like')
-                //+cell(94, '46', 'active-like')
-                //+cell(13, '47')
-                //+cell(82, '48')
-                //+cell(94, '49')
-                //+cell(475, '50')
-                //+cell(73, '51')
-                //+cell(3, '52')
-                //+cell(13, '53')
-                //+cell(82, '54')
-                //+cell(90, '55', 'active-like')
-                //+cell(73, '56')
-                //+cell(94, '57')
-                //+cell(347, '58')
-                //+cell(82, '59')
-                //+cell(823, '60')
-                //+cell(94, '61')
-                //+cell(54, '62')
-                //+cell(10, '63')
-                //+cell(94, '64')
-                //+cell(13, '65')
-                //+cell(120, '66', 'active-like')
-                //+cell(94, '67')
-                //+cell(64, '68', 'active-like')
-                //+cell(73, '69')
-                //+cell(39, '70')
-                //+cell(13, '71')
+        include jade/static/header
+        .navigation.wrapper
+            .nav__menu
+                i.la.la-arrow-left
+                .nav__itemsHolder
+                    include jade/_mixin-navItem
+                    +nav-item( '1.png' )
+                    +nav-item( '2.png' )
+                    +nav-item( '3.png' )
+                    +nav-item( '4.png' )
+                    +nav-item( '5.png' )
+                    +nav-item( '4.png' )
+                    +nav-item( '2.png' )
+                    +nav-item( '3.png' )
+                    +nav-item( '5.png' )
+                    +nav-item( '2.png' )
+                    +nav-item( '3.png' )
+                    +nav-item( '4.png' )
+                    +nav-item( '5.png' )
+                    +nav-item( '4.png' )
+                    +nav-item( '5.png' )
+                    +nav-item( '4.png' )
+                    +nav-item( '1.png' )
+                    +nav-item( '3.png' )
+                    +nav-item( '4.png' )
+                i.la.la-arrow-right
+        .holder.wrapper
+            include jade/_mixin-cell
+            +cell(2, 'bg1', 'active-like')
+            +cell(99999, 'logo', 'active-like')
+            +cell(24, '1')
+            +cell(56, '2')
+            +cell(127, '3')
+            +cell(6, '4')
+            +cell(270, '5', 'active-like')
+            +cell(694, '6')
+            +cell(53, '7')
+            +cell(538, '8')
+            +cell(567, '9', 'active-like')
+            +cell(56, '10')
+            +cell(23, '11', 'active-like')
+            +cell(58, '12')
+            +cell(5, '13')
+            +cell(1, '14')
+            +cell(0, '15')
+            +cell(9, '16')
+            +cell(41, '17')
+            +cell(47, '18', 'active-like')
+            +cell(25, '19')
+            +cell(73, '20')
+            +cell(2, '21')
+            +cell(6, '22')
+            +cell(52, '23')
+            +cell(86, '24', 'active-like')
+            +cell(2, '25')
+            +cell(73, '26')
+            +cell(84, '27')
+            +cell(674, '28', 'active-like')
+            +cell(83, '29')
+            +cell(94, '30')
+            +cell(54, '31')
+            +cell(7, '32')
+            +cell(94, '33')
+            +cell(13, '34')
+            +cell(82, '35')
+            +cell(94, '36')
+            +cell(54, '37')
+            +cell(73, '38')
+            +cell(636, '39', 'active-like')
+            +cell(103, '40')
+        include jade/static/footer

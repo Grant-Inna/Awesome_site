@@ -1,0 +1,43 @@
+mixin cartCell( img, name, available, price, amount )
+    .cartCell.relation
+        .relation__ratio.relation__ratio-6x5
+        case (available)
+            when ('+')
+                .relation__content-cart
+                    .common__checkboxContainer
+                        label.common__checkbox
+                            input( type="checkbox" )
+                            .common__checked
+                    .cartCell__imageContainer.relation
+                        .relation__ratio.relation__ratio-16x9
+                        .relation__content-justify-end
+                            img( src="../img/goods/#{img}" )
+                    .cartCell__goodsNameContainer
+                        .cartCell__goodsName #{name}
+                        .cartCell__available В наличии
+                    .cartCell__priceContainer
+                        .cartCell__price #{price}$
+                    .cartCell__amountContainer
+                        .cartCell__amountChange
+                            button.cartCell__amount-reduce
+                                .icon__reduce
+                            input( type="text", placeholder="#{amount}" ).cartCell__amount-total
+                            button.cartCell__amount-increase
+                                .icon__increase
+                        //.cartCell__amountLayout
+                        //    .cartCell__total Итого
+                        //    .cartCell__totalPrice #{ price * amount }$
+            when ('-')
+                .relation__content-cart
+                    .cartCell__disable
+                    .cart__deleteContainer
+                        label
+                            button
+                            i.cart__delete
+                    .cartCell__imageContainer.relation
+                        .relation__ratio.relation__ratio-16x9
+                        .relation__content-justify-end
+                            img( src="../img/goods/#{img}" )
+                    .cartCell__goodsNameContainer
+                        .cartCell__goodsName #{name}
+                        .cartCell__available-disable Нет в наличии

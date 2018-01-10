@@ -18,13 +18,16 @@ var dev = 'src',
     dir = {
         style: '/css/',
         html: '/',
-        images: '/img/'
+        images: '/img/',
+        fonts: '/fonts/'
     };
 
 var devImages = dev + dir.images + '*.{png,jpg,jpeg,svg}',
-    devImgDir = dev + dir.images + '**/*.{png,jpg,jpeg,svg}',
+    devImgDir = dev + dir.images + 'goods/*.{png,jpg,jpeg,svg}',
+    devFonts = dev + dir.fonts + '**/*.{ttf,woff,woff2,eot,svg}',
     devStyle = dev + dir.style + '*.less',
-    devHTML = dev + dir.html + '*.jade';
+    devHTML = dev + dir.html + '*.jade',
+    devHTMLDir = dev + dir.html + '**/*.jade';
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -36,10 +39,17 @@ gulp.task('browser-sync', function() {
 
 // TASKS
 
+// CopyFonts
+
+gulp.task( 'copyFonts', function() {
+    return gulp.src( devFonts )
+        .pipe(gulp.dest( build + dir.fonts ))
+});
+
 // Images
 
 gulp.task('imageMIN', function() {
-    return gulp.src( devImgDir )
+    return gulp.src([ devImages, devImgDir ])
         .pipe(imagemin())
         .pipe(gulp.dest( build + dir.images + 'goods/' ));
 });
@@ -47,7 +57,7 @@ gulp.task('imageMIN', function() {
 
 gulp.task('watch_imageMIN', ['browser-sync'], function() {
     gulp.watch( devImages, ['imageMIN', 'iconsMIN']);
-    gulp.watch( devImages ).on('change', browserSync.reload); // Вызываемый таким образом browserSync работает почему то стабильнее
+    gulp.watch( devImages ).on('change', browserSync.reload);
 });
 
 
@@ -57,11 +67,11 @@ gulp.task('CSS', function() {
     return gulp.src( dev + dir.style + 'style.less' )
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(autoprefixer( {browsers: ['last 5 versions', '> 1%'], cascade: false} ))
-        .pipe(groupMedia()) // У меня идёт всегда разделение на отдельные файлы в scss, но пусть будет)
+        .pipe(autoprefixer({ browsers: ['last 5 versions', '> 1%'], cascade: false }))
+        .pipe(groupMedia())
         .pipe(cleanCSS())
-        .pipe(rename( { suffix: ".min" } ))
-        .pipe(sourcemaps.write( '../map' )) // Жаль, но не получилось запихать sourcemap куда–нибудь подальше, он переставал работать от этого почему–то
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(sourcemaps.write( '../map' ))
         .pipe(gulp.dest( build + dir.style ));
 });
 
@@ -75,14 +85,14 @@ gulp.task('watch_CSS', ['browser-sync'], function() {
 // JADE
 
 gulp.task( 'jade', function() {
-    return gulp.src( dev + dir.html + '*.jade' )
+    return gulp.src([ devHTML, devHTMLDir ])
         .pipe(jade())
         .pipe(gulp.dest( build + dir.html ))
 });
 
 gulp.task( 'watch_jade', ['browser-sync'], function() {
-    gulp.watch( devHTML , ['jade']);
-    gulp.watch( devHTML ).on('change', browserSync.reload);
+    gulp.watch([ devHTML, devHTMLDir] , ['jade']);
+    gulp.watch( [ devHTML, devHTMLDir] ).on('change', browserSync.reload);
 
 });
 
@@ -92,32 +102,26 @@ gulp.task( 'watch_jade', ['browser-sync'], function() {
 
 gulp.task('smartGrid', function() {
     var options = {
-        offset: "5px",
+        offset: "2px",
         container: {
-            maxWidth: "1100px",
-            fields: "10px"
+            maxWidth: "1300px",
+            fields: "4px"
         },
         breakPoints: {
             lg: {
-                width: '1100px', /* -> @media (max-width: 1100px) */
-                offset: '5px',
-                fields: '6px'
+                width: '1100px'
             },
             md: {
                 width: '960px'
             },
             sm: {
-                width: '780px',
-                offset: '4px',
-                fields: '5px'
+                width: '780px'
             },
             xs: {
                 width: '560px'
             },
             xxs: {
-                width: '450px',
-                offset: '2px',
-                fields: '4px'
+                width: '450px'
             },
             tiny: {
                 width: '350px'
@@ -136,7 +140,7 @@ var tasksCSS = ['CSS', 'watch_CSS'];
 
 var tasksJade = ['jade', 'watch_jade'];
 
-var tasksAll = ['imageMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
+var tasksAll = [ 'copyFonts', 'imageMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
 
 
 // Main tasks
@@ -145,4 +149,5 @@ gulp.task('default', tasksAll);
 gulp.task('tasksImage', tasksImage);
 gulp.task('tasksCSS', tasksCSS);
 gulp.task('tasksJade', tasksJade);
+
 

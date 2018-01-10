@@ -1,0 +1,27 @@
+.header
+    .wrapper.header__wrapper
+        a( href="index.html", title="Home page" ).header__logo
+            img( src="img/goods/bg.jpg" )
+        .header__search
+            form.search__holder
+                input( type="search", results=5, placeholder="Search..." )
+                button
+                    i.icon__search
+        .header__buttons
+            a( href="cart.html", title="Cart" ).header__btn
+                i.icon__cart
+                .common__btnName Корзина
+            a( href="orders.html", title="Orders" ).header__btn
+                i.icon__orders
+                .common__btnName Заказы
+            a( href="favorite.html", title="Favorite" ).header__btn
+                i.icon__favorite
+                .common__btnName Избранное
+        .header__auth
+            a( href="#", title="Personal Page" ).header__btn-vert
+                .header__avatar
+                    img( src="img/goods/bg1.jpg" )
+                .header__userName Алан, эй Алан
+                i.icon__user
+            a( href="#", title="Exit" ).header__btn-small
+                i.icon__exit
