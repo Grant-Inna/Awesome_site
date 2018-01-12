@@ -1,0 +1,52 @@
+mixin info-block( img, name, available, price, amount )
+    .cartCell-info.relation
+        .relation__ratio.cartInfo__specialRatio
+        case (available)
+            when ('+')
+                .relation__content.cart__infoContainer
+                    //.common__checkboxContainer
+                    //    label.common__checkbox
+                    //        input( type="checkbox" )
+                    //        .common__checked
+                    .cartInfo__ImageContainer.relation
+                        .relation__ratio.relation__ratio-19x8
+                        .relation__content.justify-center
+                            img( src="img/goods/#{img}.jpg" )
+                        //.common__row-betweenContainer
+                    .cartInfo__goodsNameContainer
+                        .cartInfo__goodsName #{name}
+                        .cartInfo__available В наличии
+                    .cartInfo__amountContainer
+                        .cartInfo__amountChange
+                            button.cartInfo__amount-reduce
+                                .icon__reduce
+                            input( type="text", placeholder="#{amount}" ).cartInfo__amount-total
+                            button.cartInfo__amount-increase
+                                .icon__increase
+                        .cartInfo__amountLayout
+                            //.cartInfo__total Итого
+                            .cartInfo__totalPrice #{ price }$
+                    .cartInfo__buttonContainer
+                        button.cartInfo__buttonBuy
+                            span КУПИТЬ (#{amount})
+                    .cartInfo__buttonContainer
+                        button.cartInfo__buttonDelete
+                            span УДАЛИТЬ
+
+            when ('-')
+                .relation__content.cart__infoContainer
+                    //.common__checkboxContainer
+                    //    label.common__checkbox
+                    //        input( type="checkbox" )
+                    //        .common__checked
+                    .cartInfo__ImageContainer.relation
+                        .relation__ratio.relation__ratio-19x8
+                        .relation__content.justify-center
+                            img( src="../img/goods/#{img}.jpg" )
+                    .cartInfo__goodsNameContainer
+                        .cartInfo__goodsName #{name}
+                        .cartInfo__available-disable Нет в наличии
+                    .cartInfo__buttonContainer
+                        button.cartInfo__buttonDelete
+                            span УДАЛИТЬ
+

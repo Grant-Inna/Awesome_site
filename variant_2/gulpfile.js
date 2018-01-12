@@ -56,15 +56,21 @@ gulp.task( 'copyJS', function() {
 // Images
 
 gulp.task('imageMIN', function() {
-    return gulp.src([ devImages, devImgDir ])
+    return gulp.src( devImages )
+        .pipe(imagemin())
+        .pipe(gulp.dest( build + dir.images ));
+});
+
+gulp.task('imageDirMIN', function() {
+    return gulp.src( devImgDir )
         .pipe(imagemin())
         .pipe(gulp.dest( build + dir.images + 'goods/' ));
 });
 
 
 gulp.task('watch_imageMIN', ['browser-sync'], function() {
-    gulp.watch( devImages, ['imageMIN', 'iconsMIN']);
-    gulp.watch( devImages ).on('change', browserSync.reload);
+    gulp.watch([ devImages, devImgDir ], ['imageMIN', 'imageDirMIN']);
+    gulp.watch([ devImages, devImgDir ]).on('change', browserSync.reload);
 });
 
 
@@ -92,7 +98,7 @@ gulp.task('watch_CSS', ['browser-sync'], function() {
 // JADE
 
 gulp.task( 'jade', function() {
-    return gulp.src([ devHTML ])
+    return gulp.src( devHTML )
         .pipe(jade())
         .pipe(gulp.dest( build + dir.html ))
 });
@@ -141,13 +147,13 @@ gulp.task('smartGrid', function() {
 // Tasks arrays
 
 
-var tasksImage = ['imageMIN'];
+var tasksImage = ['imageMIN', 'imageDirMIN'];
 
 var tasksCSS = ['CSS', 'watch_CSS'];
 
 var tasksJade = ['jade', 'watch_jade'];
 
-var tasksAll = [ 'copyFonts', 'copyJS', 'imageMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
+var tasksAll = [ 'copyFonts', 'copyJS', 'imageMIN', 'imageDirMIN', 'CSS', 'watch_CSS', 'jade', 'watch_jade'];
 
 
 // Main tasks

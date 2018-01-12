@@ -1,0 +1,43 @@
+doctype
+html
+    include jade/static/m-head
+    +head( 'Cart Page' )
+    body.last
+        include jade/static/header
+        include jade/static/m-pageCaption
+        +page-caption( 'Корзина (n товаров)' )
+        .navigation.wrapper
+            .cart__checkboxContainer-main
+                label.cart__checkbox-main
+                    input( type="checkbox" )
+                    .common__checked
+                .cart__btnName Выбрать все товары
+            .cart__deleteContainer-main
+                label
+                    button
+                    i.cart__delete-main
+                .cart__btnName-reverse Удалить товар
+
+        .holder.wrapper
+            include jade/_mixin-cartCell-last
+            +cartCell( '10.jpg', 'Всякая всячина', '+', '35', '1' )
+            +cartCell( 'bg.jpg', 'Всякая всячина – фигачина', '+', '15', '2' )
+            +cartCell( 'img.png', 'Этот ковёр задавал стиль всей комнате', '-' )
+            +cartCell( 'bg1.jpg', 'А в будущее не все смогут смотреть', '+', '3255', '1' )
+            +cartCell( 'logo.jpg', 'Ладно – фигадно', '+', '92', '4' )
+            +cartCell( '10.jpg', 'Забавная фраза', '+', '8926', '1' )
+            +cartCell( 'bg.jpg', 'You gotta do the thing, Morty!', '+', '5', '1' )
+            +cartCell( 'img.png', 'Не так страшны стальные яйца', '-' )
+            +cartCell( 'bg1.jpg', 'Как то, что выросли они', '+', '296', '3' )
+            +cartCell( 'bg.jpg', 'У хрупкой девушки Оксаны', '-' )
+            +cartCell( 'img.png', 'в процессе жизненных невзгод', '+', '1966', '2' )
+    .cart__controlContainer-all
+        .cart__totalContainer
+            .cart__total-count Общая стоимость
+            .cart__total-price 0 руб.
+        .cart__buyContainer
+            button.cart__buyButton
+                span КУПИТЬ (0)
+    include jade/static/footer
+
+

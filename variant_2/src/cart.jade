@@ -5,39 +5,85 @@ html
     body
         include jade/static/header
         include jade/static/m-pageCaption
-        +page-caption( 'Корзина (n товаров)' )
+        +page-caption( 'Корзина (50)' )
         .navigation.wrapper
-            .cart__checkboxContainer-main
-                label.cart__checkbox-main
-                    input( type="checkbox" )
-                    .common__checked
-                .cart__btnName Выбрать все товары
+            form.cart__topButtonContainer-choose
+                button.cart__topButton-all
+                    span Выбрать все товары
+                button.cart__topButton-some
+                    span Выбрать несколько товаров
+                button.cart__topButton-cancel
+                    span Отменить выделение
             .cart__deleteContainer-main
                 label
                     button
                     i.cart__delete-main
                 .cart__btnName-reverse Удалить товар
 
-        .holder.wrapper
-            include jade/_mixin-cartCell
-            +cartCell( '10.jpg', 'Всякая всячина', '+', '35', '1' )
-            +cartCell( 'bg.jpg', 'Всякая всячина – фигачина', '+', '15', '2' )
-            +cartCell( 'img.png', 'Этот ковёр задавал стиль всей комнате', '-' )
-            +cartCell( 'bg1.jpg', 'А в будущее не все смогут смотреть', '+', '3255', '1' )
-            +cartCell( 'logo.jpg', 'Ладно – фигадно', '+', '92', '4' )
-            +cartCell( '10.jpg', 'Забавная фраза', '+', '8926', '1' )
-            +cartCell( 'bg.jpg', 'You gotta do the thing, Morty!', '+', '5', '1' )
-            +cartCell( 'img.png', 'Не так страшны стальные яйца', '-' )
-            +cartCell( 'bg1.jpg', 'Как то, что выросли они', '+', '296', '3' )
-            +cartCell( 'bg.jpg', 'У хрупкой девушки Оксаны', '-' )
-            +cartCell( 'img.png', 'в процессе жизненных невзгод', '+', '1966', '2' )
-    .cart__controlContainer-all
-        .cart__totalContainer
-            .cart__total-count Общая стоимость
-            .cart__total-price 0 руб.
-        .cart__buyContainer
-            button.cart__buyButton
-                span КУПИТЬ (0)
+        .wrapper.cart__row-betweenContainer
+            .cart__infoBlockContainer
+                include jade/_mixin-cartInfoBlock
+                +info-block( '1', 'Всякая всячина – фигачина', '+', '885', '2' )
+            .cart__goodsBlockContainer
+                include jade/_mixin-cartCell
+                +cartCell( '1', '21' )
+                +cartCell( '8' )
+                +cartCell( '3' )
+                +cartCell( '4' )
+                +cartCell( '5' )
+                +cartCell( '6' )
+                +cartCell( '7' )
+                +cartCell( '2', '3' )
+                +cartCell( '9' )
+                +cartCell( '10' )
+                +cartCell( '11' )
+                +cartCell( '12' )
+                +cartCell( '13' )
+                +cartCell( '14' )
+                +cartCell( '15' )
+                +cartCell( '16' )
+                +cartCell( '17' )
+                +cartCell( '18' )
+                +cartCell( '19' )
+                +cartCell( '20' )
+                +cartCell( '21' )
+                +cartCell( '22', '2' )
+                +cartCell( '23' )
+                +cartCell( '24' )
+                +cartCell( '25' )
+                +cartCell( '16' )
+                +cartCell( '1' )
+                +cartCell( '3' )
+                +cartCell( '4' )
+                +cartCell( '5' )
+                +cartCell( '6', '4' )
+                +cartCell( '7' )
+                +cartCell( '8' )
+                +cartCell( '9' )
+                +cartCell( '10' )
+                +cartCell( '11' )
+                +cartCell( '12' )
+                +cartCell( '13' )
+                +cartCell( '14', '2' )
+                +cartCell( '15' )
+                +cartCell( '2' )
+                +cartCell( '17' )
+                +cartCell( '18' )
+                +cartCell( '19' )
+                +cartCell( '20' )
+                +cartCell( '21' )
+                +cartCell( '22' )
+                +cartCell( '23' )
+                +cartCell( '24' )
+                +cartCell( '25' )
+
+    //.cart__controlContainer-all
+    //    .cart__totalContainer
+    //        .cart__total-count Общая стоимость
+    //        .cart__total-price 0 руб.
+    //    .cart__buyContainer
+    //        button.cart__buyButton
+    //            span КУПИТЬ (0)
     include jade/static/footer
 
 
